@@ -1,0 +1,221 @@
+---
+title: 著作権と引用
+filters:
+  - naquiz
+---
+
+この章では, レポートやスライドを作るときに必要な「引用」の基本を学びます.
+
+- **盗用（剽窃）を避ける**
+    - 自分の文章と他人の文章・アイデアを区別できる
+    - 他人の著作物を利用するときは, 適切なルールに従う
+- **著作権の「引用」ルールを理解する**
+    - どこまでなら許されるか判断できる
+- **Quarto で正しく引用できる**
+    - Zotero で文献を集め, BiBTeX 形式でエクスポートする
+    - Quarto の `[@...]` で文中引用し, 参考文献リストを出す
+
+## 著作権
+
+著作権は, 文章・画像・図表・写真・音楽・プログラムなどの「著作物」を保護します. 他人の著作物を利用するときは, 原則として許可（ライセンス）が必要ですが, 一定の条件を満たす「引用」は例外として許されます (著作権法 第32条)
+
+### ライセンス
+
+著作物を利用するための許可のことを「ライセンス」といいます. ライセンスには, 著作物をどのように利用できるか（商用利用の可否, 改変の可否など）や, 利用するときに何を守る必要があるか（出典表示の要否など）が定められています.
+
+::: {#exm-license-cc}
+
+## [Creative Commons](https://creativecommons.jp/licenses)
+
+Creative Commons（CC）は, 「出典表示が必要か」「改変してよいか」「商用利用してよいか」などの条件を, 分かりやすいマークで示すためのライセンスです. 下の CC マークをクリックすると, それぞれのライセンス概要に移動できます.
+
+::: {layout-ncol=3}
+
+[![](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)](https://creativecommons.org/licenses/by/4.0/deed.ja)
+
+[![](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg)](https://creativecommons.org/licenses/by-sa/4.0/deed.ja)
+
+[![](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nd.svg)](https://creativecommons.org/licenses/by-nd/4.0/deed.ja)
+
+[![](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc.svg)](https://creativecommons.org/licenses/by-nc/4.0/deed.ja)
+
+[![](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja)
+
+[![](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ja)
+
+:::
+
+レポート等で使うときは, マークの見た目だけで判断せず, 「表示（BY）」「非営利（NC）」「改変禁止（ND）」「継承（SA）」の意味を確認して, 自分の用途に合うかチェックしましょう.
+
+:::
+
+::: {#exm-license-unsplash}
+
+## [Unsplash](https://unsplash.com/)
+
+Unsplashは, 商用・非商用を問わず無料で高品質な写真を提供する素材サイトです. [ライセンス](https://unsplash.com/ja/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9) の内容を確認してみてください.
+
+![Photo by [Jeremy Bishop](https://unsplash.com/photos/a-person-riding-a-bike-on-the-beach-at-sunset-UPRWUJbQHR0) on [Unsplash](https://unsplash.com).](/static/img/jeremy-bishop-UPRWUJbQHR0-unsplash.jpg){width=80% fig-align="center"}
+
+:::
+
+そのほか, [いらすとや](https://www.irasutoya.com/p/terms.html) なども無料で利用できる素材サイトですが, 利用規約をよく確認してから使いましょう. またAI生成画像の利用も, 著作権やライセンスの問題が複雑であることを理解してから行うのが大事です.
+
+::: {#exr-license-this}
+
+## ウェブサイト
+
+[このウェブサイト](https://kazuyanagimoto.com/course-first-year-2026) 自体も, 著作権者である私 (柳本和春) が, ライセンスを付与して公開しています. GitHubの[レポジトリ](https://github.com/kazuyanagimoto/course-first-year-2026) でライセンスを確認してみてください.
+
+:::
+
+### 引用
+
+著作権法第32条では, 「公正な慣行に合致」し, 「引用の目的上正当な範囲内」であれば, 著作物を引用することができると定められています. 実用上, レポートなどでは, 次の点を満たしているかをチェックすると安全です.
+
+- **引用が必要**: 引用しないと議論が成り立たない
+- **主従関係が明確**: 自分の文章が主, 引用は従（引用の分量が過剰にならない）
+- **引用部分が区別できる**: かぎ括弧, 引用ブロック, 図表のキャプション等で明確に区切る
+- **改変しない**: 原文を勝手に書き換えない（省略は…等で示す）
+- **出所を示す**: どこから持ってきたかを明記する（著者・年, ページ, URL など）
+
+## 引用の種類と書き方
+
+### 直接引用
+
+
+- 引用箇所は **「」** や引用ブロックで囲む
+- ページ番号がある資料は, できるだけページ (または章・節) も示す
+- 引用は必要最小限にとどめる（主従関係を保つため）
+
+例（Quarto / Markdown）:
+
+```markdown
+先行研究では「…」と述べられている（@knuth84, p. 97）。
+
+> ここに引用文を入れる
+> （出典: @knuth84, pp. 97-98）
+```
+
+### 要約・言い換え（パラフレーズ）
+
+文章を自分の言葉で書き直しても, **元のアイデアや知見に依拠している** なら出典が必要です.
+「言い換えたから引用不要」ではありません.
+
+### Web情報
+
+Webページは内容が変わることがあるので, URL だけでなく **ページ名・作成主体・閲覧日** も意識しましょう.
+
+### 孫引き
+
+### 引用スタイル
+
+引用スタイルは, **本文中の引用の見え方** と **参考文献リストの並び・表記** を決めるルールです.
+Quarto は CSL（Citation Style Language）という仕組みで多くのスタイルに対応しています[@quarto_citations; @csl_project; @zotero_styles].
+
+この授業では, 特に指定がなければ **Chicago author-date（著者・年）** を基本にします.
+（Quarto / Pandoc のデフォルトも原則として Chicago Manual of Style の author-date です[@quarto_citations; @pandoc_citations].）
+
+### 代表的なスタイル
+
+- **著者・年（author-date）**: 本文中は `(著者, 年)` 形式. 人文・社会系でよく見ます.
+	- 例: `…と述べられている[@knuth84].` → （Knuth 1984）
+	- 代表: Chicago author-date, APA
+- **番号（numeric）**: 本文中は `[1]` のような番号. 工学・医学系でよく見ます.
+	- 例: `…と述べられている[@knuth84].` → [1]
+	- 代表: IEEE, Vancouver など
+- **脚注中心（notes / footnote）**: 本文は脚注番号で示し, 脚注に書誌情報を出す形式.
+	- 代表: Chicago notes-bibliography
+
+どれが「正しい」というより, **分野・授業・学会の慣習に合わせて統一する** のが大事です.
+
+## Zotero で文献管理（おすすめの流れ）
+
+Zotero を使うと, 文献情報（著者, 年, タイトル, DOI など）を整理して, `.bib` として書き出せます.
+
+おすすめの流れ:
+
+1. Zotero に文献を入れる（ブラウザ拡張や DOI から追加）
+2. メタデータを確認する（著者名の表記ゆれ, 年, 雑誌名など）
+3. `references.bib` にエクスポートする
+4. Quarto 原稿で `[@...]` を書く
+
+発展: Zotero のアドオン **Better BibTeX** を使うと, 引用キー（citekey）を安定させたり, 自動エクスポートで `.bib` を常に最新に保ったりできます[@betterbibtex].
+
+## Quarto
+
+### Quarto でスタイルを指定する方法
+
+スタイルを固定したい場合は, YAML に `csl:` を指定します.
+
+1) 各 `*.qmd` の先頭に書く（その文書だけ）
+
+```yaml
+---
+title: レポートタイトル
+bibliography: references.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+---
+```
+
+2) プロジェクト全体に適用する（`_quarto.yml` で一括）
+
+```yaml
+bibliography: references.bib
+csl: https://www.zotero.org/styles/chicago-author-date
+```
+
+※オンラインの CSL を指定すると, レンダリング時に取得します. オフラインでも確実にビルドしたい場合は, CSL ファイル（`.csl`）をダウンロードしてプロジェクト内に置き, `csl: my-style.csl` のように指定してください.
+
+### 文中引用（基本）
+
+- `[@キー]` の形で引用します
+- 複数文献は `;` で区切れます
+- ページなどの位置情報（locator）も書けます
+
+```markdown
+基本形: [@knuth84]
+複数:  [@knuth84; @pandoc_citations]
+ページ: [@knuth84, pp. 97-99]
+```
+
+### 参考文献リスト
+
+このプロジェクトでは [references.bib](references.bib) を使っています（設定は [_quarto.yml](_quarto.yml) 参照）.
+章末や巻末で参考文献リストを出したい場合は, `::: {#refs}` を置きます（本教材では付録に参考文献ページを用意しています）[@quarto_citations].
+
+## 演習（15分）
+
+### 小テスト（選択式）
+
+:::::{.question}
+次のうち, レポートで「引用」として安全な書き方として最も適切なのはどれですか.
+
+::::{.choices}
+
+:::{.choice}
+出典を書かずに, Web記事の文章をそのまま貼り付ける
+:::
+
+:::{.choice .correct-choice}
+引用箇所を「」や引用ブロックで明確に区切り, 出典（著者・年やURL等）を示す
+:::
+
+:::{.choice}
+出典を書かずに, 文章を少し言い換える（パラフレーズ）
+:::
+
+:::{.choice}
+参考文献リストにだけURLを載せ, 本文中には何も書かない
+:::
+
+::::
+:::::
+
+## 参考資料
+
+- Quarto: Citations（引用の書き方）[@quarto_citations]
+- Pandoc: Citations（引用処理の仕様）[@pandoc_citations]
+- 文化庁: 著作権テキスト（入門教材）[@aca_text]
+- CRIC: 学校教育と著作権（ケーススタディ）[@cric_school]
+- e-Gov: 著作権法（条文）[@copyrightlaw]
