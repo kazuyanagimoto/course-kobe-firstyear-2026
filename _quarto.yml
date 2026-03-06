@@ -1,0 +1,38 @@
+project:
+  type: book
+
+book:
+  title: 基礎演習
+  author:
+    - name: 柳本和春
+      email: yanagimoto@econ.kobe-u.ac.jp
+      orcid: 0009-0007-1967-8304
+      affiliations:
+        - name: 神戸大学
+  date: 2026-04-01
+  chapters:
+    - index.qmd
+    - 01-tool.qmd
+    - 02-citation.qmd
+  appendices: 
+    - references.qmd
+
+bibliography: references.bib
+bibliographystyle: chicago-author-date
+
+format:
+  html:
+    number-sections: true
+    number-depth: 2
+    theme:
+      - cosmo
+      - brand
+
+knitr:
+  opts_chunk: 
+    fig.align: center
+    fig.retina: 3
+    fig.width: 6
+    fig.height: 3
+    out.width: 90%
+    collapse: true
