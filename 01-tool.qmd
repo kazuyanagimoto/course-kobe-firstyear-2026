@@ -41,7 +41,7 @@ quarto --version
 R --version
 ```
 
-VS Code はインストール後に起動できることを確認してください（`code` コマンドは環境によっては別途 PATH 設定が必要です）.
+VS Code はインストール後に起動できることを確認してください(`code` コマンドは環境によっては別途 PATH 設定が必要です).
 
 **アップデート**
 
@@ -54,7 +54,7 @@ winget upgrade
 # まとめて更新
 winget upgrade --all --accept-source-agreements --accept-package-agreements
 
-# 個別に更新（必要なものだけ）
+# 個別に更新(必要なものだけ)
 winget upgrade -e --id Microsoft.VisualStudioCode --accept-source-agreements --accept-package-agreements
 winget upgrade -e --id Posit.Quarto --accept-source-agreements --accept-package-agreements
 winget upgrade -e --id Zotero.Zotero --accept-source-agreements --accept-package-agreements
@@ -94,7 +94,7 @@ quarto --version
 R --version
 ```
 
-VS Code はインストール後に起動できることを確認してください（ターミナルから `code` を使いたい場合は, VS Code のコマンドパレットで “Shell Command: Install 'code' command in PATH” を実行します）.
+VS Code はインストール後に起動できることを確認してください(ターミナルから `code` を使いたい場合は, VS Code のコマンドパレットで “Shell Command: Install 'code' command in PATH” を実行します).
 
 **アップデート**
 
@@ -110,7 +110,7 @@ brew outdated --cask
 # まとめて更新
 brew upgrade --cask
 
-# 個別に更新（必要なものだけ）
+# 個別に更新(必要なものだけ)
 brew upgrade --cask visual-studio-code
 brew upgrade --cask quarto
 brew upgrade --cask zotero
