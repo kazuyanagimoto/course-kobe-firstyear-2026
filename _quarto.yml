@@ -36,3 +36,6 @@ knitr:
     fig.height: 3
     out.width: 90%
     collapse: true
+
+
+freeze: auto
