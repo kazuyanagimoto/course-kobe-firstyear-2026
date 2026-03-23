@@ -22,6 +22,7 @@ bibliographystyle: chicago-author-date
 
 format:
   html:
+    lightbox: true
     number-sections: true
     number-depth: 2
     theme:

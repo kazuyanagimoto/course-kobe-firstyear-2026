@@ -1,0 +1,12 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+mov_files|stem|5b8d9399d6d1c44a|7cb6536ec3b7ff12|ac038c6577e35fc5|-1797586220||t20535.2307994591s|s124b|124|rds|local|vector||mov_files_c97690bef981d3cd*mov_files_34e9b1eb1583c5a2*mov_files_68e8e9ae21b31bda*mov_files_055b08cc11ff2c3f|0.005||
+gif_49a5e7ad7be10941|branch|e3a4ca01cb875085|95c3b8a9341ee69b|c625e37a5992ece8|1182258610|static/img/1_create_collection.gif|t20535.2184994544s|s1117868b|1117868|file|local|vector|gif||0.014|error in running command. error in running command|
+here_rel|function|c5fa528ca034d75b
+.Random.seed|object|c4e2244fe759d7d1
+mov_to_gif|function|fb290e0062c9a5b2
+gif_262407fc65fefdc6|branch|6b78548bf9fd4e7b|95c3b8a9341ee69b|c625e37a5992ece8|1134599840|static/img/2_import_doi.gif|t20535.2317212284s|s1344793b|1344793|file|local|vector|gif||4.041||
+gif_85a8a007a33f2113|branch|4623a7cbe64d8795|95c3b8a9341ee69b|c625e37a5992ece8|886208167|static/img/2_import_drag.gif|t20535.231745969s|s704098b|704098|file|local|vector|gif||2.133||
+gif_858763c3280d428c|branch|3a5563e9fc470cad|95c3b8a9341ee69b|c625e37a5992ece8|-214778957|static/img/2_import_extension.gif|t20535.2317604187s|s684226b|684226|file|local|vector|gif||1.239||
+gif|pattern|885ad80863cda870|95c3b8a9341ee69b||-1640353609||||2733117|file|local|vector||gif_49a5e7ad7be10941*gif_262407fc65fefdc6*gif_85a8a007a33f2113*gif_858763c3280d428c|7.413||
+static|stem|759c8af8469a4412|02d0e7efc47315f8|731c9ae2c960a742|833795528|static/img/1_create_collection.gif*static/img/2_import_doi.gif*static/img/2_import_drag.gif*static/img/2_import_extension.gif*static/img/jeremy-bishop-UPRWUJbQHR0-unsplash.jpg*static/mov/1_create_collection.mov*static/mov/2_import_doi.mov*static/mov/2_import_drag.mov*static/mov/2_import_extension.mov*static/schedule.csv|t20535.2317604187s|s51377948b|51377948|file|local|vector|||0.001||
+website|stem|62f66ed8f512b3ca|2b53c1489bd3d844|b6d96b620380c4fb|-385122080|_book/index.html|t20535.2317839061s|s39645b|39645|file|local|vector|||1.953||
