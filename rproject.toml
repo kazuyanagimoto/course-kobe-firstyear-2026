@@ -1,0 +1,66 @@
+# this config was migrated from renv.lock on 2026-04-01
+[project]
+name = "course-first-year-2025"
+r_version = "4.5"
+
+repositories = [
+    { alias = "CRAN", url = "https://cloud.r-project.org/"}
+]
+
+dependencies = [
+    { name = "R6", repository = "CRAN" },
+    { name = "Rcpp", repository = "CRAN" },
+    { name = "backports", repository = "CRAN" },
+    { name = "base64url", repository = "CRAN" },
+    { name = "cachem", repository = "CRAN" },
+    { name = "callr", repository = "CRAN" },
+    { name = "cli", repository = "CRAN" },
+    { name = "cpp11", repository = "CRAN" },
+    { name = "evaluate", repository = "CRAN" },
+    { name = "fastmap", repository = "CRAN" },
+    { name = "fontawesome", repository = "CRAN" },
+    { name = "generics", repository = "CRAN" },
+    { name = "glue", repository = "CRAN" },
+    { name = "jquerylib", repository = "CRAN" },
+    { name = "jsonlite", repository = "CRAN" },
+    { name = "lifecycle", repository = "CRAN" },
+    { name = "memoise", repository = "CRAN" },
+    { name = "mime", repository = "CRAN" },
+    { name = "pkgconfig", repository = "CRAN" },
+    { name = "prettyunits", repository = "CRAN" },
+    { name = "processx", repository = "CRAN" },
+    { name = "rlang", repository = "CRAN" },
+    { name = "rprojroot", repository = "CRAN" },
+    { name = "sass", repository = "CRAN" },
+    { name = "tidyselect", repository = "CRAN" },
+    { name = "utf8", repository = "CRAN" },
+    { name = "withr", repository = "CRAN" },
+    { name = "base64enc", repository = "CRAN" },
+    { name = "bslib", repository = "CRAN" },
+    { name = "data.table", repository = "CRAN" },
+    { name = "digest", repository = "CRAN" },
+    { name = "dplyr", repository = "CRAN" },
+    { name = "fs", repository = "CRAN" },
+    { name = "here", repository = "CRAN" },
+    { name = "highr", repository = "CRAN" },
+    { name = "htmltools", repository = "CRAN" },
+    { name = "igraph", repository = "CRAN" },
+    { name = "knitr", repository = "CRAN" },
+    { name = "later", repository = "CRAN" },
+    { name = "magrittr", repository = "CRAN" },
+    { name = "pillar", repository = "CRAN" },
+    { name = "ps", repository = "CRAN" },
+    { name = "quarto", repository = "CRAN" },
+    { name = "rappdirs", repository = "CRAN" },
+    { name = "rmarkdown", repository = "CRAN" },
+    { name = "rstudioapi", repository = "CRAN" },
+    { name = "secretbase", repository = "CRAN" },
+    { name = "tarchetypes", repository = "CRAN" },
+    { name = "targets", repository = "CRAN" },
+    { name = "tibble", repository = "CRAN" },
+    { name = "tinytable", repository = "CRAN" },
+    { name = "tinytex", repository = "CRAN" },
+    { name = "vctrs", repository = "CRAN" },
+    { name = "xfun", repository = "CRAN" },
+    { name = "yaml", repository = "CRAN" }
+]
