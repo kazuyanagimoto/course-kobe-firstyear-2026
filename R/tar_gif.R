@@ -1,5 +1,5 @@
 tar_gif <- tar_plan(
-  tar_target(mov_files, {
+  tar_files(mov_files, {
     list.files(
       here_rel("static", "mov"),
       pattern = "\\.mov$",
