@@ -8,8 +8,6 @@ project:
 
 book:
   title: 基礎演習
-  search: false
-  repo-url: https://github.com/kazuyanagimoto/course-kobe-firstyear-2026
   author:
     - name: 柳本和春
       email: yanagimoto@econ.kobe-u.ac.jp
@@ -24,6 +22,20 @@ book:
   appendices:
     - 11-quarto.qmd
     - references.qmd
+  search: false
+  site-url: https://kazuyanagimoto.com/course-kobe-firstyear-2026
+  repo-url: https://github.com/kazuyanagimoto/course-kobe-firstyear-2026
+  favicon: static/img/logo.svg
+  twitter-card:
+    image: static/img/sns-card.drawio.png
+    card-style: summary_large_image
+    creator: kazuyanagimoto
+  open-graph:
+    image: static/img/sns-card.drawio.png
+    locale: ja_JP
+  sidebar:
+    logo: static/img/logo.svg
+    search: false
 
 bibliography: references.bib
 bibliographystyle: chicago-author-date

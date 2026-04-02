@@ -57,6 +57,7 @@ _book/
 # Others
 .DS_Store
 static/mov/
+.playwright-mcp/
 
 # rv
 rv/library/

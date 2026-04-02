@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -3 189 216" width="189" height="216">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0e2f92"/>
+      <stop offset="100%" stop-color="#0a1f5c"/>
+    </linearGradient>
+    <clipPath id="hexClip">
+      <polygon points="90.5,1 181,53 181,157 90.5,209 0,157 0,53"/>
+    </clipPath>
+  </defs>
+
+  <!-- Hex background -->
+  <polygon points="90.5,1 181,53 181,157 90.5,209 0,157 0,53"
+           fill="url(#bgGrad)" stroke="#c40000" stroke-width="6" stroke-linejoin="round"/>
+
+  <!-- Mountain silhouette (Rokko) -->
+  <polygon points="0,140 20,118 40,125 55,108 75,115 90,98 105,110 120,105 135,112 155,100 170,115 181,108 181,157 90.5,209 0,157"
+           fill="#16832e" opacity="0.35" clip-path="url(#hexClip)"/>
+  <polygon points="0,148 25,130 50,138 70,122 90,130 110,118 130,128 150,120 165,132 181,122 181,157 90.5,209 0,157"
+           fill="#16832e" opacity="0.25" clip-path="url(#hexClip)"/>
+
+  <!-- Clock Tower Building (stylized Kobe Univ admin building) -->
+  <g transform="translate(90.5, 108) scale(1.2)" fill="#ffffff" opacity="0.95">
+    <!-- Main building body -->
+    <rect x="-38" y="-10" width="76" height="45" rx="1"/>
+    <!-- Roof line -->
+    <polygon points="-42,-10 42,-10 38,-16 -38,-16"/>
+    <!-- Central tower base -->
+    <rect x="-10" y="-30" width="20" height="20" rx="1"/>
+    <!-- Tower roof (triangular) -->
+    <polygon points="-12,-30 12,-30 0,-42"/>
+    <!-- Tower spire -->
+    <rect x="-1" y="-48" width="2" height="6"/>
+    <!-- Clock face -->
+    <circle cx="0" cy="-20" r="5" fill="#0e2f92" opacity="0.8"/>
+    <circle cx="0" cy="-20" r="3.8" fill="none" stroke="#ffffff" stroke-width="0.5"/>
+    <!-- Clock hands -->
+    <line x1="0" y1="-20" x2="0" y2="-23" stroke="#ffffff" stroke-width="0.7" stroke-linecap="round"/>
+    <line x1="0" y1="-20" x2="2" y2="-19" stroke="#ffffff" stroke-width="0.7" stroke-linecap="round"/>
+    <!-- Windows row 1 -->
+    <rect x="-34" y="-3" width="5" height="7" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <rect x="-26" y="-3" width="5" height="7" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <rect x="-18" y="-3" width="5" height="7" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <rect x="13" y="-3" width="5" height="7" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <rect x="21" y="-3" width="5" height="7" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <rect x="29" y="-3" width="5" height="7" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <!-- Windows row 2 -->
+    <rect x="-34" y="10" width="5" height="7" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <rect x="-26" y="10" width="5" height="7" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <rect x="-18" y="10" width="5" height="7" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <rect x="13" y="10" width="5" height="7" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <rect x="21" y="10" width="5" height="7" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <rect x="29" y="10" width="5" height="7" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <!-- Entrance -->
+    <rect x="-5" y="20" width="10" height="15" rx="5" fill="#0e2f92" opacity="0.5"/>
+    <!-- Tower windows -->
+    <rect x="-5" y="-12" width="4" height="5" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <rect x="1" y="-12" width="4" height="5" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <!-- Side wings -->
+    <rect x="-52" y="2" width="14" height="33" rx="1"/>
+    <polygon points="-54,2 -36,2 -38,-3 -52,-3"/>
+    <rect x="38" y="2" width="14" height="33" rx="1"/>
+    <polygon points="36,2 54,2 52,-3 38,-3"/>
+    <!-- Wing windows -->
+    <rect x="-49" y="8" width="4" height="5" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <rect x="-43" y="8" width="4" height="5" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <rect x="-49" y="18" width="4" height="5" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <rect x="-43" y="18" width="4" height="5" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <rect x="41" y="8" width="4" height="5" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <rect x="47" y="8" width="4" height="5" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <rect x="41" y="18" width="4" height="5" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+    <rect x="47" y="18" width="4" height="5" rx="0.5" fill="#0e2f92" opacity="0.5"/>
+  </g>
+</svg>
