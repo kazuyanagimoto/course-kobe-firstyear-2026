@@ -154,7 +154,17 @@
     "href": "02-citation.html#quartoによる引用",
     "title": "2  著作権と引用",
     "section": "2.4 Quartoによる引用",
-    "text": "2.4 Quartoによる引用\n\n引用スタイルの指定\n---\ntitle: レポートタイトル\nbibliography: references.bib\nbibliographystyle: chicago-author-date\n---\nQuartoのYAMLヘッダで bibliography にBibTeXファイルのパスを指定し, bibliographystyle で引用スタイルを指定します. これで, Quartoの [@...] 形式で文中引用ができるようになります. その他のスタイルもCSLファイルという形式で指定できますが, 詳細はQuartoのドキュメント を参照してください.\n\n\n文中引用\n@key または [@key] の形で引用します.\n\n@hamermesh1994 → Hamermesh and Biddle (1994)\n[@hamermesh1994] → (Hamermesh and Biddle 1994)\n[@hamermesh1994; @hitsch2010] → (Hamermesh and Biddle 1994; Hitsch et al. 2010)\n\n\n\n\n\nHamermesh, Daniel S., and Jeff E. Biddle. 1994. “Beauty and the Labor Market.” The American Economic Review 84 (5): 1174–94. https://www.jstor.org/stable/2117767.\n\n\nHitsch, Gunter J., Ali Hortaçsu, and Dan Ariely. 2010. “Matching and Sorting in Online Dating.” American Economic Review 100 (1): 130–63. https://doi.org/10.1257/aer.100.1.130.",
+    "text": "2.4 Quartoによる引用\n\n引用スタイルの指定\n---\ntitle: レポートタイトル\nbibliography: references.bib\nbibliographystyle: chicago-author-date\n---\nQuartoのYAMLヘッダで bibliography にBibTeXファイルのパスを指定し, bibliographystyle で引用スタイルを指定します. これで, Quartoの [@...] 形式で文中引用ができるようになります. その他のスタイルもCSLファイルという形式で指定できますが, 詳細はQuartoのドキュメント を参照してください.\n\n\n文中引用\n@key または [@key] の形で引用します.\n\n@hamermesh1994 → Hamermesh and Biddle (1994)\n[@hamermesh1994] → (Hamermesh and Biddle 1994)\n[@hamermesh1994; @hitsch2010] → (Hamermesh and Biddle 1994; Hitsch et al. 2010)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>著作権と引用</span>"
+    ]
+  },
+  {
+    "objectID": "02-citation.html#演習",
+    "href": "02-citation.html#演習",
+    "title": "2  著作権と引用",
+    "section": "2.5 演習",
+    "text": "2.5 演習\n\n\n\n\n\n\nTip演習: Quartoによる引用\n\n\n\n\n適当な場所に演習用のフォルダを作ってください (例: 02-exercise).\n02-exercise.qmd をダウンロードして, そのフォルダに入れてください.\n02-exercise.qmd を開いて, 中に書かれている指示に従ってレポートを作成してください.\n\n\n\n\n\n\n\nHamermesh, Daniel S., and Jeff E. Biddle. 1994. “Beauty and the Labor Market.” The American Economic Review 84 (5): 1174–94. https://www.jstor.org/stable/2117767.\n\n\nHitsch, Gunter J., Ali Hortaçsu, and Dan Ariely. 2010. “Matching and Sorting in Online Dating.” American Economic Review 100 (1): 130–63. https://doi.org/10.1257/aer.100.1.130.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>著作権と引用</span>"
     ]
@@ -167,6 +177,28 @@
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput. J. (USA) 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.↩︎",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>著作権と引用</span>"
+    ]
+  },
+  {
+    "objectID": "11-quarto.html",
+    "href": "11-quarto.html",
+    "title": "Appendix A — Quarto (応用編)",
+    "section": "",
+    "text": "A.1 スライド\nQuartoでスライドを作る場合, PowerPoint, Beamer, Reveal.js などの形式を選ぶことができます. Quartoを使う人は Reveal.js 形式を選ぶことが多いですが, HTMLベースであるため扱いに癖があります. ここでは, Typst 形式でスライドを作る方法を紹介します. その他の方法はQuartoのドキュメントを参照してください. 基本的に文法は変わらず, YAMLフロントマターの format で revealjs などを選ぶことでスライド形式で出力されるようになります.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Quarto (応用編)</span>"
+    ]
+  },
+  {
+    "objectID": "11-quarto.html#sec-slides",
+    "href": "11-quarto.html#sec-slides",
+    "title": "Appendix A — Quarto (応用編)",
+    "section": "",
+    "text": "quarto-clean-typst\nquarto-clean-typst は, 私 (柳本和春) が作ったQuartoでTypst形式のスライドを作るためのテンプレートです. ここでは最小限の機能を紹介しますが, 詳細は Zennの記事 を参照してください.\n\nインストールはプロジェクトを開いた状態で, ターミナルから\nquarto install extension kazuyanagimoto/quarto-clean-typst\nとして Y を入力するだけです. プロジェクトディレクトリに _extensions/kazuyanagimoto/clean/ というディレクトリができていれば成功です.\n\n\nスライドの作成\nYAMLフロントマターに format: clean-typst と書くと, Typst形式のスライドが出力されるようになります. そのほかは通常のQuartoと同じような内容を設定できます.\n基本的には, Quartoのスライド記法 (特にReveal.jsの) を使います. h2レベルのヘッダーがスライドの区切りかつスライドタイトルであり, h1がセクションタイトル, h3がスライドのサブタイトルとなります.\n\n\nslides.qmd\n\n# Section Slide as Header Level 1\n\n## Slide Title as Header Level 2\n\n### Subtitle as Header Level 3\n\nYou can put any content here, including text, images, tables, code blocks, etc.\n\n- first unorder list item\n    - A sub item\n\n1. first ordered list item\n    1. A sub item\n\nNext, we'll brief review some theme-specific components.\n\n- Note that _all_ of the standard Quarto + Typst\n[features](https://quarto.org/docs/output-formats/typst.html) \ncan be used with this theme\n- Also, all the [Touying](https://touying-typ.github.io) features can be used by **Typst native code**.\n\n\n\n\n局所的なカスタマイズ\nスライドを作成する際, 一部のスライドだけスタイルを変更したり, 行間を調整したいことがよくあります. QuartoのTypst CSSを用いたり, 独自機能の {{&lt; v 1em &gt;}} を使うことで局所的なカスタマイズが可能です.\n\n\nslides.qmd\n\n## Ad-hoc Styling\n\n### Typst CSS\n\n- Quarto supports [Typst CSS](https://quarto.org/docs/advanced/typst/typst-css.html) for simple styling\n- You can change [colors]{style=\"color: #009F8C\"}, [backgrounds]{style=\"background-color: #F0F0F0\"}, and [opacity]{style=\"opacity: 0.5\"} for `span` elements\n\n::: {style=\"font-size: 30pt; font-family: 'Times New Roman'\"}\n\nYou can also change the font size and family for `div` elements.\n\n:::\n\n{{&lt; v 1em &gt;}}\n\n### Vertical Spacing\n\n- A helper shortcode `{{&lt; v DIST &gt;}}` is provided to add vertical spacing\n- This is converted to a Typst code `#v(DIST)` internally.\n\n{{&lt; v 2em &gt;}}\n\nThis is a `2em` vertical spaced from above.\n\n\n\n\n演習\n\n\n\n\n\n\nTip演習: Quartoでスライドを作る\n\n\n\n\n適当な場所に演習用のフォルダを作ってください (例: 11-exercise).\n11-1-exercise.qmd をダウンロードして, そのフォルダに入れてください.\nQuartoのextension quarto install extension kazuyanagimoto/quarto-clean-typst によって quarto-clean-typst をインストールしてください.\n11-1-exercise.qmd をコンパイルしてみてください. うまくいけば, 11-1-exercise.pdf というファイルが生成されるはずです.\n11-1-exercise.qmd を開いて, 中に書かれている指示に従ってスライドを作成してください.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Quarto (応用編)</span>"
     ]
   },
   {

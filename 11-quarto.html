@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>参考文献 – 基礎演習</title>
+<title>Appendix A — Quarto (応用編) – 基礎演習</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,31 +23,48 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
-<link href="./11-quarto.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./02-citation.html" rel="prev">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -59,6 +76,9 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-cf829c8e5e469ecfa1daf7cb4fec641f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -87,7 +107,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-quarto.html">Appendices</a></li><li class="breadcrumb-item"><a href="./references.html">参考文献</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-quarto.html">Appendices</a></li><li class="breadcrumb-item"><a href="./11-quarto.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Quarto (応用編)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -133,13 +153,13 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./11-quarto.html" class="sidebar-item-text sidebar-link">
+  <a href="./11-quarto.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Quarto (応用編)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">参考文献</span></a>
   </div>
 </li>
@@ -150,15 +170,27 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sec-slides" id="toc-sec-slides" class="nav-link active" data-scroll-target="#sec-slides"><span class="header-section-number">A.1</span> スライド</a>
+  <ul class="collapse">
+  <li><a href="#quarto-clean-typst" id="toc-quarto-clean-typst" class="nav-link" data-scroll-target="#quarto-clean-typst">quarto-clean-typst</a></li>
+  <li><a href="#スライドの作成" id="toc-スライドの作成" class="nav-link" data-scroll-target="#スライドの作成">スライドの作成</a></li>
+  <li><a href="#局所的なカスタマイズ" id="toc-局所的なカスタマイズ" class="nav-link" data-scroll-target="#局所的なカスタマイズ">局所的なカスタマイズ</a></li>
+  <li><a href="#演習" id="toc-演習" class="nav-link" data-scroll-target="#演習">演習</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-quarto.html">Appendices</a></li><li class="breadcrumb-item"><a href="./references.html">参考文献</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-quarto.html">Appendices</a></li><li class="breadcrumb-item"><a href="./11-quarto.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Quarto (応用編)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">参考文献</h1>
+<h1 class="title">Appendix A — Quarto (応用編)</h1>
 </div>
 
 
@@ -175,20 +207,106 @@ div.csl-indent {
 </header>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-hamermesh1994" class="csl-entry" role="listitem">
-Hamermesh, Daniel S., and Jeff E. Biddle. 1994. <span>“Beauty and the
-<span>Labor Market</span>.”</span> <em>The American Economic Review</em>
-84 (5): 1174–94. <a href="https://www.jstor.org/stable/2117767">https://www.jstor.org/stable/2117767</a>.
+<section id="sec-slides" class="level2" data-number="A.1">
+<h2 data-number="A.1" class="anchored" data-anchor-id="sec-slides"><span class="header-section-number">A.1</span> スライド</h2>
+<p>Quartoでスライドを作る場合, PowerPoint, Beamer, Reveal.js などの形式を選ぶことができます. Quartoを使う人は Reveal.js 形式を選ぶことが多いですが, HTMLベースであるため扱いに癖があります. ここでは, Typst 形式でスライドを作る方法を紹介します. その他の方法は<a href="https://quarto.org/docs/presentations/">Quartoのドキュメント</a>を参照してください. 基本的に文法は変わらず, YAMLフロントマターの <code>format</code> で <code>revealjs</code> などを選ぶことでスライド形式で出力されるようになります.</p>
+<section id="quarto-clean-typst" class="level3">
+<h3 class="anchored" data-anchor-id="quarto-clean-typst">quarto-clean-typst</h3>
+<p><a href="https://github.com/kazuyanagimoto/quarto-clean-typst">quarto-clean-typst</a> は, 私 (柳本和春) が作ったQuartoでTypst形式のスライドを作るためのテンプレートです. ここでは最小限の機能を紹介しますが, 詳細は <a href="https://zenn.dev/nicetak/articles/quarto-typst-slides">Zennの記事</a> を参照してください.</p>
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/aecc63d3b8e14cb39729197c4d396066" title="Quarto Clean Theme" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
+<p>インストールはプロジェクトを開いた状態で, ターミナルから</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install extension kazuyanagimoto/quarto-clean-typst</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>として <code>Y</code> を入力するだけです. プロジェクトディレクトリに <code>_extensions/kazuyanagimoto/clean/</code> というディレクトリができていれば成功です.</p>
+</section>
+<section id="スライドの作成" class="level3">
+<h3 class="anchored" data-anchor-id="スライドの作成">スライドの作成</h3>
+<p>YAMLフロントマターに <code>format: clean-typst</code> と書くと, Typst形式のスライドが出力されるようになります. そのほかは通常のQuartoと同じような内容を設定できます.</p>
+<p>基本的には, Quartoのスライド記法 (特にReveal.jsの) を使います. <code>h2</code>レベルのヘッダーがスライドの区切りかつスライドタイトルであり, <code>h1</code>がセクションタイトル, <code>h3</code>がスライドのサブタイトルとなります.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>slides.qmd</strong></pre>
 </div>
-<div id="ref-hitsch2010" class="csl-entry" role="listitem">
-Hitsch, Gunter J., Ali Hortaçsu, and Dan Ariely. 2010. <span>“Matching
-and <span>Sorting</span> in <span>Online Dating</span>.”</span>
-<em>American Economic Review</em> 100 (1): 130–63. <a href="https://doi.org/10.1257/aer.100.1.130">https://doi.org/10.1257/aer.100.1.130</a>.
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-filename="slides.qmd"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Section Slide as Header Level 1</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Slide Title as Header Level 2</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">### Subtitle as Header Level 3</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>You can put any content here, including text, images, tables, code blocks, etc.</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>first unorder list item</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>A sub item</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>first ordered list item</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ss">    1. </span>A sub item</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>Next, we'll brief review some theme-specific components.</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Note that _all_ of the standard Quarto + Typst</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">features</span><span class="co">](https://quarto.org/docs/output-formats/typst.html)</span> </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>can be used with this theme</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Also, all the <span class="co">[</span><span class="ot">Touying</span><span class="co">](https://touying-typ.github.io)</span> features can be used by **Typst native code**.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><a href="./static/img/11-quarto/slides_example.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="./static/img/11-quarto/slides_example.png" class="img-fluid"></a></p>
+</section>
+<section id="局所的なカスタマイズ" class="level3">
+<h3 class="anchored" data-anchor-id="局所的なカスタマイズ">局所的なカスタマイズ</h3>
+<p>スライドを作成する際, 一部のスライドだけスタイルを変更したり, 行間を調整したいことがよくあります. Quartoの<a href="https://quarto.org/docs/advanced/typst/typst-css.html">Typst CSS</a>を用いたり, 独自機能の <code>{{&lt; v 1em &gt;}}</code> を使うことで局所的なカスタマイズが可能です.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>slides.qmd</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="slides.qmd"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ad-hoc Styling</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### Typst CSS</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quarto supports <span class="co">[</span><span class="ot">Typst CSS</span><span class="co">](https://quarto.org/docs/advanced/typst/typst-css.html)</span> for simple styling</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You can change <span class="co">[</span><span class="ot">colors</span><span class="co">]</span>{style="color: #009F8C"}, <span class="co">[</span><span class="ot">backgrounds</span><span class="co">]</span>{style="background-color: #F0F0F0"}, and <span class="co">[</span><span class="ot">opacity</span><span class="co">]</span>{style="opacity: 0.5"} for <span class="in">`span`</span> elements</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>::: {style="font-size: 30pt; font-family: 'Times New Roman'"}</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>You can also change the font size and family for <span class="in">`div`</span> elements.</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>{{&lt; v 1em &gt;}}</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">### Vertical Spacing</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A helper shortcode <span class="in">`{{&lt; v DIST &gt;}}`</span> is provided to add vertical spacing</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>This is converted to a Typst code <span class="in">`#v(DIST)`</span> internally.</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>{{&lt; v 2em &gt;}}</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>This is a <span class="in">`2em`</span> vertical spaced from above.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><a href="./static/img/11-quarto/adhoc_styling.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="./static/img/11-quarto/adhoc_styling.png" class="img-fluid"></a></p>
+</section>
+<section id="演習" class="level3">
+<h3 class="anchored" data-anchor-id="演習">演習</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>演習: Quartoでスライドを作る
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>適当な場所に演習用のフォルダを作ってください (例: <code>11-exercise</code>).</li>
+<li><a href="./exercise/11-1-exercise.qmd">11-1-exercise.qmd</a> をダウンロードして, そのフォルダに入れてください.</li>
+<li>Quartoのextension <code>quarto install extension kazuyanagimoto/quarto-clean-typst</code> によって <code>quarto-clean-typst</code> をインストールしてください.</li>
+<li><code>11-1-exercise.qmd</code> をコンパイルしてみてください. うまくいけば, <code>11-1-exercise.pdf</code> というファイルが生成されるはずです.</li>
+<li><code>11-1-exercise.qmd</code> を開いて, 中に書かれている指示に従ってスライドを作成してください.</li>
+</ol>
 </div>
 </div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -593,15 +711,50 @@ and <span>Sorting</span> in <span>Online Dating</span>.”</span>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./11-quarto.html" class="pagination-link" aria-label="Quarto (応用編)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Quarto (応用編)</span></span>
+      <a href="./02-citation.html" class="pagination-link" aria-label="著作権と引用">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">著作権と引用</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link" aria-label="参考文献">
+        <span class="nav-page-text">参考文献</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
 <script src="static/mermaid-icon.js"></script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
