@@ -1,0 +1,14 @@
+/*-- scss:rules --*/
+
+// Mermaid icon shape: remove grey background from label
+.icon-shape {
+  rect {
+    fill: transparent !important;
+  }
+  .labelBkg {
+    background-color: transparent !important;
+  }
+  p {
+    background-color: transparent !important;
+  }
+}

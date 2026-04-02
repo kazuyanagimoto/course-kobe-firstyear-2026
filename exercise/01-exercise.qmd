@@ -1,0 +1,35 @@
+---
+title: "Exercise 1: Quartoの使い方"
+date: today
+date-format: "YYYY年M月D日"
+author:
+  - name: YOUR NAME
+    email: 000000@gsuite.kobe-u.ac.jp
+format: typst
+brand:
+  typography:      
+    fonts:
+      - family: Noto Serif JP
+        source: google
+      - family: IBM Plex Sans JP
+        source: google
+    base: Noto Serif JP
+    headings:
+      family: IBM Plex Sans JP
+      weight: regular
+number-sections: true
+---
+
+<!-- この部分はコメントです. 消しても消さなくても問題ありません. ------------------------
+
+次のことを行なった上で, 正しくレポートがコンパイルできているか確認してください.
+
+1. VSCodeのQuarto拡張機能を使って, レポートをコンパイルする (ショートカット: `Ctrl + Shift + K` または `Cmd + Shift + K`). コンパイル後に `report.pdf` が生成されるはずです.
+2. YAMLフロントマターの `author` フィールドを自分の名前とメールアドレスに書き換える
+3. h2 (##) や h3 (###) の見出しを適当につける
+4. 文章を適当に書いてみる. 箇条書きや数式も試してみてください.
+5. 画像や表を入れてみてください.
+    - 適当な画像がなければ, https://www.metmuseum.org/art/collection/search/45434 をダウンロードしてみてください. これは, メトロポリタン美術館が公開しているパブリックドメインの画像の一つです.
+6. 正しくコンパイルされるか確認してみてください.
+
+------------------------------------------------------------------------------->
