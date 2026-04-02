@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.35">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; 著作権と引用 – 基礎演習</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<link href="./references.html" rel="next">
+<link href="./01-quarto.html" rel="prev">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-747c93cda6b922015c53ae09f81ec4ae.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-citation.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">著作権と引用</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">基礎演習</a> 
+    </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">この授業について</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Quarto の使い方</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-citation.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">著作権と引用</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">参考文献</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#著作権" id="toc-著作権" class="nav-link active" data-scroll-target="#著作権"><span class="header-section-number">2.1</span> 著作権</a>
+  <ul class="collapse">
+  <li><a href="#ライセンス" id="toc-ライセンス" class="nav-link" data-scroll-target="#ライセンス">ライセンス</a></li>
+  <li><a href="#引用" id="toc-引用" class="nav-link" data-scroll-target="#引用">引用</a></li>
+  </ul></li>
+  <li><a href="#引用の種類と書き方" id="toc-引用の種類と書き方" class="nav-link" data-scroll-target="#引用の種類と書き方"><span class="header-section-number">2.2</span> 引用の種類と書き方</a>
+  <ul class="collapse">
+  <li><a href="#直接引用" id="toc-直接引用" class="nav-link" data-scroll-target="#直接引用">直接引用</a></li>
+  <li><a href="#要約言い換えパラフレーズ" id="toc-要約言い換えパラフレーズ" class="nav-link" data-scroll-target="#要約言い換えパラフレーズ">要約・言い換え(パラフレーズ)</a></li>
+  <li><a href="#孫引き" id="toc-孫引き" class="nav-link" data-scroll-target="#孫引き">孫引き</a></li>
+  <li><a href="#引用スタイル" id="toc-引用スタイル" class="nav-link" data-scroll-target="#引用スタイル">引用スタイル</a></li>
+  </ul></li>
+  <li><a href="#zoteroによる文献管理" id="toc-zoteroによる文献管理" class="nav-link" data-scroll-target="#zoteroによる文献管理"><span class="header-section-number">2.3</span> Zoteroによる文献管理</a>
+  <ul class="collapse">
+  <li><a href="#コレクションを作る" id="toc-コレクションを作る" class="nav-link" data-scroll-target="#コレクションを作る">1. コレクションを作る</a></li>
+  <li><a href="#zoteroに文献を入れる" id="toc-zoteroに文献を入れる" class="nav-link" data-scroll-target="#zoteroに文献を入れる">2. Zoteroに文献を入れる</a></li>
+  <li><a href="#メタデータを確認修正する" id="toc-メタデータを確認修正する" class="nav-link" data-scroll-target="#メタデータを確認修正する">3. メタデータを確認・修正する</a></li>
+  <li><a href="#references.bib-にエクスポートする" id="toc-references.bib-にエクスポートする" class="nav-link" data-scroll-target="#references.bib-にエクスポートする">4. <code>references.bib</code> にエクスポートする</a></li>
+  </ul></li>
+  <li><a href="#quartoによる引用" id="toc-quartoによる引用" class="nav-link" data-scroll-target="#quartoによる引用"><span class="header-section-number">2.4</span> Quartoによる引用</a>
+  <ul class="collapse">
+  <li><a href="#引用スタイルの指定" id="toc-引用スタイルの指定" class="nav-link" data-scroll-target="#引用スタイルの指定">引用スタイルの指定</a></li>
+  <li><a href="#文中引用" id="toc-文中引用" class="nav-link" data-scroll-target="#文中引用">文中引用</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-citation" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">著作権と引用</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>この章では, レポートやスライドを作るときに必要な「引用」の基本を学びます.</p>
+<section id="著作権" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="著作権"><span class="header-section-number">2.1</span> 著作権</h2>
+<p>著作権は, 文章・画像・図表・写真・音楽・プログラムなどの「著作物」を保護します. 他人の著作物を利用するときは, 原則として許可(ライセンス)が必要ですが, 一定の条件を満たす「引用」は例外として許されます (著作権法 第32条)</p>
+<section id="ライセンス" class="level3">
+<h3 class="anchored" data-anchor-id="ライセンス">ライセンス</h3>
+<p>著作物を利用するための許可のことを「ライセンス」といいます. ライセンスには, 著作物をどのように利用できるか(商用利用の可否, 改変の可否など)や, 利用するときに何を守る必要があるか(出典表示の要否など)が定められています.</p>
+<div id="exm-license-cc" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.1 (<a href="https://creativecommons.jp/licenses">Creative Commons</a>)</strong></span> Creative Commons(CC)は, 「出典表示が必要か」「改変してよいか」「商用利用してよいか」などの条件を, 分かりやすいマークで示すためのライセンスです. 下の CC マークをクリックすると, それぞれのライセンス概要に移動できます.</p>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="https://creativecommons.org/licenses/by/4.0/deed.ja"><img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja"><img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="https://creativecommons.org/licenses/by-nd/4.0/deed.ja"><img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nd.svg" class="img-fluid"></a></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="https://creativecommons.org/licenses/by-nc/4.0/deed.ja"><img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc.svg" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja"><img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ja"><img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.svg" class="img-fluid"></a></p>
+</div>
+</div>
+</div>
+<p>レポート等で使うときは, マークの見た目だけで判断せず, 「表示(BY)」「非営利(NC)」「改変禁止(ND)」「継承(SA)」の意味を確認して, 自分の用途に合うかチェックしましょう.</p>
+</div>
+<div id="exm-license-unsplash" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.2 (<a href="https://unsplash.com/">Unsplash</a>)</strong></span> Unsplashは, 商用・非商用を問わず無料で高品質な写真を提供する素材サイトです. <a href="https://unsplash.com/ja/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9">ライセンス</a> の内容を確認してみてください.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./static/img/jeremy-bishop-UPRWUJbQHR0-unsplash.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Photo by Jeremy Bishop on Unsplash."><img src="./static/img/jeremy-bishop-UPRWUJbQHR0-unsplash.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="Photo by Jeremy Bishop on Unsplash."></a></p>
+</figure>
+</div>
+<figcaption>Photo by <a href="https://unsplash.com/photos/a-person-riding-a-bike-on-the-beach-at-sunset-UPRWUJbQHR0">Jeremy Bishop</a> on <a href="https://unsplash.com">Unsplash</a>.</figcaption>
+</figure>
+</div>
+</div>
+<p>そのほか, <a href="https://www.irasutoya.com/p/terms.html">いらすとや</a> なども無料で利用できる素材サイトですが, 利用規約をよく確認してから使いましょう. またAI生成画像の利用も, 著作権やライセンスの問題が複雑であることを理解してから行うのが大事です.</p>
+<div id="exr-license-this" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2.1 (ウェブサイト)</strong></span> <a href="https://kazuyanagimoto.com/course-first-year-2026">このウェブサイト</a> 自体も, 著作権者である私 (柳本和春) が, ライセンスを付与して公開しています. GitHubの<a href="https://github.com/kazuyanagimoto/course-first-year-2026">レポジトリ</a> でライセンスを確認してみてください.</p>
+</div>
+</section>
+<section id="引用" class="level3">
+<h3 class="anchored" data-anchor-id="引用">引用</h3>
+<p>著作権法第32条では, 「公正な慣行に合致」し, 「引用の目的上正当な範囲内」であれば, 著作物を引用することができると定められています. 実用上, レポートなどでは, 次の点を満たしているかをチェックすると安全です.</p>
+<ul>
+<li><strong>引用が必要</strong>: 引用しないと議論が成り立たない</li>
+<li><strong>主従関係が明確</strong>: 自分の文章が主, 引用は従(引用の分量が過剰にならない)</li>
+<li><strong>引用部分が区別できる</strong>: かぎ括弧, 引用ブロック, 図表のキャプション等で明確に区切る</li>
+<li><strong>改変しない</strong>: 原文を勝手に書き換えない(省略は…等で示す)</li>
+<li><strong>出所を示す</strong>: どこから持ってきたかを明記する(著者・年, ページ, URL など)</li>
+</ul>
+</section>
+</section>
+<section id="引用の種類と書き方" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="引用の種類と書き方"><span class="header-section-number">2.2</span> 引用の種類と書き方</h2>
+<section id="直接引用" class="level3">
+<h3 class="anchored" data-anchor-id="直接引用">直接引用</h3>
+<ul>
+<li>引用箇所は <strong>「」</strong> や引用ブロックで囲む</li>
+<li>ページ番号がある資料は, できるだけページ (または章・節) も示す</li>
+<li>引用は必要最小限にとどめる(主従関係を保つため)</li>
+</ul>
+<div id="exm-quotation" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.3 (直接引用)</strong></span> &nbsp;</p>
+<ul>
+<li>先行研究では「…」と述べられている(<span class="citation" data-cites="hamermesh1994">Hamermesh and Biddle (<a href="references.html#ref-hamermesh1994" role="doc-biblioref">1994</a>)</span>, p.&nbsp;97).</li>
+</ul>
+</div>
+</section>
+<section id="要約言い換えパラフレーズ" class="level3">
+<h3 class="anchored" data-anchor-id="要約言い換えパラフレーズ">要約・言い換え(パラフレーズ)</h3>
+<p>文章を自分の言葉で書き直しても, 元のアイデアや知見に依拠しているなら出典が必要です. 言い換えたから引用不要というわけではありません.</p>
+<div id="exm-paraphrase" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.4 (要約・言い換え)</strong></span> &nbsp;</p>
+<ul>
+<li>先行研究では, あるアルゴリズムが効率的であることが示されている <span class="citation" data-cites="hamermesh1994">(<a href="references.html#ref-hamermesh1994" role="doc-biblioref">Hamermesh and Biddle 1994</a>)</span>.</li>
+<li><span class="citation" data-cites="hamermesh1994">Hamermesh and Biddle (<a href="references.html#ref-hamermesh1994" role="doc-biblioref">1994</a>)</span> は, あるアルゴリズムの効率性を示した.</li>
+</ul>
+</div>
+</section>
+<section id="孫引き" class="level3">
+<h3 class="anchored" data-anchor-id="孫引き">孫引き</h3>
+<p>何かを引用しているものをさらに引用することを「孫引き」といいます. 原則として, 一次資料を確認して引用しなければなりません.</p>
+<div id="exm-wikipedia" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.5 (Wikipedia)</strong></span> Wikipedia自体がすでに存在する資料から引用して作られている二次資料であるため, 引用元として使用するのは不適切です. Wikipedia内で引用されている一次資料を確認して, そちらを引用するのが望ましいです.</p>
+</div>
+<div id="exm-famous-quote" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.6 (偉人の名言)</strong></span> ネットで “アインシュタイン 名言” などと検索すると, 出典 (どの著作の何ページか) が示されていない「名言」が大量に出てきます. 名言のまとめサイトは, それらの孫引きをさらにまとめていることが多いので, ほとんど信用性に欠けます.</p>
+<ul>
+<li>「常識とは18歳までに身につけた偏見のコレクションである」: アインシュタインの言葉とされるが, 出典は不明</li>
+<li>「パンがなければケーキを食べればいいじゃない」: マリー・アントワネットの言葉とされるが, 出典は不明</li>
+</ul>
+</div>
+</section>
+<section id="引用スタイル" class="level3">
+<h3 class="anchored" data-anchor-id="引用スタイル">引用スタイル</h3>
+<p>引用スタイルは, <strong>本文中の引用の見え方</strong> と <strong>参考文献リストの並び・表記</strong> を決めるルールです.</p>
+<div id="exm-author-date" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.7 (著者・年, author-date)</strong></span> 本文中は <code>(著者, 年)</code> 形式. 人文・社会系でよく見ます.</p>
+<ul>
+<li>先行研究では, あるアルゴリズムが効率的であることが示されている <span class="citation" data-cites="hamermesh1994">(<a href="references.html#ref-hamermesh1994" role="doc-biblioref">Hamermesh and Biddle 1994</a>)</span>.</li>
+<li><span class="citation" data-cites="hamermesh1994">Hamermesh and Biddle (<a href="references.html#ref-hamermesh1994" role="doc-biblioref">1994</a>)</span> は, あるアルゴリズムの効率性を示した</li>
+</ul>
+</div>
+<div id="exm-numeric" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.8 (番号, numeric)</strong></span> 本文中は <code>[1]</code> のような番号. 工学・医学系でよく見ます.</p>
+<ul>
+<li>先行研究では, あるアルゴリズムが効率的であることが示されている [1].</li>
+<li>Knuth [1] は, あるアルゴリズムの効率性を示した</li>
+</ul>
+</div>
+<div id="exm-notes" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.9 (脚注中心, notes/footnote)</strong></span> 本文は脚注番号で示し, 脚注に書誌情報を出す形式.</p>
+<ul>
+<li>先行研究では, あるアルゴリズムが効率的であることが示されている.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+</ul>
+</div>
+<p>どれが「正しい」というより, <strong>分野・授業・学会の慣習に合わせて統一する</strong> のが大事です. この授業では, 経済学の論文でよく使われるChicago author-date(著者・年) を基本にします.</p>
+</section>
+</section>
+<section id="zoteroによる文献管理" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="zoteroによる文献管理"><span class="header-section-number">2.3</span> Zoteroによる文献管理</h2>
+<p>Zoteroを使うと, 文献情報 (著者, 年, タイトル, DOI など) を整理して, BibTeX形式として書き出せます.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>BibTeXとは
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>BibTeXは, 文献情報を管理するためのフォーマットの一つです. 文献ごとに <code>@article</code> や <code>@book</code> などのエントリータイプを指定し, キーと値のペアで書誌情報を記述します. 例えば, Knuthの論文をBibTeXで表すと次のようになります.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">@article</span>{<span class="ot">hamermesh1994</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span> = {Knuth, Donald E.},</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> = {Literate Programming},</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span> = {1984},</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">issue_date</span> = {May 1984},</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">publisher</span> = {Oxford University Press, Inc.},</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">address</span> = {USA},</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">volume</span> = {27},</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">number</span> = {2},</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">issn</span> = {0010-4620},</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">url</span> = {https://doi.org/10.1093/comjnl/27.2.97},</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">doi</span> = {10.1093/comjnl/27.2.97},</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">journal</span> = {Comput. J.},</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">month</span> = <span class="st">may</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">pages</span> = {97–111},</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">numpages</span> = {15}</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>元々はLaTeXで文献管理するためのフォーマットですが, QuartoでもBibTeX形式のファイルを読み込んで引用に利用できます.</p>
+</div>
+</div>
+<p>ZoteroからBibTeXファイルを作る手順は次の通りです.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Zotero → BiBTeX
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>コレクションを好きな名前で作る</li>
+<li>Zotero に文献を入れる (ブラウザ拡張, ドラッグ&amp;ドロップ, DOIなど)</li>
+<li>メタデータを確認・修正する (著者名の表記ゆれ, 年, 雑誌名など)</li>
+<li><code>references.bib</code> にエクスポートする (BibTeX形式)</li>
+</ol>
+<p>なお, Zotero拡張の<a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a> を導入することで, BiBTeXファイルを自動で更新するなどの便利な機能が使えるようになります.</p>
+</div>
+</div>
+<section id="コレクションを作る" class="level3">
+<h3 class="anchored" data-anchor-id="コレクションを作る">1. コレクションを作る</h3>
+<p><a href="./static/img/1_create_collection.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="./static/img/1_create_collection.gif" class="img-fluid"></a></p>
+<p>Zoteroでは全ての文献は「ライブラリ」に属します. ライブラリには複数の「コレクション」を作ることができ, 基本的には文献を管理したいプロジェクト (レポート, 論文) ごとに作成します. コレクションはフォルダのようなもので, 同じ文献を複数のコレクションに入れることもできます.</p>
+</section>
+<section id="zoteroに文献を入れる" class="level3">
+<h3 class="anchored" data-anchor-id="zoteroに文献を入れる">2. Zoteroに文献を入れる</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">ブラウザ拡張</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">ドラッグ &amp; ドロップ</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">DOI</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><a href="./static/img/2_import_extension.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="./static/img/2_import_extension.gif" class="img-fluid"></a></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><a href="./static/img/2_import_drag.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="./static/img/2_import_drag.gif" class="img-fluid"></a></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><a href="./static/img/2_import_doi.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="./static/img/2_import_doi.gif" class="img-fluid"></a></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>メタデータの取得
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>ZoteroはDOIやURLから自動で書誌情報 (メタデータ) を取得しますが, 全ての情報が正確に入るわけではありません. 基本的には DOI という論文ごとのユニークな識別子が発見できた場合, <a href="https://www.crossref.org">CrossRef</a> などのデータベースから情報を取得しています. しかし, これでも間違いがあったり, DOIがない資料があったりするため, メタデータは必ず確認して修正する必要があります.</p>
+</div>
+</div>
+</section>
+<section id="メタデータを確認修正する" class="level3">
+<h3 class="anchored" data-anchor-id="メタデータを確認修正する">3. メタデータを確認・修正する</h3>
+<p><a href="./static/img/3_meta_zotero.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="./static/img/3_meta_zotero.png" class="img-fluid"></a></p>
+<p>ドラッグ &amp; ドロップで入れた “Beauty and Labor Market” は, タイトルと著者名は正しく入っていますが, その他の情報が空欄になっています. 書誌情報のところを見ると “Zotero” となっているので, これはZoteroがDOIなどの情報を自動で取得できなかったことを示しています.</p>
+<p><a href="./static/img/3_meta_doi.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="./static/img/3_meta_doi.png" class="img-fluid"></a></p>
+<p>上の例は, CrossRefから取得したデータでも間違いがあったケースです. 著者名に “University of Maryland, USA” という著者の所属する機関名が入ってしまっています. ここでは, RISファイルによる修正方法と, Zotero上で直接修正する方法の両方を紹介します.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">RISファイル</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">手動</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p><a href="./static/img/3_import_ris.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="./static/img/3_import_ris.gif" class="img-fluid"></a></p>
+<p>RISファイルとは, 文献情報を管理するためのファイル形式の一つです. 多くの出版社やデータベースが, 文献情報をRIS形式でエクスポートする機能を提供しています. 本来は</p>
+<ol type="1">
+<li>RISファイルをダウンロード</li>
+<li>Zoteroにインポート</li>
+</ol>
+<p>という手順で書誌情報を取り込むのですが, Zoteroのブラウザ拡張では, RISのダウンロードの際に自動でZoteroにインポートする機能もあります.</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><a href="./static/img/3_fix_meta.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="./static/img/3_fix_meta.gif" class="img-fluid"></a></p>
+<p>Zoteroの画面上で直接書誌情報を修正することもできます. しかし, 手入力はミスが起こりやすいので, 可能な限り出版社やデータベースから正しい書誌情報を取得し, 最終手段として手入力で修正するのが望ましいです.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="references.bib-にエクスポートする" class="level3">
+<h3 class="anchored" data-anchor-id="references.bib-にエクスポートする">4. <code>references.bib</code> にエクスポートする</h3>
+<p><a href="./static/img/4_install_betterbibtex.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="./static/img/4_install_betterbibtex.gif" class="img-fluid"></a></p>
+<p>Better BibTeXは, Zoteroの拡張機能で, BiBTeX形式でのエクスポートを強化するものです. これを入れると, ZoteroのコレクションをBiBTeXファイルにエクスポートする際に, ファイルを自動で更新するなどの便利な機能が使えるようになります. インストールは, GitHubの<a href="https://github.com/retorquere/zotero-better-bibtex/releases/latest">リリースページ</a>からダウンロードした <code>.xpi</code> ファイルを, Zoteroの「ツール」→「プラグイン」→「Install Plugin from File」からインストールするだけです.</p>
+<p><a href="./static/img/4_citekey.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="./static/img/4_citekey.png" class="img-fluid"></a></p>
+<p>Better BibTeXを入れると, Zoteroの文献ごとに “citekey” という識別子が自動で割り当てられます. これが, Quartoの <code>[@...]</code> で引用するときのキーになります. 個人的には, <code>auth.lower + year</code> 形式 (例: <code>knuth1984</code>) が分かりやすいと思いますが, 好みに合わせて変更することもできます.</p>
+<p><a href="./static/img/4_regenerate_citekey.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="./static/img/4_regenerate_citekey.png" class="img-fluid"></a></p>
+<p>Better BibTeXが設定されていると, 自動的にcitekeyが生成されるようになりますが, 既に文献を入れてしまった後にBetter BibTeXを入れた場合は, Zoteroの「ツール」→「Better BibTeX」→「Regenerate BibTeX keys」で既存の文献にもcitekeyを割り当てることができます.</p>
+<p><a href="./static/img/4_export_bib.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="./static/img/4_export_bib.gif" class="img-fluid"></a></p>
+<p>コレクション名を右クリックすることで, そのコレクションに入っている文献をBiBTeX形式でエクスポートできます. 出力形式は “Better BibTeX” を選び, ファイル名は <code>references.bib</code> として, Quartoプロジェクトのルートディレクトリに保存してください. この時, 「Keep updated」をチェックしておくと, Zoteroのコレクションに文献を追加・削除したときに <code>references.bib</code> が自動で更新されるようになります.</p>
+</section>
+</section>
+<section id="quartoによる引用" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="quartoによる引用"><span class="header-section-number">2.4</span> Quartoによる引用</h2>
+<section id="引用スタイルの指定" class="level3">
+<h3 class="anchored" data-anchor-id="引用スタイルの指定">引用スタイルの指定</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> レポートタイトル</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliographystyle</span><span class="kw">:</span><span class="at"> chicago-author-date</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>QuartoのYAMLヘッダで <code>bibliography</code> にBibTeXファイルのパスを指定し, <code>bibliographystyle</code> で引用スタイルを指定します. これで, Quartoの <code>[@...]</code> 形式で文中引用ができるようになります. その他のスタイルもCSLファイルという形式で指定できますが, 詳細は<a href="https://quarto.org/docs/authoring/citations.html">Quartoのドキュメント</a> を参照してください.</p>
+</section>
+<section id="文中引用" class="level3">
+<h3 class="anchored" data-anchor-id="文中引用">文中引用</h3>
+<p><code>@key</code> または <code>[@key]</code> の形で引用します.</p>
+<ul>
+<li><code>@hamermesh1994</code> → <span class="citation" data-cites="hamermesh1994">Hamermesh and Biddle (<a href="references.html#ref-hamermesh1994" role="doc-biblioref">1994</a>)</span></li>
+<li><code>[@hamermesh1994]</code> → <span class="citation" data-cites="hamermesh1994">(<a href="references.html#ref-hamermesh1994" role="doc-biblioref">Hamermesh and Biddle 1994</a>)</span></li>
+<li><code>[@hamermesh1994; @hitsch2010]</code> → <span class="citation" data-cites="hamermesh1994 hitsch2010">(<a href="references.html#ref-hamermesh1994" role="doc-biblioref">Hamermesh and Biddle 1994</a>; <a href="references.html#ref-hitsch2010" role="doc-biblioref">Hitsch et al. 2010</a>)</span></li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-hamermesh1994" class="csl-entry" role="listitem">
+Hamermesh, Daniel S., and Jeff E. Biddle. 1994. <span>“Beauty and the <span>Labor Market</span>.”</span> <em>The American Economic Review</em> 84 (5): 1174–94. <a href="https://www.jstor.org/stable/2117767">https://www.jstor.org/stable/2117767</a>.
+</div>
+<div id="ref-hitsch2010" class="csl-entry" role="listitem">
+Hitsch, Gunter J., Ali Hortaçsu, and Dan Ariely. 2010. <span>“Matching and <span>Sorting</span> in <span>Online Dating</span>.”</span> <em>American Economic Review</em> 100 (1): 130–63. <a href="https://doi.org/10.1257/aer.100.1.130">https://doi.org/10.1257/aer.100.1.130</a>.
+</div>
+</div>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Knuth, Donald E. 1984. “Literate Programming.” Comput. J. (USA) 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./01-quarto.html" class="pagination-link" aria-label="Quarto の使い方">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Quarto の使い方</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link" aria-label="参考文献">
+        <span class="nav-page-text">参考文献</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script src="static/mermaid-icon.js"></script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

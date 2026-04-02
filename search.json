@@ -1,0 +1,183 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "基礎演習",
+    "section": "",
+    "text": "この授業について",
+    "crumbs": [
+      "この授業について"
+    ]
+  },
+  {
+    "objectID": "index.html#日程",
+    "href": "index.html#日程",
+    "title": "基礎演習",
+    "section": "日程",
+    "text": "日程\n\n\n\n\n    \n\n    \n\n    \n    \n    \n      \n        \n        \n              \n                week\n                date\n                topic\n              \n        \n        \n        \n                \n                  1\n                  2026-04-10\n                  イントロダクション\n                \n                \n                  2\n                  2026-04-17\n                  引用・プレゼンテーションの方法\n                \n                \n                  3\n                  2026-04-24\n                  発表: グループ1\n                \n                \n                  4\n                  2026-05-01\n                  発表: グループ2\n                \n                \n                  5\n                  2026-05-15\n                  発表: グループ3\n                \n                \n                  6\n                  2026-05-22\n                  発表: グループ4\n                \n                \n                  7\n                  2026-05-29\n                  発表: グループ5\n                \n                \n                  8\n                  2026-06-05\n                  発表: グループ6\n                \n                \n                  9\n                  2026-06-12\n                  データ分析の基礎1\n                \n                \n                  10\n                  2026-06-19\n                  データ分析の基礎2\n                \n                \n                  11\n                  2026-06-26\n                  発表: グループ1\n                \n                \n                  12\n                  2026-07-03\n                  発表: グループ2\n                \n                \n                  13\n                  2026-07-10\n                  発表: グループ3\n                \n                \n                  14\n                  2026-07-17\n                  発表: グループ4\n                \n                \n                  15\n                  2026-07-24\n                  発表: グループ5\n                \n                \n                  16\n                  2026-07-31\n                  発表: グループ6",
+    "crumbs": [
+      "この授業について"
+    ]
+  },
+  {
+    "objectID": "index.html#課題",
+    "href": "index.html#課題",
+    "title": "基礎演習",
+    "section": "課題",
+    "text": "課題\nこの授業では次のような基準で成績が評価されます:\n\nグループでのプレゼンテーション (40%)\nコメント提出と授業への参加状況 (30%)\nグループでの期末レポート (30%)\n\n\n1. グループでのプレゼンテーション\nこの授業では, 6人程度のグループに分かれて, 教科書の内容をプレゼンテーションしてもらいます. プレゼンテーションは2回あり, 1回目は教科書の内容を正確に説明することを目的とし, 2回目は教科書の内容を踏まえて, 気になるテーマについて新たな図表を作成し, 発表することを目的とします.\nプレゼンテーション自体はグループのうち誰が行なっても構いませんが, スライドの内容についてはグループのメンバー全員が理解している必要があります. そのため, プレゼンの最中に発表者とは別のメンバーに内容について質問することがあります.\n\n\n2. コメント提出と授業への参加状況\n各グループのプレゼンテーションにあたり, 発表するグループ以外の学生は, 事前に教科書を読んで, 一人2つ以上のコメントを提出することを求めます. 内容は, 教科書の内容で疑問に思った点や, 他の研究の可能性など, 授業中の議論のきっかけになるようなものとします.\nGoogle Forms にて, 授業の前日 (23:59JST) までに提出してください. 全てのコメントを拾い上げることはできないため, 毎回ランダムでコメントを選びます. コメントが選ばれた学生は, そのコメントについて説明してください. その後, コメントに対して質問や議論などを行います.\n\n\n3. グループでの期末レポート\n期末レポートは, グループ単位で提出してください. 内容は, 後半のプレゼンテーションで発表した内容をまとめたものとします. 授業では学術論文の形式についても扱うので, 内容というよりも, 形式に沿って正確に記述できているかを評価します.\n\n\nAIの利用\nこの授業では, 生成AIの利用を奨励します. ただし, 提出物の責任は全て, 作成した学生本人にあることを理解してください. 特に, 次の点に注意してください.\n1. 内容を理解する\nプレゼンやコメントに対して, こちらから質問することがあります. その際, スライドの記述やコメントの内容を説明できない場合は, 仮に記述そのものがあっていても理解できていないと判断します. 生成AIはあくまでも補助ツールであり, 提出物の内容は学生本人の主張でなければなりません.\n2. 不正行為に注意する\n生成AIは, 時に, 事実と異なる内容を生成することがあります. 仮に, 存在しない文献を引用していたり, 事実と異なる内容が含まれていた場合は, それが重大な不正行為とみなされる可能性があります. 生成AIを利用する場合は, 必ず事実確認を行い, 不正行為にならないように注意してください.",
+    "crumbs": [
+      "この授業について"
+    ]
+  },
+  {
+    "objectID": "index.html#授業の進め方",
+    "href": "index.html#授業の進め方",
+    "title": "基礎演習",
+    "section": "授業の進め方",
+    "text": "授業の進め方\nこの授業では, 教員による講義形式の日と, 学生の発表形式の日があります. 学生の発表形式の場合, 以下のような流れになります.\n\n担当者のプレゼンテーション (30分程度)\nコメントと議論 (30分程度)\n教員からのフィードバック (10分程度)\nツール等の追加的な説明 (20分程度)\n\n基本的には, プレゼンテーションとコメント・議論の時間をメインとします. 余った時間で, ツール (QuartoやR) の使い方を説明することもありますが, 議論が活発な場合は, そちらを優先します.",
+    "crumbs": [
+      "この授業について"
+    ]
+  },
+  {
+    "objectID": "index.html#ツール",
+    "href": "index.html#ツール",
+    "title": "基礎演習",
+    "section": "ツール",
+    "text": "ツール\nこの授業では, 以下のツールを使用します. これらのツールは, すべて無料で利用できます.\n\nVS Code: テキストエディタ. レポートやスライドの作成に使用します.\nQuarto: ドキュメント作成ツール. レポートやスライドの作成に使用します.\nZotero: 文献管理ツール. 文献の管理と引用に使用します.\n\n各公式サイトからそれぞれダウンロードしてインストールするという方法がありますが, 私はコマンドラインからインストールする方法をお勧めします. これにより, 今後のアップデートも簡単に行えるようになります.\n\nインストール\n\nWindowsMac\n\n\nWindows では標準のパッケージマネージャ winget を使うと, まとめて導入できます.\n\nまず PowerShell を開き, winget --version が動くことを確認してください.\n以降のコマンドは, 基本的に PowerShell でそのまま実行できます.\n\n# VS Code\nwinget install -e --id Microsoft.VisualStudioCode --accept-source-agreements --accept-package-agreements\n\n# Quarto\nwinget install -e --id Posit.Quarto --accept-source-agreements --accept-package-agreements\n\n# Zotero\nwinget install -e --id Zotero.Zotero --accept-source-agreements --accept-package-agreements\nもし --id ... が見つからない場合は, winget search vscode や winget search quarto のように検索して表示された ID を使ってください.\n\n\nMac では Homebrew を使うのが簡単です. Homebrew が入っていない場合は, まず以下をターミナルで実行します.\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\nその後, 以下のコマンドでツールをまとめてインストールできます.\nbrew update\n\n# VS Code\nbrew install --cask visual-studio-code\n\n# Quarto\nbrew install --cask quarto\n\n# Zotero\nbrew install --cask zotero\nもし見つからない場合は, brew search quarto のように検索して cask 名を確認してください. インストール後, 次のコマンドで確認できます.\n\n\n\nインストール後はPowershell/ターミナルを再起動してから, 次のコマンドでversionが表示されることを確認してください.\nquarto --version\n\n\nアップデート\n\nWindowsMac\n\n\n# 更新があるソフトの一覧を表示\nwinget upgrade\n\n# まとめて更新\nwinget upgrade --all --accept-source-agreements --accept-package-agreements\n\n# 個別に更新(必要なものだけ)\nwinget upgrade -e --id Microsoft.VisualStudioCode --accept-source-agreements --accept-package-agreements\nwinget upgrade -e --id Posit.Quarto --accept-source-agreements --accept-package-agreements\nwinget upgrade -e --id Zotero.Zotero --accept-source-agreements --accept-package-agreements\n\n\n# Homebrew 自体とレシピ情報を更新\nbrew update\n\n# 更新があるものの一覧\nbrew outdated --cask\n\n# まとめて更新\nbrew upgrade --cask\n\n# 個別に更新(必要なものだけ)\nbrew upgrade --cask visual-studio-code\nbrew upgrade --cask quarto\nbrew upgrade --cask zotero\n\n\n\n\n\nVS Codeの拡張機能\nVS Code には, QuartoやRを使うための拡張機能があります. これらを入れると, コードの補完や, Quartoのコンパイルなどが簡単にできるようになります. VS Code の拡張機能のタブで, “Quarto” や “R” で検索してインストールしてください.",
+    "crumbs": [
+      "この授業について"
+    ]
+  },
+  {
+    "objectID": "01-quarto.html",
+    "href": "01-quarto.html",
+    "title": "1  Quarto の使い方",
+    "section": "",
+    "text": "1.1 Quarto とは\nflowchart LR\n  A@{ icon: \"simple-icons:quarto\", label: \".qmd\", pos: \"b\", h: 48 }\n  B@{ icon: \"simple-icons:r\", label: \"knitr\", pos: \"b\", h: 48 }\n  C@{ icon: \"simple-icons:jupyter\", label: \"jupyter\", pos: \"b\", h: 48 }\n  D@{ icon: \"simple-icons:julia\", label: \"julia\", pos: \"b\", h: 48 }\n  F@{ icon: \"fa6-brands:markdown\", label: \".md\", pos: \"b\", h: 48 }\n  G@{ icon: \"simple-icons:pandoc\", label: \"pandoc\", pos: \"b\", h: 48 }\n  H@{ icon: \"simple-icons:html5\", label: \"HTML\", pos: \"b\", h: 48 }\n  I@{ icon: \"fa6-solid:file-pdf\", label: \"PDF\", pos: \"b\", h: 48 }\n  J@{ icon: \"simple-icons:microsoftword\", label: \"Microsoft Word\", pos: \"b\", h: 48 }\n  K@{ icon: \"simple-icons:typst\", label: \"Typst\", pos: \"b\", h: 48 }\n  A --&gt; B\n  A --&gt; C\n  A --&gt; D\n  B --&gt; F\n  C --&gt; F\n  D --&gt; F\n  F --&gt; G\n  G --&gt; H\n  G --&gt; I\n  G --&gt; J\n  G --&gt; K\n  style A color:#75AADB\n  style B color:#276DC3\n  style C color:#F37626\n  style D color:#9558B2\n  style F color:#000000\n  style G color:#130654\n  style H color:#E34F26\n  style I color:#FA0F00\n  style J color:#2B579A\n  style K color:#239DAD\nQuartoはプログラミングコードを含んだレポートやスライドを作成するためのツールです. これによって, 研究者が再現可能なドキュメントを簡単に作成できるようになっています. Quartoは, .qmd という拡張子のファイルにあるコードを実行し, Markdown (.md) 形式のドキュメントを生成します. さらに, pandoc というツールを使って, HTMLやPDF, Microsoft Word, Typstなどの様々な形式に変換することができます.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Quarto の使い方</span>"
+    ]
+  },
+  {
+    "objectID": "01-quarto.html#markdown-記法",
+    "href": "01-quarto.html#markdown-記法",
+    "title": "1  Quarto の使い方",
+    "section": "1.2 Markdown 記法",
+    "text": "1.2 Markdown 記法\nコードの実行については後の章で説明しますが, まずはMarkdown記法について簡単に説明します.\n\nHeading (見出し)\n\n\nInput\n# Heading 1\n\n## Heading 2\n\n### Heading 3\n\n\n\nOutput\n\nHeading 1\n\n\nHeading 2\n\n\nHeading 3\n\n\n\n# の個数で見出しのレベルが決まります. HTMLのルールとして, h1 はそのページのタイトルに使うことが推奨されているため, 通常は h2 以降を見出しとして使います. Quartoの場合は, 後に紹介するYAMLフロントマターで指定したタイトルが h1 として扱われるため, 基本的には h2 以降を使ってください.1\n\n\n改行とパラグラフ\nアカデミックな文章では, 改行は段落の区切りを意味します. Markdownでは, パラグラフを明示的に区切るために, 空行を入れる必要があります. 逆に, markdown上で改行しているだけでは, 出力上では改行されません.\n\n\nInput\n吾輩は猫である.\n名前はまだない.\n\nどこで生れたかとんと見当がつかぬ.\n\n\n\nOutput\n吾輩は猫である. 名前はまだない.\nどこで生れたかとんと見当がつかぬ.\n\n\n\n\n強調\nMarkdownでは必要最小限の以下の三つの装飾が用意されています.\n\n\nInput\n**太字** か __太字__ と書きます.\n\n*斜体* か _斜体_ と書きます.\n\n***太字かつ斜体*** か ___太字かつ斜体___\n\n~~打ち消し線~~ はあまり使いません.\n\n\n\nOutput\n太字 か 太字 と書きます.\n斜体 か 斜体 と書きます.\n太字かつ斜体 か 太字かつ斜体\n打ち消し線 はあまり使いません.\n\n\n\n\nリンク\n\n\nInput\n[Google](https://google.com) へのリンク\n\n\n\nOutput\nGoogle へのリンク\n\n\n\n\n箇条書き\n番号付きでないものは - や * を使って箇条書きにできます. ネストも可能です.\n\n\nInput\n- 項目1\n- 項目2\n    - 項目2.1\n    - 項目2.2\n- 項目3\n\n\n\nOutput\n\n項目1\n項目2\n\n項目2.1\n項目2.2\n\n項目3\n\n\n\n番号つきのものは, 数字を使います. なお, 全ての行で 1. と書いても, 出力上では正しい番号になります.\n\n\nInput\n1. 項目1\n1. 項目2\n    1. 項目2.1\n    1. 項目2.2\n1. 項目3\n\n\n\nOutput\n\n項目1\n項目2\n\n項目2.1\n項目2.2\n\n項目3\n\n\n\n\n\n図の挿入\n\n\nInput\n![図のタイトル](path/to/image.png)\n\n\n\nOutput\n\n\n\n図のタイトル\n\n\n\n\nここでパスという概念が重要になります. Quartoでは, ドキュメントのルートディレクトリを基準にして画像ファイルを指定します. 基本的には, .qmd ファイルと同じ階層に img というフォルダを作り, そこに画像ファイルを入れるのが一般的です. 例えば, report.qmd と同じ階層に img/hokusai_kanagawa.jpg というファイルがある場合は, ![図のタイトル](img/hokusai_kanagawa.jpg) と書くことで画像を挿入できます.\n\n\n表の挿入\n\n\nInput\n| Default | Left | Right | Center |\n|---------|:-----|------:|:------:|\n| 12      | 12   |    12 |   12   |\n| 123     | 123  |   123 |  123   |\n\n: 表のタイトル\n\n\n\nOutput\n\n表のタイトル\n\n\nDefault\nLeft\nRight\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n\n\n\nMarkdownでは, | と - を使って表を作ることができます. さらに, : を使うことで, 列の位置を指定することもできます. デフォルトでは, 列は全て左寄せになりますが, :--- と書くと左寄せ, ---: と書くと右寄せ, :---: と書くと中央寄せになります. GUIツールで表を作ってmarkdwon形式でエクスポートするサービスとして, Tables Generator などがあります.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Quarto の使い方</span>"
+    ]
+  },
+  {
+    "objectID": "01-quarto.html#latex-math-記法",
+    "href": "01-quarto.html#latex-math-記法",
+    "title": "1  Quarto の使い方",
+    "section": "1.3 \\(\\LaTeX\\) Math 記法",
+    "text": "1.3 \\(\\LaTeX\\) Math 記法\nMarkdownでは \\(\\LaTeX\\) という組版ソフトの数式記法を使って数式を表現することができます. 数式は, $...$ で囲むとインライン数式, $$...$$ で囲むとブロック数式 (改行して中央揃え) になります.\n\n\nInput\n$e^{i\\pi} + 1 = 0$ は最も美しい数式だ.\n\n\n\nOutput\n\\(e^{i\\pi} + 1 = 0\\) は最も美しい数式だ.\n\n\n\nInputOutput\n\n\nラマヌジャンの円周率公式は次の通り:\n\n$$\n\\frac{1}{\\pi}=\\frac{2 \\sqrt{2}}{99^2}\n\\sum_{n=0}^{\\infty} \\frac{(4 n)!}{(n!)^4}\n\\frac{26390 n+1103}{396^{4 n}}\n$$\n\n\nラマヌジャンの円周率公式は次の通り:\n\\[\n\\frac{1}{\\pi}=\\frac{2 \\sqrt{2}}{99^2} \\sum_{n=0}^{\\infty} \\frac{(4 n)!}{(n!)^4} \\frac{26390 n+1103}{396^{4 n}}\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Quarto の使い方</span>"
+    ]
+  },
+  {
+    "objectID": "01-quarto.html#quarto-記法",
+    "href": "01-quarto.html#quarto-記法",
+    "title": "1  Quarto の使い方",
+    "section": "1.4 Quarto 記法",
+    "text": "1.4 Quarto 記法\nここからは Quarto独自の記法についての説明です. 引用と文献情報については Chapter 2 で説明します.\n\nFront Matter\n---\ntitle: タイトル\nauthor: 著者名\ndate: 2026-04-01\nformat: typst\n---\n\nここから本文\nQuartoのドキュメントでは, 冒頭に --- で囲まれたYAML形式のフロントマターを置くことができます. ここには, ドキュメントのタイトルや著者名, 日付などのメタデータを記述することができます. また, format というフィールドで, 出力形式を指定することもできます. 例えば, format: typst と書くと, Typst形式で出力されるようになります.\n\n\n相互参照 (Cross Reference)\nスライドでは必須ではありませんが, レポートなどを書く場合は, 図表番号や節番号を自動で管理できると便利です. Quartoでは, fig-xxxx, tbl-xxx, sec-xxx などの特別なラベルを貼ることで, それらの番号を自動で管理することができます.\n\nInputOutput\n\n\n![神奈川沖浪裏](img/hokusai_kanagawa.jpg){#fig-kanagawa}\n\n@fig-kanagawa は葛飾北斎の有名な浮世絵である.\n\n\n\n\n\n\n\n\nFigure 1.1: 神奈川沖浪裏\n\n\n\nFigure 1.1 は葛飾北斎の有名な浮世絵である.\n\n\n\n\nInputOutput\n\n\n| fruit  | price  |\n|--------|--------|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: Fruit prices {#tbl-fruit}\n\n@tbl-fruit は果物の値段を表している.\n\n\n\n\n\nTable 1.1: Fruit prices\n\n\n\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09\n\n\n\n\n\n\nTable 1.1 は果物の値段を表している.\n\n\n\n基本的には, 特別な prefix (fig-, tbl-, sec- など) をつけたラベルを {#label} という形式で指定し, 本文中では @label と書くことで, その要素の番号を自動で参照することができます. その他の要素 (式や命題など) も同様の方法で参照できるので Quartoのドキュメント を参照してください.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Quarto の使い方</span>"
+    ]
+  },
+  {
+    "objectID": "01-quarto.html#演習",
+    "href": "01-quarto.html#演習",
+    "title": "1  Quarto の使い方",
+    "section": "1.5 演習",
+    "text": "1.5 演習\n\n\n\n\n\n\nTip演習: はじめてのQuarto\n\n\n\n\n適当な場所に演習用のフォルダを作ってください (例: exercise).\n01-exercise.qmd をダウンロードして, そのフォルダに入れてください.\nVSCodeで演習用のフォルダを開いて, 01-exercise.qmd をコンパイルしてみてください. うまくいけば, report.pdf というファイルが生成されるはずです.\n01-exercise.qmd を開いて, 中に書かれている指示に従ってレポートを作成してください.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Quarto の使い方</span>"
+    ]
+  },
+  {
+    "objectID": "01-quarto.html#footnotes",
+    "href": "01-quarto.html#footnotes",
+    "title": "1  Quarto の使い方",
+    "section": "",
+    "text": "論文の場合は, h1 を節ごとに使うこともありますが, その場合はQuartoが## を h1 に自動で変換するため, 基本的には ## 以降を見出しとして使うと覚えておくと良いでしょう.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Quarto の使い方</span>"
+    ]
+  },
+  {
+    "objectID": "02-citation.html",
+    "href": "02-citation.html",
+    "title": "2  著作権と引用",
+    "section": "",
+    "text": "2.1 著作権\nこの章では, レポートやスライドを作るときに必要な「引用」の基本を学びます.\n著作権は, 文章・画像・図表・写真・音楽・プログラムなどの「著作物」を保護します. 他人の著作物を利用するときは, 原則として許可(ライセンス)が必要ですが, 一定の条件を満たす「引用」は例外として許されます (著作権法 第32条)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>著作権と引用</span>"
+    ]
+  },
+  {
+    "objectID": "02-citation.html#著作権",
+    "href": "02-citation.html#著作権",
+    "title": "2  著作権と引用",
+    "section": "",
+    "text": "ライセンス\n著作物を利用するための許可のことを「ライセンス」といいます. ライセンスには, 著作物をどのように利用できるか(商用利用の可否, 改変の可否など)や, 利用するときに何を守る必要があるか(出典表示の要否など)が定められています.\n\nExample 2.1 (Creative Commons) Creative Commons(CC)は, 「出典表示が必要か」「改変してよいか」「商用利用してよいか」などの条件を, 分かりやすいマークで示すためのライセンスです. 下の CC マークをクリックすると, それぞれのライセンス概要に移動できます.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nレポート等で使うときは, マークの見た目だけで判断せず, 「表示(BY)」「非営利(NC)」「改変禁止(ND)」「継承(SA)」の意味を確認して, 自分の用途に合うかチェックしましょう.\n\n\nExample 2.2 (Unsplash) Unsplashは, 商用・非商用を問わず無料で高品質な写真を提供する素材サイトです. ライセンス の内容を確認してみてください.\n\n\n\n\n\n\n\nPhoto by Jeremy Bishop on Unsplash.\n\n\n\nそのほか, いらすとや なども無料で利用できる素材サイトですが, 利用規約をよく確認してから使いましょう. またAI生成画像の利用も, 著作権やライセンスの問題が複雑であることを理解してから行うのが大事です.\n\nExercise 2.1 (ウェブサイト) このウェブサイト 自体も, 著作権者である私 (柳本和春) が, ライセンスを付与して公開しています. GitHubのレポジトリ でライセンスを確認してみてください.\n\n\n\n引用\n著作権法第32条では, 「公正な慣行に合致」し, 「引用の目的上正当な範囲内」であれば, 著作物を引用することができると定められています. 実用上, レポートなどでは, 次の点を満たしているかをチェックすると安全です.\n\n引用が必要: 引用しないと議論が成り立たない\n主従関係が明確: 自分の文章が主, 引用は従(引用の分量が過剰にならない)\n引用部分が区別できる: かぎ括弧, 引用ブロック, 図表のキャプション等で明確に区切る\n改変しない: 原文を勝手に書き換えない(省略は…等で示す)\n出所を示す: どこから持ってきたかを明記する(著者・年, ページ, URL など)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>著作権と引用</span>"
+    ]
+  },
+  {
+    "objectID": "02-citation.html#引用の種類と書き方",
+    "href": "02-citation.html#引用の種類と書き方",
+    "title": "2  著作権と引用",
+    "section": "2.2 引用の種類と書き方",
+    "text": "2.2 引用の種類と書き方\n\n直接引用\n\n引用箇所は 「」 や引用ブロックで囲む\nページ番号がある資料は, できるだけページ (または章・節) も示す\n引用は必要最小限にとどめる(主従関係を保つため)\n\n\nExample 2.3 (直接引用)  \n\n先行研究では「…」と述べられている(Hamermesh and Biddle (1994), p. 97).\n\n\n\n\n要約・言い換え(パラフレーズ)\n文章を自分の言葉で書き直しても, 元のアイデアや知見に依拠しているなら出典が必要です. 言い換えたから引用不要というわけではありません.\n\nExample 2.4 (要約・言い換え)  \n\n先行研究では, あるアルゴリズムが効率的であることが示されている (Hamermesh and Biddle 1994).\nHamermesh and Biddle (1994) は, あるアルゴリズムの効率性を示した.\n\n\n\n\n孫引き\n何かを引用しているものをさらに引用することを「孫引き」といいます. 原則として, 一次資料を確認して引用しなければなりません.\n\nExample 2.5 (Wikipedia) Wikipedia自体がすでに存在する資料から引用して作られている二次資料であるため, 引用元として使用するのは不適切です. Wikipedia内で引用されている一次資料を確認して, そちらを引用するのが望ましいです.\n\n\nExample 2.6 (偉人の名言) ネットで “アインシュタイン 名言” などと検索すると, 出典 (どの著作の何ページか) が示されていない「名言」が大量に出てきます. 名言のまとめサイトは, それらの孫引きをさらにまとめていることが多いので, ほとんど信用性に欠けます.\n\n「常識とは18歳までに身につけた偏見のコレクションである」: アインシュタインの言葉とされるが, 出典は不明\n「パンがなければケーキを食べればいいじゃない」: マリー・アントワネットの言葉とされるが, 出典は不明\n\n\n\n\n引用スタイル\n引用スタイルは, 本文中の引用の見え方 と 参考文献リストの並び・表記 を決めるルールです.\n\nExample 2.7 (著者・年, author-date) 本文中は (著者, 年) 形式. 人文・社会系でよく見ます.\n\n先行研究では, あるアルゴリズムが効率的であることが示されている (Hamermesh and Biddle 1994).\nHamermesh and Biddle (1994) は, あるアルゴリズムの効率性を示した\n\n\n\nExample 2.8 (番号, numeric) 本文中は [1] のような番号. 工学・医学系でよく見ます.\n\n先行研究では, あるアルゴリズムが効率的であることが示されている [1].\nKnuth [1] は, あるアルゴリズムの効率性を示した\n\n\n\nExample 2.9 (脚注中心, notes/footnote) 本文は脚注番号で示し, 脚注に書誌情報を出す形式.\n\n先行研究では, あるアルゴリズムが効率的であることが示されている.1\n\n\nどれが「正しい」というより, 分野・授業・学会の慣習に合わせて統一する のが大事です. この授業では, 経済学の論文でよく使われるChicago author-date(著者・年) を基本にします.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>著作権と引用</span>"
+    ]
+  },
+  {
+    "objectID": "02-citation.html#zoteroによる文献管理",
+    "href": "02-citation.html#zoteroによる文献管理",
+    "title": "2  著作権と引用",
+    "section": "2.3 Zoteroによる文献管理",
+    "text": "2.3 Zoteroによる文献管理\nZoteroを使うと, 文献情報 (著者, 年, タイトル, DOI など) を整理して, BibTeX形式として書き出せます.\n\n\n\n\n\n\nNoteBibTeXとは\n\n\n\nBibTeXは, 文献情報を管理するためのフォーマットの一つです. 文献ごとに @article や @book などのエントリータイプを指定し, キーと値のペアで書誌情報を記述します. 例えば, Knuthの論文をBibTeXで表すと次のようになります.\n@article{hamermesh1994,\n  author = {Knuth, Donald E.},\n  title = {Literate Programming},\n  year = {1984},\n  issue_date = {May 1984},\n  publisher = {Oxford University Press, Inc.},\n  address = {USA},\n  volume = {27},\n  number = {2},\n  issn = {0010-4620},\n  url = {https://doi.org/10.1093/comjnl/27.2.97},\n  doi = {10.1093/comjnl/27.2.97},\n  journal = {Comput. J.},\n  month = may,\n  pages = {97–111},\n  numpages = {15}\n}\n元々はLaTeXで文献管理するためのフォーマットですが, QuartoでもBibTeX形式のファイルを読み込んで引用に利用できます.\n\n\nZoteroからBibTeXファイルを作る手順は次の通りです.\n\n\n\n\n\n\nTipZotero → BiBTeX\n\n\n\n\nコレクションを好きな名前で作る\nZotero に文献を入れる (ブラウザ拡張, ドラッグ&ドロップ, DOIなど)\nメタデータを確認・修正する (著者名の表記ゆれ, 年, 雑誌名など)\nreferences.bib にエクスポートする (BibTeX形式)\n\nなお, Zotero拡張のBetter BibTeX を導入することで, BiBTeXファイルを自動で更新するなどの便利な機能が使えるようになります.\n\n\n\n1. コレクションを作る\n\nZoteroでは全ての文献は「ライブラリ」に属します. ライブラリには複数の「コレクション」を作ることができ, 基本的には文献を管理したいプロジェクト (レポート, 論文) ごとに作成します. コレクションはフォルダのようなもので, 同じ文献を複数のコレクションに入れることもできます.\n\n\n2. Zoteroに文献を入れる\n\nブラウザ拡張ドラッグ & ドロップDOI\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipメタデータの取得\n\n\n\nZoteroはDOIやURLから自動で書誌情報 (メタデータ) を取得しますが, 全ての情報が正確に入るわけではありません. 基本的には DOI という論文ごとのユニークな識別子が発見できた場合, CrossRef などのデータベースから情報を取得しています. しかし, これでも間違いがあったり, DOIがない資料があったりするため, メタデータは必ず確認して修正する必要があります.\n\n\n\n\n3. メタデータを確認・修正する\n\nドラッグ & ドロップで入れた “Beauty and Labor Market” は, タイトルと著者名は正しく入っていますが, その他の情報が空欄になっています. 書誌情報のところを見ると “Zotero” となっているので, これはZoteroがDOIなどの情報を自動で取得できなかったことを示しています.\n\n上の例は, CrossRefから取得したデータでも間違いがあったケースです. 著者名に “University of Maryland, USA” という著者の所属する機関名が入ってしまっています. ここでは, RISファイルによる修正方法と, Zotero上で直接修正する方法の両方を紹介します.\n\nRISファイル手動\n\n\n\nRISファイルとは, 文献情報を管理するためのファイル形式の一つです. 多くの出版社やデータベースが, 文献情報をRIS形式でエクスポートする機能を提供しています. 本来は\n\nRISファイルをダウンロード\nZoteroにインポート\n\nという手順で書誌情報を取り込むのですが, Zoteroのブラウザ拡張では, RISのダウンロードの際に自動でZoteroにインポートする機能もあります.\n\n\n\nZoteroの画面上で直接書誌情報を修正することもできます. しかし, 手入力はミスが起こりやすいので, 可能な限り出版社やデータベースから正しい書誌情報を取得し, 最終手段として手入力で修正するのが望ましいです.\n\n\n\n\n\n4. references.bib にエクスポートする\n\nBetter BibTeXは, Zoteroの拡張機能で, BiBTeX形式でのエクスポートを強化するものです. これを入れると, ZoteroのコレクションをBiBTeXファイルにエクスポートする際に, ファイルを自動で更新するなどの便利な機能が使えるようになります. インストールは, GitHubのリリースページからダウンロードした .xpi ファイルを, Zoteroの「ツール」→「プラグイン」→「Install Plugin from File」からインストールするだけです.\n\nBetter BibTeXを入れると, Zoteroの文献ごとに “citekey” という識別子が自動で割り当てられます. これが, Quartoの [@...] で引用するときのキーになります. 個人的には, auth.lower + year 形式 (例: knuth1984) が分かりやすいと思いますが, 好みに合わせて変更することもできます.\n\nBetter BibTeXが設定されていると, 自動的にcitekeyが生成されるようになりますが, 既に文献を入れてしまった後にBetter BibTeXを入れた場合は, Zoteroの「ツール」→「Better BibTeX」→「Regenerate BibTeX keys」で既存の文献にもcitekeyを割り当てることができます.\n\nコレクション名を右クリックすることで, そのコレクションに入っている文献をBiBTeX形式でエクスポートできます. 出力形式は “Better BibTeX” を選び, ファイル名は references.bib として, Quartoプロジェクトのルートディレクトリに保存してください. この時, 「Keep updated」をチェックしておくと, Zoteroのコレクションに文献を追加・削除したときに references.bib が自動で更新されるようになります.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>著作権と引用</span>"
+    ]
+  },
+  {
+    "objectID": "02-citation.html#quartoによる引用",
+    "href": "02-citation.html#quartoによる引用",
+    "title": "2  著作権と引用",
+    "section": "2.4 Quartoによる引用",
+    "text": "2.4 Quartoによる引用\n\n引用スタイルの指定\n---\ntitle: レポートタイトル\nbibliography: references.bib\nbibliographystyle: chicago-author-date\n---\nQuartoのYAMLヘッダで bibliography にBibTeXファイルのパスを指定し, bibliographystyle で引用スタイルを指定します. これで, Quartoの [@...] 形式で文中引用ができるようになります. その他のスタイルもCSLファイルという形式で指定できますが, 詳細はQuartoのドキュメント を参照してください.\n\n\n文中引用\n@key または [@key] の形で引用します.\n\n@hamermesh1994 → Hamermesh and Biddle (1994)\n[@hamermesh1994] → (Hamermesh and Biddle 1994)\n[@hamermesh1994; @hitsch2010] → (Hamermesh and Biddle 1994; Hitsch et al. 2010)\n\n\n\n\n\nHamermesh, Daniel S., and Jeff E. Biddle. 1994. “Beauty and the Labor Market.” The American Economic Review 84 (5): 1174–94. https://www.jstor.org/stable/2117767.\n\n\nHitsch, Gunter J., Ali Hortaçsu, and Dan Ariely. 2010. “Matching and Sorting in Online Dating.” American Economic Review 100 (1): 130–63. https://doi.org/10.1257/aer.100.1.130.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>著作権と引用</span>"
+    ]
+  },
+  {
+    "objectID": "02-citation.html#footnotes",
+    "href": "02-citation.html#footnotes",
+    "title": "2  著作権と引用",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput. J. (USA) 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>著作権と引用</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "参考文献",
+    "section": "",
+    "text": "Hamermesh, Daniel S., and Jeff E. Biddle. 1994. “Beauty and the\nLabor Market.” The American Economic Review\n84 (5): 1174–94. https://www.jstor.org/stable/2117767.\n\n\nHitsch, Gunter J., Ali Hortaçsu, and Dan Ariely. 2010. “Matching\nand Sorting in Online Dating.”\nAmerican Economic Review 100 (1): 130–63. https://doi.org/10.1257/aer.100.1.130.",
+    "crumbs": [
+      "Appendices",
+      "参考文献"
+    ]
+  }
+]
