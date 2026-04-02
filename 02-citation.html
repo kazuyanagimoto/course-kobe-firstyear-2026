@@ -84,6 +84,7 @@ div.csl-indent {
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <link href="./11-quarto.html" rel="next">
 <link href="./01-quarto.html" rel="prev">
+<link href="./static/img/logo.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -115,6 +116,20 @@ div.csl-indent {
 }</script>
 
 
+<meta property="og:title" content="2&nbsp; 著作権と引用 – 基礎演習">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://kazuyanagimoto.com/course-kobe-firstyear-2026/static/img/sns-card.drawio.png">
+<meta property="og:site_name" content="基礎演習">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image:height" content="640">
+<meta property="og:image:width" content="1280">
+<meta name="twitter:title" content="2&nbsp; 著作権と引用 – 基礎演習">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://kazuyanagimoto.com/course-kobe-firstyear-2026/static/img/sns-card.drawio.png">
+<meta name="twitter:creator" content="kazuyanagimoto">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="640">
+<meta name="twitter:image-width" content="1280">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -136,7 +151,11 @@ div.csl-indent {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./static/img/logo.svg" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./static/img/logo.svg" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">基礎演習</a> 
         <div class="sidebar-tools-main">
@@ -637,7 +656,7 @@ Hitsch, Gunter J., Ali Hortaçsu, and Dan Ariely. 2010. <span>“Matching and <s
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/kazuyanagimoto\.com\/course-kobe-firstyear-2026");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
