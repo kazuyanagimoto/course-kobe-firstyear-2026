@@ -1,0 +1,101 @@
+# Quarto (応用編)
+
+## スライド {#sec-slides}
+
+Quartoでスライドを作る場合, PowerPoint, Beamer, Reveal.js などの形式を選ぶことができます. Quartoを使う人は Reveal.js 形式を選ぶことが多いですが, HTMLベースであるため扱いに癖があります. ここでは, Typst 形式でスライドを作る方法を紹介します. その他の方法は[Quartoのドキュメント](https://quarto.org/docs/presentations/)を参照してください. 基本的に文法は変わらず, YAMLフロントマターの `format` で `revealjs` などを選ぶことでスライド形式で出力されるようになります.
+
+### quarto-clean-typst
+
+[quarto-clean-typst](https://github.com/kazuyanagimoto/quarto-clean-typst) は, 私 (柳本和春) が作ったQuartoでTypst形式のスライドを作るためのテンプレートです.  ここでは最小限の機能を紹介しますが, 詳細は [Zennの記事](https://zenn.dev/nicetak/articles/quarto-typst-slides) を参照してください.
+
+```{=html}
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/aecc63d3b8e14cb39729197c4d396066" title="Quarto Clean Theme" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
+```
+
+
+インストールはプロジェクトを開いた状態で, ターミナルから
+
+```bash
+quarto install extension kazuyanagimoto/quarto-clean-typst
+```
+
+として `Y` を入力するだけです. プロジェクトディレクトリに `_extensions/kazuyanagimoto/clean/` というディレクトリができていれば成功です.
+
+### スライドの作成
+
+YAMLフロントマターに `format: clean-typst` と書くと, Typst形式のスライドが出力されるようになります. そのほかは通常のQuartoと同じような内容を設定できます.
+
+基本的には, Quartoのスライド記法 (特にReveal.jsの) を使います. `h2`レベルのヘッダーがスライドの区切りかつスライドタイトルであり, `h1`がセクションタイトル, `h3`がスライドのサブタイトルとなります.
+
+
+```{.markdown filename=slides.qmd}
+# Section Slide as Header Level 1
+
+## Slide Title as Header Level 2
+
+### Subtitle as Header Level 3
+
+You can put any content here, including text, images, tables, code blocks, etc.
+
+- first unorder list item
+    - A sub item
+
+1. first ordered list item
+    1. A sub item
+
+Next, we'll brief review some theme-specific components.
+
+- Note that _all_ of the standard Quarto + Typst
+[features](https://quarto.org/docs/output-formats/typst.html) 
+can be used with this theme
+- Also, all the [Touying](https://touying-typ.github.io) features can be used by **Typst native code**.
+```
+
+![](/static/img/11-quarto/slides_example.png)
+
+### 局所的なカスタマイズ
+
+スライドを作成する際, 一部のスライドだけスタイルを変更したり, 行間を調整したいことがよくあります. Quartoの[Typst CSS](https://quarto.org/docs/advanced/typst/typst-css.html)を用いたり, 独自機能の `{{< v 1em >}}` を使うことで局所的なカスタマイズが可能です.
+
+```{.markdown filename=slides.qmd}
+## Ad-hoc Styling
+
+### Typst CSS
+
+- Quarto supports [Typst CSS](https://quarto.org/docs/advanced/typst/typst-css.html) for simple styling
+- You can change [colors]{style="color: #009F8C"}, [backgrounds]{style="background-color: #F0F0F0"}, and [opacity]{style="opacity: 0.5"} for `span` elements
+
+::: {style="font-size: 30pt; font-family: 'Times New Roman'"}
+
+You can also change the font size and family for `div` elements.
+
+:::
+
+{{< v 1em >}}
+
+### Vertical Spacing
+
+- A helper shortcode `{{{< v DIST >}}}` is provided to add vertical spacing
+- This is converted to a Typst code `#v(DIST)` internally.
+
+{{< v 2em >}}
+
+This is a `2em` vertical spaced from above.
+```
+
+![](/static/img/11-quarto/adhoc_styling.png)
+
+
+### 演習
+
+::: {.callout-tip}
+
+## 演習: Quartoでスライドを作る
+
+1. 適当な場所に演習用のフォルダを作ってください (例: `11-exercise`).
+2. [11-1-exercise.qmd](/exercise/11-1-exercise.qmd) をダウンロードして, そのフォルダに入れてください.
+3. Quartoのextension `quarto install extension kazuyanagimoto/quarto-clean-typst` によって `quarto-clean-typst` をインストールしてください.
+4. `11-1-exercise.qmd` をコンパイルしてみてください. うまくいけば, `11-1-exercise.pdf` というファイルが生成されるはずです.
+5. `11-1-exercise.qmd` を開いて, 中に書かれている指示に従ってスライドを作成してください.
+
+:::

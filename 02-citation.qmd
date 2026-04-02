@@ -312,3 +312,16 @@ QuartoのYAMLヘッダで `bibliography` にBibTeXファイルのパスを指定
 - `@hamermesh1994` → @hamermesh1994
 - `[@hamermesh1994]` → [@hamermesh1994]
 - `[@hamermesh1994; @hitsch2010]` → [@hamermesh1994; @hitsch2010]
+
+## 演習
+
+::: {.callout-tip}
+
+## 演習: Quartoによる引用
+
+1. 適当な場所に演習用のフォルダを作ってください (例: `02-exercise`).
+1. [02-exercise.qmd](/exercise/02-exercise.qmd) をダウンロードして, そのフォルダに入れてください.
+1. `02-exercise.qmd` を開いて, 中に書かれている指示に従ってレポートを作成してください.
+
+:::
+

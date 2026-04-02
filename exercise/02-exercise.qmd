@@ -1,0 +1,33 @@
+---
+title: "Exercise 2: 引用"
+date: today
+date-format: "YYYY年M月D日"
+author:
+  - name: YOUR NAME
+    email: 000000@gsuite.kobe-u.ac.jp
+format: typst
+brand:
+  typography:      
+    fonts:
+      - family: Noto Serif JP
+        source: google
+      - family: IBM Plex Sans JP
+        source: google
+    base: Noto Serif JP
+    headings:
+      family: IBM Plex Sans JP
+      weight: regular
+number-sections: true
+---
+
+<!-- この部分はコメントです. 消しても消さなくても問題ありません. ------------------------
+
+次のことを行なった上で, 正しくレポートがコンパイルできているか確認してください.
+
+1. Zoteroにコレクションを作成して, 文献を追加してください. 教科書の自分の担当章の参考文献を追加するのが良いと思います.
+2. ZoteroからBibTeX形式で書き出したファイルを, `references.bib` という名前でこのレポートと同じディレクトリに保存してください.
+3. YAMLフロントマターに `bibliography` と `bibliographystyle` を追加してください.
+4. 文中で `@key` または `[@key]` の形式で引用してみてください. ここで, `key` は `references.bib` に書かれている文献のcitekeyになります.
+5. 正しくコンパイルされるか確認してみてください.
+
+------------------------------------------------------------------------------->
