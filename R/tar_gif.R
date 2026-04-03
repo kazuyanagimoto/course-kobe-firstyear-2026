@@ -3,7 +3,8 @@ tar_gif <- tar_plan(
     list.files(
       here_rel("static", "mov"),
       pattern = "\\.mov$",
-      full.names = TRUE
+      full.names = TRUE,
+      recursive = TRUE
     )
   }),
   tar_target(

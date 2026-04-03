@@ -12,11 +12,13 @@ tar_source()
 tar_plan(
   #---- Image ----
   tar_gif,
+  tar_typst,
   #---- Website ----
   tar_file(
     static,
     {
       gif
+      typst_svg
       list.files(
         here_rel("static"),
         recursive = TRUE,

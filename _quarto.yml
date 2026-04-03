@@ -48,10 +48,6 @@ format:
     theme:
       - cosmo
       - brand
-      - static/custom.scss
-    include-after-body:
-      - text: |
-          <script src="static/mermaid-icon.js"></script>
 
 knitr:
   opts_chunk: 
