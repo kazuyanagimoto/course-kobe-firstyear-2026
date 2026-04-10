@@ -164,7 +164,7 @@
     "href": "02-citation.html#演習",
     "title": "2  著作権と引用",
     "section": "2.5 演習",
-    "text": "2.5 演習\n\n\n\n\n\n\nTip演習: Quartoによる引用\n\n\n\n\n適当な場所に演習用のフォルダを作ってください (例: 02-exercise).\n02-exercise.qmd をダウンロードして, そのフォルダに入れてください.\n02-exercise.qmd を開いて, 中に書かれている指示に従ってレポートを作成してください.\n\n\n\n\n\n\n\nHamermesh, Daniel S., and Jeff E. Biddle. 1994. “Beauty and the Labor Market.” The American Economic Review 84 (5): 1174–94. https://www.jstor.org/stable/2117767.\n\n\nHitsch, Gunter J., Ali Hortaçsu, and Dan Ariely. 2010. “Matching and Sorting in Online Dating.” American Economic Review 100 (1): 130–63. https://doi.org/10.1257/aer.100.1.130.",
+    "text": "2.5 演習\n\n\n\n\n\n\nTip演習: Quartoによる引用\n\n\n\n\n適当な場所に演習用のフォルダを作ってください (例: 02-exercise).\n02-exercise.qmd をダウンロードして, そのフォルダに入れてください.\n02-exercise.qmd を開いて, 中に書かれている指示に従ってレポートを作成してください.\n\n\n\n\n\n\n\nHamermesh, Daniel S., and Jeff E. Biddle. 1994. “Beauty and the Labor Market.” The American Economic Review 84 (5): 1174–94. https://www.jstor.org/stable/2117767.\n\n\nHitsch, Günter J, Alı Hortaçsu, and Dan Ariely. 2010. “Matching and Sorting in Online Dating.” American Economic Review 100 (1): 130–63. https://doi.org/10.1257/aer.100.1.130.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>著作権と引用</span>"
     ]
@@ -177,6 +177,56 @@
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput. J. (USA) 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.↩︎",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>著作権と引用</span>"
+    ]
+  },
+  {
+    "objectID": "03-data-analysis.html",
+    "href": "03-data-analysis.html",
+    "title": "3  データ分析の基礎",
+    "section": "",
+    "text": "3.1 データ分析の流れ\nこの章ではデータ分析の基礎を学びます. 例として, 日本の男性と女性の50歳時未婚率の推移を分析してみましょう. 教科書の図表1-1の結果の再現 (replication) を目指します.\nデータ分析は主に次の3つのステップで行われます:\n実際の研究ではこのあと, 統計手法 (回帰分析など) やシミュレーションを行なっていきますが, まずはこの3ステップを理解することが重要です.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>データ分析の基礎</span>"
+    ]
+  },
+  {
+    "objectID": "03-data-analysis.html#データ分析の流れ",
+    "href": "03-data-analysis.html#データ分析の流れ",
+    "title": "3  データ分析の基礎",
+    "section": "",
+    "text": "データ収集\nデータの前処理\nデータの可視化",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>データ分析の基礎</span>"
+    ]
+  },
+  {
+    "objectID": "03-data-analysis.html#データ収集",
+    "href": "03-data-analysis.html#データ収集",
+    "title": "3  データ分析の基礎",
+    "section": "3.2 データ収集",
+    "text": "3.2 データ収集\nデータには大きく分けて2種類あります:\n\n集計データ: 国や地域, 年齢などの単位で集計されたデータ\n個票データ: 個人や企業などの単位で収集されたデータ\n\n集計データは政府や統計局などの公的機関で公表されていることが多く, 比較的手に入りやすいです. 一方, 個票データはプライバシーの観点などから, 研究者や大学院生などが申請を行って入手する場合が多いです. この授業では, 集計データをもとにデータ分析を行うことを想定しています.\n\nデータの探し方\n集計データを探す際に使うデータベースというものがあります. 代表的なものをいくつか紹介します:\n\ne-Stat: 日本の政府統計の総合窓口\nWorld Bank Open Data: 世界銀行が提供する世界の経済・社会データ\nOECD Data: OECDが提供する経済協力開発機構加盟国のデータ\nUN Data: 国連が提供する世界の経済・社会データ\n\nこれらのデータベースから必要なデータをCSVやExcel形式でダウンロードして, データ分析に使用します. 最近であればAIにデータを探してもらうこともできるでしょう.\n\n\n\n\n\n\nTipパッケージによるデータの取得\n\n\n\n\n\nいくつかのデータベースでは, RやPythonなどのプログラミング言語でデータを直接取得するためのパッケージが提供されています. 例えば, Rでは WDI パッケージを使ってWorld Bankのデータを取得することができます. これらのパッケージを使うと, データベースから必要なデータを直接取得して分析に使用することができるため, データの更新があった場合にも簡単に対応できます.\n\ndat &lt;- WDI::WDI(\n  country = \"JP\",\n  indicator = c(\"SP.POP.TOTL\", \"NY.GDP.MKTP.CD\"),\n  start = 2000,\n  end = 2020\n)\n\n\n\n\ne-Statで探したところ, 国勢調査による配偶関係別の人口のデータが見つかりました. data/raw のフォルダにCSVファイルとしてダウンロードしました.\n\n配偶関係別人口の推移 → data/raw/pop_marriage.csv\n\n\n\nパス\nプログラミング言語からファイルを読み込む際には, ファイルの場所 (パス)　を指定する必要があります. パスには絶対パスと相対パスの2種類があります:\n\n絶対パス: ファイルの場所をルートディレクトリから完全に指定する方法. 例えば,\n\nWindows: C:\\Users\\username\\Documents\\project\\data\\raw\\pop_marriage.csv\nMac/Linux: /Users/username/Documents/project/data/raw/pop_marriage.csv\n\n相対パス: 現在の作業ディレクトリからファイルの場所を指定する方法. 例えば, 現在の作業ディレクトリがプロジェクトのルートディレクトリ (/Users/username/Documents/project)であれば, data/raw/pop_marriage.csv と指定することができます.\n\n絶対パスが必要な場面も数多くありますが, 複数人や異なるデバイスでアクセスする可能性があるプロジェクトでは相対パスを使用することが一般的です. ただし, 相対パスは現在の作業ディレクトリに依存するため, 作業ディレクトリがどこになっているかを常に意識する必要があり, これが原因でファイルが見つからないエラーが発生することもあります. Rでは here パッケージを使うことで, プロジェクトのルートディレクトリを基準にして相対パスを指定することができます. これにより, プロジェクト内のファイルへのアクセスに際して, デバイスやユーザーごとに異なる絶対パスを気にする必要がなくなります.\n\nhere::here() # プロジェクトのルートディレクトリを表示\n## [1] \"/Users/kazuharu/github/course-kobe-firstyear-2026\"\nhere::here(\"data\", \"raw\", \"pop_marriage.csv\") # プロジェクトのルートディレクトリからの相対パスを指定\n## [1] \"/Users/kazuharu/github/course-kobe-firstyear-2026/data/raw/pop_marriage.csv\"\n\nなお, here::here() 関数はプロジェクトのルートディレクトリを次のような順序で探します:\n\n.here ファイルがあるディレクトリ. 空ファイルで良い\nRプロジェクトファイル (.Rproj) があるディレクトリ\nGitリポジトリのルートディレクトリ (.git があるディレクトリ)\n\nほとんどのプロジェクトでは, Gitを使ってバージョン管理を行うことが推奨されているため, Gitリポジトリのルートディレクトリをプロジェクトのルートディレクトリとして使用することが多いです. また, 伝統的には, RStudio でプロジェクトを作成する人が多かっため, .Rproj ファイルを用いている人も多いです.\nGitによるバージョン管理はこの授業の範囲を超えてしまい, RStudioも使用しないので, この授業では .here という空のファイルを使用することをお勧めします.\n\n\nデータの読み込み\nCSVファイルをダウンロードした場合, readr::read_csv() 関数を使ってRに読み込むことができます. 例えば, data/raw/pop_marriage.csv というファイルを読み込む場合は次のようにします:\n\npop_marriage_raw &lt;- readr::read_csv(here::here(\n  \"data\",\n  \"raw\",\n  \"pop_marriage.csv\"\n))\npop_marriage_raw",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>データ分析の基礎</span>"
+    ]
+  },
+  {
+    "objectID": "03-data-analysis.html#データの前処理",
+    "href": "03-data-analysis.html#データの前処理",
+    "title": "3  データ分析の基礎",
+    "section": "3.3 データの前処理",
+    "text": "3.3 データの前処理\nデータの前処理には次のような作業が含まれます:\n\n用いる変数の選択と変数名の変更\n新しい変数の作成\nサンプル抽出\nデータの結合\n欠損値の処理\n\n\npop_marriage &lt;- pop_marriage_raw |&gt;\n  filter(!grepl(\"不詳補完値\", `時間軸（調査年）`)) |&gt;\n  mutate(\n    year = time_code / 10^6,\n    gender = recode_factor(cat01_code, `110` = \"Men\", `120` = \"Women\"),\n    age_bin5 = recode_factor(\n      cat02_code,\n      `150` = \"15-19\",\n      `160` = \"20-24\",\n      `170` = \"25-29\",\n      `180` = \"30-34\",\n      `190` = \"35-39\",\n      `200` = \"40-44\",\n      `210` = \"45-49\",\n      `220` = \"50-54\",\n      `230` = \"55-59\",\n      `240` = \"60-64\",\n      `250` = \"65-69\",\n      `260` = \"70-74\",\n      `270` = \"75-79\",\n      `280` = \"80-84\",\n      `310` = \"85+\",\n      .default = NA_character_\n    ),\n    marriage4 = recode_factor(\n      cat03_code,\n      `110` = \"Never-married\",\n      `120` = \"Married\",\n      `130` = \"Widowed\",\n      `140` = \"Divorced\",\n      .default = NA_character_\n    )\n  ) |&gt;\n  select(year, gender, age_bin5, marriage4, n = value) |&gt;\n  tidyr::drop_na()\npop_marriage\n\n\n  \n\n\n\n\nfilter() 関数を使って, 時間軸（調査年） 変数に “不詳補完値” が含まれる行を除外しています. そもそも回答が “不詳”　である行を分析から除外したいからです.\nmutate() 関数を使って, 新しい変数を作成しています\n\nyear 変数は time_code 変数を10^6で割ることで作成しています\ngender 変数は cat01_code 変数の値を “Men” と “Women” に変換しています\nage_bin5 変数は cat02_code 変数のコードを元に5歳刻みの年齢区分を作成しています\nmarriage4 変数は cat03_code 変数のコードを元に4つの婚姻状態区分を作成しています\n\nselect() 関数を使って, 分析に必要な変数だけを選択しています\ntidyr::drop_na() 関数を使って, 欠損値を含む行を除外しています. ここでは年齢区分が “総数”　である行なども除外されています",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>データ分析の基礎</span>"
+    ]
+  },
+  {
+    "objectID": "03-data-analysis.html#データの可視化",
+    "href": "03-data-analysis.html#データの可視化",
+    "title": "3  データ分析の基礎",
+    "section": "3.4 データの可視化",
+    "text": "3.4 データの可視化\n\nデータの集計\nデータを可視化する前に, データを集計しておく必要があります. ここでは, 年齢区分が “45-49” と “50-54” の行の平均を取ることで, 50歳時の未婚率を計算する必要があります.\n\nshare_nevermarried &lt;- pop_marriage |&gt;\n  mutate(is_nevermarried = marriage4 == \"Never-married\") |&gt;\n  filter(age_bin5 %in% c(\"45-49\", \"50-54\")) |&gt;\n  summarize(\n    share_nevermarried = weighted.mean(is_nevermarried, n),\n    .by = c(gender, year)\n  ) |&gt;\n  arrange(year, gender)\nshare_nevermarried\n\n\n  \n\n\n\n\n\nデータのプロット\n\nshare_nevermarried |&gt;\n  ggplot(aes(\n    x = year,\n    y = share_nevermarried,\n    color = gender,\n    shape = gender\n  )) +\n  geom_point(size = 2) +\n  geom_line() +\n  scale_x_continuous(expand = expansion(add = 1)) +\n  scale_y_continuous(labels = scales::percent) +\n  scale_color_manual(values = c(\"#009F8C\", \"#B75C9D\")) +\n  coord_cartesian(ylim = c(0.0, NA)) +\n  labs(\n    x = NULL,\n    y = NULL,\n    color = NULL,\n    shape = NULL,\n    title = \"Share of Never-married at Age 45-54\",\n    caption = \"Source: Japanese Census.\"\n  ) +\n  theme_minimal(base_size = 15) +\n  theme(\n    panel.grid.major.x = element_blank(),\n    panel.grid.minor = element_blank(),\n    legend.position = \"inside\",\n    legend.position.inside = c(0.1, 0.8)\n  )",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>データ分析の基礎</span>"
     ]
   },
   {
@@ -202,11 +252,44 @@
     ]
   },
   {
+    "objectID": "12-rlang.html",
+    "href": "12-rlang.html",
+    "title": "Appendix B — Rの基礎",
+    "section": "",
+    "text": "B.1 baseR\nRには統計処理に便利な関数がbuilt-inで用意されており, これらをbaseRと呼びます. さらに, データ分析に便利な関数を提供するパッケージが多数存在し, 最も有名なものが tidyverse です. この章では, baseRとtidyverseの基礎を学びます.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Rの基礎</span>"
+    ]
+  },
+  {
+    "objectID": "12-rlang.html#baser",
+    "href": "12-rlang.html#baser",
+    "title": "Appendix B — Rの基礎",
+    "section": "",
+    "text": "配列\nRでは配列を c() 関数を使って作成します. 例えば, 数値の配列を作成するには次のようにします:\n\nvec &lt;- c(1, 2, 3, 4, 5)\nvec\n## [1] 1 2 3 4 5\n\nなお, 一定間隔の配列を作成するには seq() または簡略表記の : を使います:\n\nseq_vec &lt;- seq(1, 10, by = 2)\nseq_vec\n## [1] 1 3 5 7 9\n\n\ncolon_vec &lt;- 1:10\ncolon_vec\n##  [1]  1  2  3  4  5  6  7  8  9 10\n\n\n\nfor 文\n\nfor (i in 1:5) {\n  print(i)\n}\n## [1] 1\n## [1] 2\n## [1] 3\n## [1] 4\n## [1] 5\n\n\n\nif 文\n\nx &lt;- 3\nif (x &gt; 0) {\n  print(\"xは正の数です\")\n} else if (x &lt; 0) {\n  print(\"xは負の数です\")\n} else {\n  print(\"xはゼロです\")\n}\n## [1] \"xは正の数です\"\n\nelse if や else は省略することもできます.\n\n\n関数\nRでは次のように関数を定義します:\n\nmy_function &lt;- function(x) {\n  return(x^2)\n}\nmy_function(3)\n## [1] 9\n\n\n\nデータフレーム\n\ndf &lt;- data.frame(\n  w = seq(1, 2, length.out = 5),\n  x = 1:5,\n  y = c(\"a\", \"b\", \"c\", \"d\", \"e\"),\n  z = as.Date(\"2020-01-01\") + 0:4\n)\ndf\n\n\n  \n\n\n\nデータフレームは行と列からなる表形式のデータ構造で, 列ごとに異なる型のデータを格納できます. データ分析では, データフレームを使ってデータを整理し, 分析を行います.\n\n\nPipe 演算子 |&gt;\nパイプ演算子 |&gt; を使うと, 左側のオブジェクトを右側の関数の最初の引数として渡すことができます. つまり, a |&gt; f() は f(a) と同じ意味になります. これにより, 関数の入れ子構造を避けて, より読みやすいコードを書くことができます. mean(log(df$w)) をパイプ演算子を使って書くと次のようになります:\n\ndf$w |&gt;\n  log() |&gt;\n  mean()\n## [1] 0.3762743\n\nこれにより, データフレームの処理がより読みやすくなります.\n\ndf |&gt;\n  subset(w &gt; 1.5) |&gt; # wが1.5より大きい行を抽出\n  transform(log_w = log(w)) # wの対数を新しい列log_wとして追加",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Rの基礎</span>"
+    ]
+  },
+  {
+    "objectID": "12-rlang.html#tidyverse-によるデータ分析",
+    "href": "12-rlang.html#tidyverse-によるデータ分析",
+    "title": "Appendix B — Rの基礎",
+    "section": "B.2 tidyverse によるデータ分析",
+    "text": "B.2 tidyverse によるデータ分析\ntidyverse はデータ分析に関する便利なパッケージの集合体で, 主に次のパッケージが含まれています:\n\ntibble: データフレームの拡張. あまり意識しなくて良いです.\ndplyr: データの前処理\nggplot2: データの可視化\nreadr: データの読み込み\ntidyr: データの整形\n\n読み込む際は, library(tidyverse) としても良いですが, 必要なパッケージだけを個別に読み込むことも多いです. ここでは, dplyr, tidyr, ggplot2 を使うので, これらを個別に読み込みます.\n\nlibrary(dplyr)\nlibrary(tidyr)\nlibrary(ggplot2)\n\n\ndplyr によるデータの前処理\n\npenguins |&gt;\n  select(species, starts_with(\"bill\"), flipper_len_mm = flipper_len) |&gt;\n  head()\n\n\n  \n\n\n\n\nselect() はデータフレームから列を選択する関数\nstarts_with() などの便利な関数と組み合わせると強力\nrename() 関数を使うことなく, 選択する際に名前を変更することもできる.\n\n\npenguins |&gt;\n  filter(species == \"Adelie\", !is.na(bill_len)) |&gt;\n  head()\n\n\n  \n\n\n\n\nfilter() はデータフレームから行を抽出する関数\nis.na() 関数は欠損値を検出でき, 否定演算子 ! と組み合わせると, 欠損値でない行を抽出できる\n\n\npenguins |&gt;\n  mutate(bill_ratio = bill_len / bill_dep) |&gt;\n  head()\n\n\n  \n\n\n\n\nmutate() はデータフレームに新しい列を追加する関数\n既存の列を使って新しい列を作成することができる\n\nデータの結合\nデータの結合には基本的に, dplyr::left_join() を使います. 例えば, nycflights13 パッケージの flights データフレームと airlines データフレームを結合するには次のようにします:\n\nlibrary(nycflights13)\n\nflights |&gt; head()\n\n\n  \n\n\nplanes |&gt; head()\n\n\n  \n\n\nflights |&gt;\n  left_join(planes, by = c(\"year\", \"tailnum\")) |&gt;\n  select(\n    year,\n    month,\n    day,\n    dep_time,\n    arr_time,\n    carrier,\n    flight,\n    tailnum\n  ) |&gt;\n  head()\n\n\n  \n\n\n\n\nleft_join() は左側のデータフレームを基準にして, 右側のデータフレームを結合する関数\nby 引数で結合のキーとなる列を指定する必要がある\n左右のキーの名前が異なる場合は, by = c(\"left_key\" = \"right_key\") と指定することができる\n\n\n\ntidyr によるデータの整形\n\ntb1 &lt;- tibble(\n  country = c(\"Afghanistan\", \"Brazil\", \"China\"),\n  `1999` = c(745, 37737, 212258),\n  `2000` = c(2666, 80488, 213766)\n)\n\ntb1\n\n\n  \n\n\ntb1 |&gt;\n  pivot_longer(cols = c(`1999`, `2000`), names_to = \"year\", values_to = \"cases\")\n\n\n  \n\n\n\n\npivot_longer() はデータフレームを長い形式に変換する関数\ncols 引数で変換する列を指定する必要がある\nnames_to 引数で新しい列の名前を指定できる\nvalues_to 引数で新しい列の値の名前を指定できる\n\n\ntb2 &lt;- tibble(\n  country = c(rep(\"Afghanistan\", 4), rep(\"Brazil\", 2)),\n  year = c(rep(c(1999, 2000), each = 2), 1999, 1999),\n  type = rep(c(\"cases\", \"population\"), 3),\n  count = c(745, 19987071, 2666, 20595360, 37737, 172006362)\n)\ntb2\n\n\n  \n\n\ntb2 |&gt;\n  pivot_wider(names_from = type, values_from = count)\n\n\n  \n\n\n\n\npivot_wider() はデータフレームを広い形式に変換する関数\nnames_from 引数で新しい列の名前を指定する必要がある\nvalues_from 引数で新しい列の値の名前を指定できる\n\n\n\nggplot2 によるデータの可視化\nggplot2 は Grammar of Graphics (Wilkinson 1999) に基づいて設計されたデータ可視化のためのパッケージです.\n\n\n\n\n\n\nNoteGrammar of Graphics (Wilkinson 1999)\n\n\n\n\nグラフィックスは文法的な要素の異なる層から構成されている\nプロットは適切な美的マッピングを使用して構築され、これらのプロットを意味のあるものにする\n\n\n\nこれだけだと分かりにくいと思いますが, 次に示す例を見れば, 層を重ねていく様子が分かると思います.\n\npenguins |&gt;\n  ggplot(aes(x = flipper_len, y = bill_len)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\nggplot() 関数はグラフの基本的な構造を定義する関数\naes() 関数は美的マッピングを定義する関数 (x軸とy軸にどの変数を割り当てるかなど)\ngeom_point() 関数は散布図を描く関数 (点をプロットするレイヤー)\n\n\npenguins |&gt;\n  ggplot(aes(x = flipper_len, y = bill_len)) +\n  geom_point() +\n  facet_wrap(~species)\n\n\n\n\n\n\n\n\n\nfacet_wrap() 関数はグラフをファセット (小さなグラフ) に分割する関数\n\n\npenguins |&gt;\n  ggplot(aes(x = flipper_len, y = bill_len)) +\n  geom_point() +\n  facet_wrap(~species) +\n  geom_smooth(method = \"lm\", formula = y ~ x, se = FALSE)\n\n\n\n\n\n\n\n\n\ngeom_smooth() 関数はデータにフィットする曲線を描く関数\nmethod = \"lm\" は線形モデルを使用してフィットすることを指定する引数\nformula = y ~ x はフィットするモデルの式を指定する引数\nse = FALSE は信頼区間の表示を無効にする引数\n\n\npenguins |&gt;\n  ggplot(aes(x = flipper_len, y = bill_len)) +\n  geom_point() +\n  facet_wrap(~species) +\n  geom_smooth(method = \"lm\", formula = y ~ x, se = FALSE) +\n  theme(axis.text.x = element_text(color = \"red\"))\n\n\n\n\n\n\n\n\nこのように, ggplot2 ではグラフを構築する際にレイヤーを重ねていくことで, 複雑なグラフを作成することができます.label\n\npenguins |&gt;\n  ggplot(aes(x = flipper_len, y = bill_len, color = species, shape = species)) +\n  geom_point() +\n  geom_smooth(method = \"lm\", formula = y ~ x, se = FALSE)\n\n\n\n\n\n\n\n\n\ncolor 美的マッピングを追加することで, 種類ごとに色分けされたグラフを作成することができます.\nshape 美的マッピングを追加することで, 種類ごとに形を変えることができます.\nどちらか一方を指定するだけでもいいですが, 両方を指定することをお勧めします. (色覚障害の方も見やすくなるため, 白黒印刷しても見やすくなるため)\n\n\n\n\n\nWilkinson, Leland. 1999. The Grammar of Graphics. Statistics and Computing. Springer.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Rの基礎</span>"
+    ]
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "参考文献",
     "section": "",
-    "text": "Hamermesh, Daniel S., and Jeff E. Biddle. 1994. “Beauty and the\nLabor Market.” The American Economic Review\n84 (5): 1174–94. https://www.jstor.org/stable/2117767.\n\n\nHitsch, Gunter J., Ali Hortaçsu, and Dan Ariely. 2010. “Matching\nand Sorting in Online Dating.”\nAmerican Economic Review 100 (1): 130–63. https://doi.org/10.1257/aer.100.1.130.",
+    "text": "Hamermesh, Daniel S., and Jeff E. Biddle. 1994. “Beauty and the\nLabor Market.” The American Economic Review\n84 (5): 1174–94. https://www.jstor.org/stable/2117767.\n\n\nHitsch, Günter J, Alı Hortaçsu, and Dan Ariely. 2010. “Matching\nand Sorting in Online Dating.”\nAmerican Economic Review 100 (1): 130–63. https://doi.org/10.1257/aer.100.1.130.\n\n\nWilkinson, Leland. 1999. The Grammar of Graphics. Statistics\nand Computing. Springer.",
     "crumbs": [
       "Appendices",
       "参考文献"
