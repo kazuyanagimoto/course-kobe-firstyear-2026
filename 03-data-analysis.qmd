@@ -1,0 +1,216 @@
+# データ分析の基礎 {#sec-data-analysis}
+
+```{r}
+#| label: setup
+library(dplyr)
+library(ggplot2)
+```
+
+この章ではデータ分析の基礎を学びます. 例として, 日本の男性と女性の50歳時未婚率の推移を分析してみましょう. 教科書の図表1-1の結果の再現 (replication) を目指します.
+
+## データ分析の流れ
+
+データ分析は主に次の3つのステップで行われます:
+
+1. データ収集
+1. データの前処理
+1. データの可視化
+
+実際の研究ではこのあと, 統計手法 (回帰分析など) やシミュレーションを行なっていきますが, まずはこの3ステップを理解することが重要です.
+
+## データ収集
+
+データには大きく分けて2種類あります:
+
+1. 集計データ: 国や地域, 年齢などの単位で集計されたデータ
+1. 個票データ: 個人や企業などの単位で収集されたデータ
+
+集計データは政府や統計局などの公的機関で公表されていることが多く, 比較的手に入りやすいです. 一方, 個票データはプライバシーの観点などから, 研究者や大学院生などが申請を行って入手する場合が多いです. この授業では, 集計データをもとにデータ分析を行うことを想定しています.
+
+### データの探し方
+
+集計データを探す際に使うデータベースというものがあります. 代表的なものをいくつか紹介します:
+
+- [e-Stat](https://www.e-stat.go.jp/): 日本の政府統計の総合窓口
+- [World Bank Open Data](https://data.worldbank.org/): 世界銀行が提供する世界の経済・社会データ
+- [OECD Data](https://data.oecd.org/): OECDが提供する経済協力開発機構加盟国のデータ
+- [UN Data](https://data.un.org/): 国連が提供する世界の経済・社会データ
+
+これらのデータベースから必要なデータをCSVやExcel形式でダウンロードして, データ分析に使用します. 最近であればAIにデータを探してもらうこともできるでしょう.
+
+::: {.callout-tip collapse="true"}
+
+## パッケージによるデータの取得
+
+いくつかのデータベースでは, RやPythonなどのプログラミング言語でデータを直接取得するためのパッケージが提供されています. 例えば, Rでは [WDI](https://vincentarelbundock.github.io/WDI) パッケージを使ってWorld Bankのデータを取得することができます. これらのパッケージを使うと, データベースから必要なデータを直接取得して分析に使用することができるため, データの更新があった場合にも簡単に対応できます.
+
+```{r}
+#| label: wdi
+#| eval: false
+dat <- WDI::WDI(
+  country = "JP",
+  indicator = c("SP.POP.TOTL", "NY.GDP.MKTP.CD"),
+  start = 2000,
+  end = 2020
+)
+```
+
+:::
+
+e-Statで探したところ, 国勢調査による配偶関係別の人口のデータが見つかりました. `data/raw` のフォルダにCSVファイルとしてダウンロードしました.
+
+- [配偶関係別人口の推移](https://www.e-stat.go.jp/dbview?sid=0003410382) → `data/raw/pop_marriage.csv`
+
+### パス
+
+プログラミング言語からファイルを読み込む際には, ファイルの場所 (パス)　を指定する必要があります. パスには絶対パスと相対パスの2種類があります:
+
+- **絶対パス**: ファイルの場所をルートディレクトリから完全に指定する方法. 例えば,
+    - Windows: `C:\Users\username\Documents\project\data\raw\pop_marriage.csv`
+    - Mac/Linux: `/Users/username/Documents/project/data/raw/pop_marriage.csv`
+- **相対パス**: 現在の作業ディレクトリからファイルの場所を指定する方法. 例えば, 現在の作業ディレクトリがプロジェクトのルートディレクトリ (`/Users/username/Documents/project`)であれば, `data/raw/pop_marriage.csv` と指定することができます.
+
+絶対パスが必要な場面も数多くありますが, 複数人や異なるデバイスでアクセスする可能性があるプロジェクトでは相対パスを使用することが一般的です. ただし, 相対パスは現在の作業ディレクトリに依存するため, 作業ディレクトリがどこになっているかを常に意識する必要があり, これが原因でファイルが見つからないエラーが発生することもあります. Rでは `here` パッケージを使うことで, プロジェクトのルートディレクトリを基準にして相対パスを指定することができます. これにより, プロジェクト内のファイルへのアクセスに際して, デバイスやユーザーごとに異なる絶対パスを気にする必要がなくなります.
+
+```{r}
+#| label: package-here
+here::here() # プロジェクトのルートディレクトリを表示
+here::here("data", "raw", "pop_marriage.csv") # プロジェクトのルートディレクトリからの相対パスを指定
+```
+
+なお, `here::here()` 関数はプロジェクトのルートディレクトリを次のような順序で探します:
+
+1. `.here` ファイルがあるディレクトリ. 空ファイルで良い
+1. Rプロジェクトファイル (`.Rproj`) があるディレクトリ
+1. Gitリポジトリのルートディレクトリ (`.git` があるディレクトリ)
+
+ほとんどのプロジェクトでは, Gitを使ってバージョン管理を行うことが推奨されているため, Gitリポジトリのルートディレクトリをプロジェクトのルートディレクトリとして使用することが多いです. また, 伝統的には, [RStudio](https://posit.co/download/rstudio-desktop/) でプロジェクトを作成する人が多かっため, `.Rproj` ファイルを用いている人も多いです.
+
+Gitによるバージョン管理はこの授業の範囲を超えてしまい, RStudioも使用しないので, この授業では `.here` という空のファイルを使用することをお勧めします.
+
+
+### データの読み込み
+
+CSVファイルをダウンロードした場合, `readr::read_csv()` 関数を使ってRに読み込むことができます. 例えば, `data/raw/pop_marriage.csv` というファイルを読み込む場合は次のようにします:
+
+```{r}
+#| label: readr
+pop_marriage_raw <- readr::read_csv(here::here(
+  "data",
+  "raw",
+  "pop_marriage.csv"
+))
+pop_marriage_raw
+```
+
+## データの前処理
+
+データの前処理には次のような作業が含まれます:
+
+- 用いる変数の選択と変数名の変更
+- 新しい変数の作成
+- サンプル抽出
+- データの結合
+- 欠損値の処理
+
+```{r}
+#| label: data-preprocessing
+pop_marriage <- pop_marriage_raw |>
+  filter(!grepl("不詳補完値", `時間軸（調査年）`)) |>
+  mutate(
+    year = time_code / 10^6,
+    gender = recode_factor(cat01_code, `110` = "Men", `120` = "Women"),
+    age_bin5 = recode_factor(
+      cat02_code,
+      `150` = "15-19",
+      `160` = "20-24",
+      `170` = "25-29",
+      `180` = "30-34",
+      `190` = "35-39",
+      `200` = "40-44",
+      `210` = "45-49",
+      `220` = "50-54",
+      `230` = "55-59",
+      `240` = "60-64",
+      `250` = "65-69",
+      `260` = "70-74",
+      `270` = "75-79",
+      `280` = "80-84",
+      `310` = "85+",
+      .default = NA_character_
+    ),
+    marriage4 = recode_factor(
+      cat03_code,
+      `110` = "Never-married",
+      `120` = "Married",
+      `130` = "Widowed",
+      `140` = "Divorced",
+      .default = NA_character_
+    )
+  ) |>
+  select(year, gender, age_bin5, marriage4, n = value) |>
+  tidyr::drop_na()
+pop_marriage
+```
+
+- `filter()` 関数を使って, `時間軸（調査年）` 変数に "不詳補完値" が含まれる行を除外しています. そもそも回答が "不詳"　である行を分析から除外したいからです.
+- `mutate()` 関数を使って, 新しい変数を作成しています
+    - `year` 変数は `time_code` 変数を10^6で割ることで作成しています
+    - `gender` 変数は `cat01_code` 変数の値を "Men" と "Women" に変換しています
+    - `age_bin5` 変数は `cat02_code` 変数のコードを元に5歳刻みの年齢区分を作成しています
+    - `marriage4` 変数は `cat03_code` 変数のコードを元に4つの婚姻状態区分を作成しています
+- `select()` 関数を使って, 分析に必要な変数だけを選択しています
+- `tidyr::drop_na()` 関数を使って, 欠損値を含む行を除外しています. ここでは年齢区分が "総数"　である行なども除外されています
+
+## データの可視化
+
+### データの集計
+
+データを可視化する前に, データを集計しておく必要があります. ここでは, 年齢区分が "45-49" と "50-54" の行の平均を取ることで, 50歳時の未婚率を計算する必要があります.
+
+```{r}
+#| label: data-aggregation
+share_nevermarried <- pop_marriage |>
+  mutate(is_nevermarried = marriage4 == "Never-married") |>
+  filter(age_bin5 %in% c("45-49", "50-54")) |>
+  summarize(
+    share_nevermarried = weighted.mean(is_nevermarried, n),
+    .by = c(gender, year)
+  ) |>
+  arrange(year, gender)
+share_nevermarried
+```
+
+### データのプロット
+
+```{r}
+#| label: plot-share-nevermarried
+share_nevermarried |>
+  ggplot(aes(
+    x = year,
+    y = share_nevermarried,
+    color = gender,
+    shape = gender
+  )) +
+  geom_point(size = 2) +
+  geom_line() +
+  scale_x_continuous(expand = expansion(add = 1)) +
+  scale_y_continuous(labels = scales::percent) +
+  scale_color_manual(values = c("#009F8C", "#B75C9D")) +
+  coord_cartesian(ylim = c(0.0, NA)) +
+  labs(
+    x = NULL,
+    y = NULL,
+    color = NULL,
+    shape = NULL,
+    title = "Share of Never-married at Age 45-54",
+    caption = "Source: Japanese Census."
+  ) +
+  theme_minimal(base_size = 15) +
+  theme(
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank(),
+    legend.position = "inside",
+    legend.position.inside = c(0.1, 0.8)
+  )
+```

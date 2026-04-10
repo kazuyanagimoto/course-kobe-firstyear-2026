@@ -19,8 +19,10 @@ book:
     - index.qmd
     - 01-quarto.qmd
     - 02-citation.qmd
+    - 03-data-analysis.qmd
   appendices:
     - 11-quarto.qmd
+    - 12-rlang.qmd
     - references.qmd
   search: false
   site-url: https://kazuyanagimoto.com/course-kobe-firstyear-2026
@@ -45,18 +47,26 @@ format:
     lightbox: true
     number-sections: true
     number-depth: 2
+    df-print: paged
     theme:
       - cosmo
       - brand
+      - static/html/custom.scss
 
 knitr:
   opts_chunk: 
     fig.align: center
     fig.retina: 3
     fig.width: 6
-    fig.height: 3
+    fig.height: 3.708
     out.width: 90%
     collapse: true
+    dev: svg
 
 
 freeze: auto
+
+execute: 
+  message: false
+  warning: false
+  error: false

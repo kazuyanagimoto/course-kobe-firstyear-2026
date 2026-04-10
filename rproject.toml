@@ -62,5 +62,11 @@ dependencies = [
     { name = "tinytex", repository = "CRAN" },
     { name = "vctrs", repository = "CRAN" },
     { name = "xfun", repository = "CRAN" },
-    { name = "yaml", repository = "CRAN" }
+    { name = "yaml", repository = "CRAN" },
+    "tidyr",
+    "nycflights13",
+    "ggplot2",
+    "WDI",
+    "readr",
+    "estatapi",
 ]

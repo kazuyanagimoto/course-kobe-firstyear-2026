@@ -1,0 +1,7 @@
+/*-- scss:rules --*/
+
+/* Fix tinytable dark-mode text on light-mode Quarto pages */
+.quarto-light .tinytable {
+  --tt-text-color: inherit;
+  --tt-line-color: black;
+}

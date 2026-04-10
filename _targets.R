@@ -13,6 +13,8 @@ tar_plan(
   #---- Image ----
   tar_gif,
   tar_typst,
+  #---- Data ----
+  tar_data,
   #---- Website ----
   tar_file(
     static,
