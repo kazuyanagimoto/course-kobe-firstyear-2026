@@ -2,6 +2,9 @@ project:
   type: book
   preview:
     port: 5555
+  render:
+    - "*.qmd"
+    - "!template/**/*.qmd"
   resources:
     - exercise/**.qmd
     - static/schedule.csv

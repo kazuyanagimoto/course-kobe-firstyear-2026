@@ -95,7 +95,6 @@ df$w |>
 
 ```{r}
 #| label: pipe-dataframe
-
 df |>
   subset(w > 1.5) |> # wが1.5より大きい行を抽出
   transform(log_w = log(w)) # wの対数を新しい列log_wとして追加
@@ -111,6 +110,13 @@ df |>
 - `ggplot2`: データの可視化
 - `readr`: データの読み込み
 - `tidyr`: データの整形
+
+インストールは次のコマンドを実行してください:
+
+```{.r}
+install.packages("tidyverse")
+```
+
 
 読み込む際は, `library(tidyverse)` としても良いですが, 必要なパッケージだけを個別に読み込むことも多いです. ここでは, `dplyr`, `tidyr`, `ggplot2` を使うので, これらを個別に読み込みます.
 

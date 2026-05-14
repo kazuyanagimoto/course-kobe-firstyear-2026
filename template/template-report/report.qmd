@@ -1,0 +1,362 @@
+---
+title: 期末レポート
+subtitle: グループX
+author:
+  - name: Member 1
+  - name: Member 2
+  - name: Member 3
+  - name: Member 4
+  - name: Member 5
+  - name: Member 6
+date: today
+date-format: "YYYY年M月D日"
+format:
+  typst:
+    include-in-header:
+      - _caption.typ
+thanks: "ここで貢献について説明してください. 例: Member 1がFigure 1-3を担当, Member 2がFigure 4-6を担当, Member 3がPoint 1の内容をまとめるのを担当, Member 4がPoint 2の内容をまとめるのを担当, Member 5がPoint 3の内容をまとめるのを担当, Member 6がまとめの部分を担当"
+filters:
+  - quarto-notes-filter
+brand:
+  typography:      
+    fonts:
+      - family: Noto Serif JP
+        source: google
+      - family: IBM Plex Sans JP
+        source: google
+    base: Noto Serif JP
+    headings:
+      family: IBM Plex Sans JP
+      weight: regular
+number-sections: true
+bibliography: references.bib
+bibliographystyle: chicago-author-date
+execute:
+  echo: false
+  warning: false
+  error: false
+freeze: true
+knitr:
+  opts_chunk: 
+    fig.align: center
+    fig.retina: 3
+    fig.width: 6
+    fig.height: 3.708
+    out.width: 90%
+    collapse: true
+    dev: svg
+crossref:
+  fig-title: 図
+  fig-prefix: 図
+  tbl-title: 表
+  tbl-prefix: 表
+  sec-prefix: 第
+fig-notes-title: 注
+tbl-notes-title: 注
+---
+
+```{r}
+#| label: setup
+library(dplyr)
+library(ggplot2)
+library(tinytable)
+library(WDI)
+library(showtext)
+showtext_auto()
+
+mainfont <- "IBM Plex Sans JP"
+font_add_google(name = mainfont, family = mainfont)
+
+theme_proj <- function(
+  font_title = mainfont,
+  font_text = mainfont,
+  size_base = 12
+) {
+  ggplot2::theme_classic(base_family = font_text, base_size = size_base) +
+    ggplot2::theme(
+      plot.title = ggplot2::element_text(
+        size = size_base,
+        face = "bold",
+        family = font_title
+      ),
+      plot.subtitle = ggplot2::element_text(
+        size = size_base,
+        face = "plain",
+        family = font_text
+      ),
+      plot.caption = ggplot2::element_text(
+        size = size_base * 0.6,
+        color = "grey50",
+        face = "plain",
+        family = font_text,
+        margin = ggplot2::margin(t = 10)
+      ),
+      legend.position = "none",
+      legend.title = ggplot2::element_blank(),
+      legend.key = ggplot2::element_blank(),
+      legend.text = ggplot2::element_text(
+        size = size_base * 0.75,
+        family = font_text,
+        face = "plain"
+      ),
+      axis.line = ggplot2::element_line(linewidth = 0.3),
+      axis.ticks = ggplot2::element_line(linewidth = 0.3),
+      axis.title = ggplot2::element_text(
+        family = font_text,
+        face = "plain",
+        size = size_base * 0.8
+      ),
+      axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 5)),
+      axis.text = ggplot2::element_text(family = font_text, face = "plain"),
+      strip.background = ggplot2::element_blank(),
+      strip.text = ggplot2::element_text(
+        size = size_base,
+        hjust = 0,
+        family = font_title,
+        face = "bold"
+      )
+    )
+}
+
+color_accent <- "#107895"
+color_accent2 <- "#9a2515"
+color_accent3 <- "#e64173"
+
+theme_set(theme_proj())
+```
+
+
+# 第X章 「XXXの経済学」 のまとめ
+
+<!--
+ここに自分が担当した章の内容をまとめてください. 次に気をつけてください
+
+- 各小節の内容を一つか二つのパラグラフでまとめてください. 一言一句正確な表現というよりは, その小節の主張の要点をまとめてください.
+- 引用は正確に行なってください. 各論文の紹介を一つずつするというよりは, 「XXXのような研究がある [@aaaa2019; @bbbb2020]」 のような列挙の形が相応しい場面が多いでしょう. もちろん重要な研究であれば, 「@cccc2018 によれば・・・」のような形で紹介しても構いません.
+
+また, この節の最後に次のような文章を入れてください:
+
+「@sec-point1 節では, XXXの経済学において重要な論点の一つであるYYYについて分析を行い, @sec-point2 節ではZZZについて分析を行い, @sec-point3 節ではAAAについて分析を行う.」
+
+ここで, Point 1などは具体的な内容に置き換えてください (例: 男性の家事労働時間の国際比較)
+
+--->
+
+
+
+# Point 1 {#sec-point1}
+
+<!--
+ここにPoint 1の内容を入れてください.
+最初に, 教科書の内容との関連性を説明してください. その後, 実際のデータを用いたグラフを入れてください. その際,
+
+- データソースを明記してください (例: OECD Family Database)
+- グラフのタイトルと注釈を入れてください. 注釈では, サンプルの説明を入れてください.
+- グラフの内容を本文中で説明してください
+
+グラフから得られる知見も本文中に明記してください. ただし, グラフから読み取れない内容は入れてはいけません.
+
+以下は例である. 実際のレポートでは, このグラフと本文を自分のPoint 1の内容に置き換えること.
+--->
+
+
+@fig-housework-tfr は, WDIデータベースを用いて高所得国における家事・育児の男女負担格差と合計特殊出生率の関係を示したものである. 横軸は無償労働に占める女性の無償労働時間の割合を示しており, 縦軸は合計特殊出生率を示している. 点は各国を表しており, 実線は回帰直線を表している. データは2010-2020年の世界銀行のWorld Development Indicatorsのうち2010-2020年のうちデータが存在する最新の年のものである. 女性への負担が集中している国ほど出生率が低い傾向があり, 家事・育児の男女間の不平等が少子化と関連していることが示唆される.
+
+```{r}
+#| label: fig-housework-tfr
+#| fig-cap: 家事・育児の男女負担格差と合計特殊出生率
+#| fig-notes: World Bank, World Development Indicators (SP.DYN.TFRT.IN, SG.TIM.UWRK.FE, SG.TIM.UWRK.MA) より作成. 高所得国を対象に, 2010--2020年のうち利用可能な最新年データを用いた. 実線は最小二乗法による回帰直線.
+df <- WDI::WDI(
+  country = "all",
+  indicator = c(
+    tfr = "SP.DYN.TFRT.IN",
+    uwrk_fe = "SG.TIM.UWRK.FE",
+    uwrk_ma = "SG.TIM.UWRK.MA"
+  ),
+  start = 2010,
+  end = 2020,
+  extra = TRUE
+) |>
+  filter(income == "High income") |>
+  filter(!is.na(tfr), !is.na(uwrk_fe), !is.na(uwrk_ma)) |>
+  mutate(housework_ratio = uwrk_fe / (uwrk_fe + uwrk_ma)) |>
+  slice_max(year, by = country, with_ties = FALSE)
+
+ggplot(df, aes(x = housework_ratio, y = tfr, label = iso2c)) +
+  geom_point() +
+  ggrepel::geom_text_repel(size = 3) +
+  geom_smooth(
+    method = "lm",
+    se = FALSE,
+    linewidth = 0.7,
+    color = color_accent
+  ) +
+  labs(
+    x = "無償労働に占める女性の無償労働時間の割合",
+    y = "合計特殊出生率"
+  )
+```
+
+# Point 2 {#sec-point2}
+
+<!-- ここにPoint 2の内容を入れてください. 
+
+以下は例である. 実際のレポートでは, このテーブルと本文を自分のPoint 2の内容に置き換えること.
+
+-->
+
+@fig-housework-tfr では家事格差と出生率の関係を示しましたが,
+@tbl-policy は各国の産休日数・家事格差・合計特殊出生率を同時に比較したものである.
+スウェーデンの産休が0日なのは欠損ではなく, 法定の女性専用産休ではなく育児休業に制度が統合されているためである.
+産休が長い日本（98日）と韓国（90日）は, スウェーデン（0日）やフランス（112日）と比べても遜色ない一方,
+出生率は東アジア2か国が最も低くなっている.
+一方で, 家事に占める女性の割合を見ると, 日本・韓国が他国より高く,
+産休日数よりも家事の男女分担の方が出生率と関連している可能性が示唆される.
+
+```{r}
+#| label: tbl-policy
+#| tbl-cap: "主要国の産休日数・家事格差・合計特殊出生率"
+country_ja <- c(
+  "Sweden" = "スウェーデン",
+  "Norway" = "ノルウェー",
+  "France" = "フランス",
+  "Germany" = "ドイツ",
+  "United Kingdom" = "イギリス",
+  "Canada" = "カナダ",
+  "United States" = "アメリカ",
+  "Japan" = "日本",
+  "Korea, Rep." = "韓国"
+)
+region_map <- c(
+  "Sweden" = "北欧",
+  "Norway" = "北欧",
+  "France" = "西欧",
+  "Germany" = "西欧",
+  "United Kingdom" = "西欧",
+  "Canada" = "北米",
+  "United States" = "北米",
+  "Japan" = "東アジア",
+  "Korea, Rep." = "東アジア"
+)
+
+country_codes <- c(
+  "SWE",
+  "NOR",
+  "FRA",
+  "DEU",
+  "GBR",
+  "CAN",
+  "USA",
+  "JPN",
+  "KOR"
+)
+
+latest_non_missing <- function(x, year) {
+  idx <- which(!is.na(x))
+  if (length(idx) == 0) {
+    return(NA_real_)
+  }
+  x[idx[which.max(year[idx])]]
+}
+
+df_leave <- WDI(
+  country = country_codes,
+  indicator = c(mat_leave = "SH.MMR.LEVE"),
+  start = 2010,
+  end = 2023
+) |>
+  filter(!is.na(mat_leave)) |>
+  slice_max(year, by = country, with_ties = FALSE) |>
+  select(country, mat_leave)
+
+df_wdi <- WDI(
+  country = country_codes,
+  indicator = c(
+    uwrk_fe = "SG.TIM.UWRK.FE",
+    uwrk_ma = "SG.TIM.UWRK.MA",
+    tfr = "SP.DYN.TFRT.IN"
+  ),
+  start = 2000,
+  end = 2023
+)
+
+df_uwrk <- df_wdi |>
+  summarise(
+    uwrk_fe = latest_non_missing(uwrk_fe, year),
+    uwrk_ma = latest_non_missing(uwrk_ma, year),
+    tfr = latest_non_missing(tfr, year),
+    .by = country
+  ) |>
+  select(country, uwrk_fe, uwrk_ma, tfr)
+
+df_policy <- tibble(country = names(country_ja)) |>
+  left_join(df_uwrk, by = "country") |>
+  left_join(df_leave, by = "country") |>
+  mutate(
+    country_ja = country_ja[country],
+    region = factor(
+      region_map[country],
+      levels = c("北欧", "西欧", "北米", "東アジア")
+    )
+  ) |>
+  arrange(region, country) |>
+  transmute(
+    country_ja,
+    region,
+    mat_leave_days = mat_leave,
+    female_housework_share = uwrk_fe / (uwrk_fe + uwrk_ma),
+    tfr
+  )
+
+group_starts <- df_policy |>
+  mutate(row = row_number()) |>
+  summarise(row = first(row), .by = region) |>
+  arrange(region)
+
+group_label_rows <- group_starts$row + seq_len(nrow(group_starts)) - 1
+
+notes <- "注: 産休 (日) は WDI の SH.MMR.LEVE（Length of paid maternity leave, calendar days）を使用. 産休 (日) は各国とも2019年の値を掲載し, 女性の家事割合と合計特殊出生率は2000--2023年のうち取得できる最新の非欠損値を掲載. 表中の 0 は欠損ではなく実測値（女性専用の有給産休が0日）を意味し, 表中の — は WDI 未収録を意味する. ノルウェーとアメリカの産休 (日) は SH.MMR.LEVE で2019年値が WDI 未収録のため, 本表では — と表示している."
+
+df_policy |>
+  select(-region) |>
+  setNames(c("国", "産休 (日)", "女性の家事割合", "合計特殊出生率")) |>
+  tt(notes = notes, width = 0.9) |>
+  group_tt(
+    i = setNames(as.list(group_starts$row), as.character(group_starts$region))
+  ) |>
+  style_tt(align = "lrrr") |>
+  style_tt(i = group_label_rows, bold = TRUE) |>
+  style_tt(i = "notes", fontsize = 0.8) |>
+  format_tt(
+    j = 2,
+    digits = 0,
+    num_fmt = "decimal",
+    num_zero = TRUE,
+    replace = "—"
+  ) |>
+  format_tt(j = 3, fn = function(x) scales::percent(x, accuracy = 0.1)) |>
+  format_tt(j = 4, digits = 2, num_fmt = "decimal", num_zero = TRUE)
+```
+
+# Point 3 {#sec-point3}
+
+<!-- ここにPoint 3の内容を入れてください. -->
+
+# まとめ
+
+<!--
+ここにレポート全体のまとめを入れてください.　要件としては
+
+- Point 1, Point 2, Point 3 で得られた知見のまとめ
+- それらの知見から得られる示唆
+- 今回の分析の限界や今後の課題 
+
+気をつけてほしいのは, レポート内で触れられていないことは一切入れないことである. まとめの役割は議論を閉じることである. 新たな論点は決して入れないこと.
+-->
+
+<!-- 以下は触れないこと. 適切に設定していれば, 自動で参考文献リストが生成される. -->
+
+# 参考文献 {.unnumbered}
+
+::: {#refs}
+:::

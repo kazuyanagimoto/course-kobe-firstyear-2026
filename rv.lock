@@ -288,6 +288,20 @@ dependencies = [
 ]
 
 [[packages]]
+name = "ggrepel"
+version = "0.9.8"
+source = { repository = "https://cloud.r-project.org/" }
+force_source = false
+dependencies = [
+    { name = "ggplot2", requirement = "(>= 3.5.2)" },
+    "Rcpp",
+    { name = "rlang", requirement = "(>= 1.1.6)" },
+    "S7",
+    { name = "scales", requirement = "(>= 1.4.0)" },
+    { name = "withr", requirement = "(>= 3.0.2)" },
+]
+
+[[packages]]
 name = "glue"
 version = "1.8.0"
 source = { repository = "https://cloud.r-project.org/" }
@@ -688,6 +702,25 @@ force_source = false
 dependencies = []
 
 [[packages]]
+name = "showtext"
+version = "0.9-8"
+source = { repository = "https://cloud.r-project.org/" }
+force_source = false
+dependencies = [
+    { name = "sysfonts", requirement = "(>= 0.7.1)" },
+    { name = "showtextdb", requirement = "(>= 2.0)" },
+]
+
+[[packages]]
+name = "showtextdb"
+version = "3.0"
+source = { repository = "https://cloud.r-project.org/" }
+force_source = false
+dependencies = [
+    { name = "sysfonts", requirement = "(>= 0.7)" },
+]
+
+[[packages]]
 name = "stringi"
 version = "1.8.7"
 source = { repository = "https://cloud.r-project.org/" }
@@ -712,6 +745,13 @@ dependencies = [
 [[packages]]
 name = "sys"
 version = "3.4.3"
+source = { repository = "https://cloud.r-project.org/" }
+force_source = false
+dependencies = []
+
+[[packages]]
+name = "sysfonts"
+version = "0.8.9"
 source = { repository = "https://cloud.r-project.org/" }
 force_source = false
 dependencies = []

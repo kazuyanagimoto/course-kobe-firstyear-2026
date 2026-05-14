@@ -69,4 +69,6 @@ dependencies = [
     "WDI",
     "readr",
     "estatapi",
+    "showtext",
+    "ggrepel",
 ]
