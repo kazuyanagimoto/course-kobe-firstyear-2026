@@ -419,10 +419,11 @@ local function stash_cell_div_notes(div)
   return div
 end
 
--- Run the cell-Div stashing pass first, then the float-handling pass,
--- so that `pending_fig_notes` is populated before `FloatRefTarget` is
--- invoked for the corresponding figure.
+-- Run Meta first so document-level defaults (fig-notes-title etc.) are
+-- applied before any FloatRefTarget is processed, then the cell-Div
+-- stashing pass, then the float-handling pass.
 return {
+  { Meta = Meta },
   { Div = stash_cell_div_notes },
   {
     FloatRefTarget = function(float)
@@ -431,6 +432,5 @@ return {
       end
       return handle_figure(float)
     end,
-    Meta = Meta,
   },
 }

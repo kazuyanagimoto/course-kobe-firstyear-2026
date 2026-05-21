@@ -13,7 +13,7 @@ date-format: "YYYY年M月D日"
 format:
   typst:
     include-in-header:
-      - _caption.typ
+      - text: "#set bibliography(title: [参考文献])"
 thanks: "ここで貢献について説明してください. 例: Member 1がFigure 1-3を担当, Member 2がFigure 4-6を担当, Member 3がPoint 1の内容をまとめるのを担当, Member 4がPoint 2の内容をまとめるのを担当, Member 5がPoint 3の内容をまとめるのを担当, Member 6がまとめの部分を担当"
 filters:
   - quarto-notes-filter
@@ -51,8 +51,8 @@ crossref:
   tbl-title: 表
   tbl-prefix: 表
   sec-prefix: 第
-fig-notes-title: 注
-tbl-notes-title: 注
+fig-notes-title: "注:"
+tbl-notes-title: "注:"
 ---
 
 ```{r}
@@ -142,6 +142,7 @@ theme_set(theme_proj())
 
 --->
 
+@yamaguchi2019 は, 日本において育休期間の延長が出生率にあまり影響を与えないことをシミュレーションによって示した. 
 
 
 # Point 1 {#sec-point1}
@@ -165,7 +166,7 @@ theme_set(theme_proj())
 ```{r}
 #| label: fig-housework-tfr
 #| fig-cap: 家事・育児の男女負担格差と合計特殊出生率
-#| fig-notes: World Bank, World Development Indicators (SP.DYN.TFRT.IN, SG.TIM.UWRK.FE, SG.TIM.UWRK.MA) より作成. 高所得国を対象に, 2010--2020年のうち利用可能な最新年データを用いた. 実線は最小二乗法による回帰直線.
+#| fig-notes: World Bank, World Development Indicators より作成. 高所得国を対象に, 2010--2020年のうち利用可能な最新年データを用いた. 実線は最小二乗法による回帰直線.
 df <- WDI::WDI(
   country = "all",
   indicator = c(
@@ -205,13 +206,7 @@ ggplot(df, aes(x = housework_ratio, y = tfr, label = iso2c)) +
 
 -->
 
-@fig-housework-tfr では家事格差と出生率の関係を示しましたが,
-@tbl-policy は各国の産休日数・家事格差・合計特殊出生率を同時に比較したものである.
-スウェーデンの産休が0日なのは欠損ではなく, 法定の女性専用産休ではなく育児休業に制度が統合されているためである.
-産休が長い日本（98日）と韓国（90日）は, スウェーデン（0日）やフランス（112日）と比べても遜色ない一方,
-出生率は東アジア2か国が最も低くなっている.
-一方で, 家事に占める女性の割合を見ると, 日本・韓国が他国より高く,
-産休日数よりも家事の男女分担の方が出生率と関連している可能性が示唆される.
+@fig-housework-tfr では家事格差と出生率の関係を示しましたが, @tbl-policy は各国の産休日数・家事格差・合計特殊出生率を同時に比較したものである. スウェーデンの産休が0日なのは欠損ではなく, 法定の女性専用産休ではなく育児休業に制度が統合されているためである. 産休が長い日本（98日）と韓国（90日）は, フランス（112日）と比べても遜色ない一方, 出生率は東アジア2か国が最も低くなっている. 一方で, 家事に占める女性の割合を見ると, 日本・韓国が他国より高く, 産休日数よりも家事の男女分担の方が出生率と関連している可能性が示唆される.
 
 ```{r}
 #| label: tbl-policy
@@ -356,7 +351,3 @@ df_policy |>
 
 <!-- 以下は触れないこと. 適切に設定していれば, 自動で参考文献リストが生成される. -->
 
-# 参考文献 {.unnumbered}
-
-::: {#refs}
-:::
