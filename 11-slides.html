@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Appendix A — Quarto (応用編) – 基礎演習</title>
+<title>Appendix A — スライド – 基礎演習</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -97,14 +97,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<meta property="og:title" content="Appendix A — Quarto (応用編) – 基礎演習">
+<meta property="og:title" content="Appendix A — スライド – 基礎演習">
 <meta property="og:description" content="">
 <meta property="og:image" content="https://kazuyanagimoto.com/course-kobe-firstyear-2026/static/img/sns-card.drawio.png">
 <meta property="og:site_name" content="基礎演習">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image:height" content="640">
 <meta property="og:image:width" content="1280">
-<meta name="twitter:title" content="Appendix A — Quarto (応用編) – 基礎演習">
+<meta name="twitter:title" content="Appendix A — スライド – 基礎演習">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://kazuyanagimoto.com/course-kobe-firstyear-2026/static/img/sns-card.drawio.png">
 <meta name="twitter:creator" content="kazuyanagimoto">
@@ -122,7 +122,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-quarto.html">Appendices</a></li><li class="breadcrumb-item"><a href="./11-quarto.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Quarto (応用編)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-slides.html">Appendices</a></li><li class="breadcrumb-item"><a href="./11-slides.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">スライド</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -181,8 +181,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./11-quarto.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Quarto (応用編)</span></span></a>
+  <a href="./11-slides.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">スライド</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -209,22 +209,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-slides" id="toc-sec-slides" class="nav-link active" data-scroll-target="#sec-slides"><span class="header-section-number">A.1</span> スライド</a>
+  <li><a href="#quarto-clean-typst" id="toc-quarto-clean-typst" class="nav-link active" data-scroll-target="#quarto-clean-typst"><span class="header-section-number">A.1</span> quarto-clean-typst</a></li>
+  <li><a href="#スライドの作成" id="toc-スライドの作成" class="nav-link" data-scroll-target="#スライドの作成"><span class="header-section-number">A.2</span> スライドの作成</a>
   <ul class="collapse">
-  <li><a href="#quarto-clean-typst" id="toc-quarto-clean-typst" class="nav-link" data-scroll-target="#quarto-clean-typst">quarto-clean-typst</a></li>
-  <li><a href="#スライドの作成" id="toc-スライドの作成" class="nav-link" data-scroll-target="#スライドの作成">スライドの作成</a></li>
   <li><a href="#局所的なカスタマイズ" id="toc-局所的なカスタマイズ" class="nav-link" data-scroll-target="#局所的なカスタマイズ">局所的なカスタマイズ</a></li>
-  <li><a href="#演習" id="toc-演習" class="nav-link" data-scroll-target="#演習">演習</a></li>
   </ul></li>
+  <li><a href="#演習" id="toc-演習" class="nav-link" data-scroll-target="#演習"><span class="header-section-number">A.3</span> 演習</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-quarto.html">Appendices</a></li><li class="breadcrumb-item"><a href="./11-quarto.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Quarto (応用編)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-slides.html">Appendices</a></li><li class="breadcrumb-item"><a href="./11-slides.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">スライド</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Appendix A — Quarto (応用編)</h1>
+<h1 class="title"><span id="sec-slides" class="quarto-section-identifier">Appendix A — スライド</span></h1>
 </div>
 
 
@@ -241,19 +240,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="sec-slides" class="level2" data-number="A.1">
-<h2 data-number="A.1" class="anchored" data-anchor-id="sec-slides"><span class="header-section-number">A.1</span> スライド</h2>
 <p>Quartoでスライドを作る場合, PowerPoint, Beamer, Reveal.js などの形式を選ぶことができます. Quartoを使う人は Reveal.js 形式を選ぶことが多いですが, HTMLベースであるため扱いに癖があります. ここでは, Typst 形式でスライドを作る方法を紹介します. その他の方法は<a href="https://quarto.org/docs/presentations/">Quartoのドキュメント</a>を参照してください. 基本的に文法は変わらず, YAMLフロントマターの <code>format</code> で <code>revealjs</code> などを選ぶことでスライド形式で出力されるようになります.</p>
-<section id="quarto-clean-typst" class="level3">
-<h3 class="anchored" data-anchor-id="quarto-clean-typst">quarto-clean-typst</h3>
+<section id="quarto-clean-typst" class="level2" data-number="A.1">
+<h2 data-number="A.1" class="anchored" data-anchor-id="quarto-clean-typst"><span class="header-section-number">A.1</span> quarto-clean-typst</h2>
 <p><a href="https://github.com/kazuyanagimoto/quarto-clean-typst">quarto-clean-typst</a> は, 私 (柳本和春) が作ったQuartoでTypst形式のスライドを作るためのテンプレートです. ここでは最小限の機能を紹介しますが, 詳細は <a href="https://zenn.dev/nicetak/articles/quarto-typst-slides">Zennの記事</a> を参照してください.</p>
 <iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/aecc63d3b8e14cb39729197c4d396066" title="Quarto Clean Theme" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
 <p>インストールはプロジェクトを開いた状態で, ターミナルから</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install extension kazuyanagimoto/quarto-clean-typst</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>として <code>Y</code> を入力するだけです. プロジェクトディレクトリに <code>_extensions/kazuyanagimoto/clean/</code> というディレクトリができていれば成功です.</p>
 </section>
-<section id="スライドの作成" class="level3">
-<h3 class="anchored" data-anchor-id="スライドの作成">スライドの作成</h3>
+<section id="スライドの作成" class="level2" data-number="A.2">
+<h2 data-number="A.2" class="anchored" data-anchor-id="スライドの作成"><span class="header-section-number">A.2</span> スライドの作成</h2>
 <p>YAMLフロントマターに <code>format: clean-typst</code> と書くと, Typst形式のスライドが出力されるようになります. そのほかは通常のQuartoと同じような内容を設定できます.</p>
 <p>基本的には, Quartoのスライド記法 (特にReveal.jsの) を使います. <code>h2</code>レベルのヘッダーがスライドの区切りかつスライドタイトルであり, <code>h1</code>がセクションタイトル, <code>h3</code>がスライドのサブタイトルとなります.</p>
 <div class="code-with-filename">
@@ -282,7 +279,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Also, all the <span class="co">[</span><span class="ot">Touying</span><span class="co">](https://touying-typ.github.io)</span> features can be used by **Typst native code**.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><a href="./static/img/11-quarto/slides_example.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="./static/img/11-quarto/slides_example.png" class="img-fluid"></a></p>
-</section>
 <section id="局所的なカスタマイズ" class="level3">
 <h3 class="anchored" data-anchor-id="局所的なカスタマイズ">局所的なカスタマイズ</h3>
 <p>スライドを作成する際, 一部のスライドだけスタイルを変更したり, 行間を調整したいことがよくあります. Quartoの<a href="https://quarto.org/docs/advanced/typst/typst-css.html">Typst CSS</a>を用いたり, 独自機能の <code>{{&lt; v 1em &gt;}}</code> を使うことで局所的なカスタマイズが可能です.</p>
@@ -316,8 +312,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><a href="./static/img/11-quarto/adhoc_styling.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="./static/img/11-quarto/adhoc_styling.png" class="img-fluid"></a></p>
 </section>
-<section id="演習" class="level3">
-<h3 class="anchored" data-anchor-id="演習">演習</h3>
+</section>
+<section id="演習" class="level2" data-number="A.3">
+<h2 data-number="A.3" class="anchored" data-anchor-id="演習"><span class="header-section-number">A.3</span> 演習</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -339,7 +336,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
