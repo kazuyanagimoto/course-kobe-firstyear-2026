@@ -1,52 +1,386 @@
 ---
 title: A title
-subtitle: A subtitle
-format: clean-typst
+subtitle: グループX
+format:
+  touying-typst:
+    theme: clean
 author:
-  - name: Your Name
-    email: 000000@gsuite.kobe-u.ac.jp
-    affiliations: 神戸大学
+  - name: Member 1
+  - name: Member 2
+  - name: Member 3
+  - name: Member 4
+  - name: Member 5
+  - name: Member 6
 date: today
-date-format: long
+date-format: "YYYY年M月D日"
 brand:
-  typography: 
-    fonts: 
+  typography:
+    fonts:
       - family: Noto Sans JP
-        weight: [100, 200, 300, 400, 500, 600, 700]
-        style: [normal, italic]
         source: google
     base: Noto Sans JP
     headings: Noto Sans JP
+bibliography: references.bib
+bibliographystyle: chicago-author-date
+execute:
+  echo: false
+  warning: false
+  error: false
+freeze: true
+knitr:
+  opts_chunk:
+    fig.align: center
+    fig.retina: 3
+    fig.width: 6
+    fig.height: 3.708
+    out.width: 80%
+    collapse: true
+    dev: svg
+crossref:
+  fig-title: 図
+  fig-prefix: 図
+  tbl-title: 表
+  tbl-prefix: 表
+  sec-prefix: 第
 ---
 
-# セクションスライド
+```{r}
+#| label: setup
+library(dplyr)
+library(ggplot2)
+library(tinytable)
+library(WDI)
+library(showtext)
+showtext_auto()
 
-<!-- ここはセクションスライドです. セクションスライドは, セクションの区切りを示すためのスライドで, スライドタイトルは `h1` レベルの見出しになります. 他の文字を入れることはできません. -->
+mainfont <- "Noto Sans JP"
+font_add_google(name = mainfont, family = mainfont)
 
-## スライドタイトルです
+theme_proj <- function(
+  font_title = mainfont,
+  font_text = mainfont,
+  size_base = 12
+) {
+  ggplot2::theme_classic(base_family = font_text, base_size = size_base) +
+    ggplot2::theme(
+      plot.title = ggplot2::element_text(
+        size = size_base,
+        face = "bold",
+        family = font_title
+      ),
+      plot.subtitle = ggplot2::element_text(
+        size = size_base,
+        face = "plain",
+        family = font_text
+      ),
+      plot.caption = ggplot2::element_text(
+        size = size_base * 0.6,
+        color = "grey50",
+        face = "plain",
+        family = font_text,
+        margin = ggplot2::margin(t = 10)
+      ),
+      legend.position = "none",
+      legend.title = ggplot2::element_blank(),
+      legend.key = ggplot2::element_blank(),
+      legend.text = ggplot2::element_text(
+        size = size_base * 0.75,
+        family = font_text,
+        face = "plain"
+      ),
+      axis.line = ggplot2::element_line(linewidth = 0.3),
+      axis.ticks = ggplot2::element_line(linewidth = 0.3),
+      axis.title = ggplot2::element_text(
+        family = font_text,
+        face = "plain",
+        size = size_base * 0.8
+      ),
+      axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 5)),
+      axis.text = ggplot2::element_text(family = font_text, face = "plain"),
+      strip.background = ggplot2::element_blank(),
+      strip.text = ggplot2::element_text(
+        size = size_base,
+        hjust = 0,
+        family = font_title,
+        face = "bold"
+      )
+    )
+}
 
-<!-- ここはスライドタイトルです. スライドタイトルは `h2` レベルの見出しになります. スライドの区切りとして機能します -->
+color_accent <- "#107895"
+color_accent2 <- "#9a2515"
+color_accent3 <- "#e64173"
 
-### サブタイトルです
+theme_set(theme_proj(size_base = 16))
+```
 
-<!-- ここはサブタイトルです. サブタイトルは `h3` レベルの見出しになります. スライドタイトルの補足的な情報を入れることができます. 一枚のスライドに複数回使えます -->
+# 第X章 「XXXの経済学」 のまとめ
 
-あとは普通のQuartoのように, テキストや画像, 箇条書きなどを入れることが出来ます.
+<!--
+ここはセクションスライドです (`h1` 見出し). セクションの区切りを示します.
 
-- リストも普通に使えます
-    - ネストもできます
-1. 番号付きのリストも使えます
+レポートの「第X章のまとめ」に対応する内容を, 数枚のスライドにまとめてください.
 
-参考として, 柳本が大学院の授業のスライドのコードが役に立つと思います.
-
-- レポジトリ: [course-kobe-macro4-2025](https://github.com/kazuyanagimoto/course-kobe-macro4-2025)
-- 例: [01-1-intro.qmd](https://github.com/kazuyanagimoto/course-kobe-macro4-2025/blob/main/slides/01-1-intro.qmd), [01-1-intro.pdf](https://kazuyanagimoto.com/course-kobe-macro4-2025/slides/01-1-intro.pdf)
-
-
-<!-- 演習
-
-1. 図や表を挿入してみてください
-2. 柳本のスライドを参考にして画像などを並べる方法 `layout-ncol=2` を試してみてください
-3. 引用を入れてみてください (例: `@hamermesh1994`). Bibliography の部分についても柳本のスライドを参考にしてみてください
-
+- 各小節の主張の要点を箇条書きで示してください. 1小節につき1枚のスライドにまとめると良いでしょう (それ以上でも問題ないです)
+- 引用は正確に行なってください. 「XXXのような研究がある [@aaaa2019; @bbbb2020]」 のような列挙の形が相応しい場面が多いでしょう. 重要な研究は 「@cccc2018 によれば...」 のように紹介しても構いません
 --->
+
+## 1. 小節のタイトル
+
+{{< v 0.5em >}}
+
+### Point 1
+
+- 各小節の中で言及された主張の要点を箇条書きで示してください
+- 一言一句正確な表現というよりは, その小節の主張を端的にまとめます
+
+{{< v 0.5em >}}
+
+### Point 2
+
+- 研究をまとめて紹介する場合は [@yamaguchi2019; @doepke2019] のように列挙の形で引用してください
+
+<!-- 以下, 小節の数だけ繰り返してください -->
+
+
+# 分析
+
+## このレポートで扱う論点
+
+### Point 1
+
+- ここに Point 1 の内容を入れてください. 例えば, 「男性の家事労働時間の国際比較」などです.
+- 分析する目的なども入れるといいでしょう
+
+## Point 2
+
+- ここに Point 2 の内容を入れてください. 例えば, 「産休日数と出生率の関係」などです.
+- 分析する目的なども入れるといいでしょう
+
+<!-- Point 1 などは具体的な内容に置き換えてください (例: 男性の家事労働時間の国際比較). スライドではセクション間の相互参照 (`@sec-point1` 等) は使えないため, 論点名を直接書いてください. -->
+
+# Point 1
+
+<!--
+ここに Point 1 の内容を入れてください.
+最初に教科書の内容との関連性を説明し, その後, 実際のデータを用いたグラフを示します. その際,
+
+- データソースを明記してください (例: OECD Family Database)
+- グラフの内容を本文 (発表) で説明してください. グラフから読み取れない内容は入れてはいけません
+
+以下は例です. 実際のスライドでは, このグラフと説明を自分の Point 1 の内容に置き換えてください.
+--->
+
+## 家事・育児の男女負担格差と出生率
+
+{{< v -0.5em >}}
+
+```{r}
+#| label: plot-housework-tfr
+#| out-width: 65%
+df <- WDI::WDI(
+  country = "all",
+  indicator = c(
+    tfr = "SP.DYN.TFRT.IN",
+    uwrk_fe = "SG.TIM.UWRK.FE",
+    uwrk_ma = "SG.TIM.UWRK.MA"
+  ),
+  start = 2010,
+  end = 2020,
+  extra = TRUE
+) |>
+  filter(income == "High income") |>
+  filter(!is.na(tfr), !is.na(uwrk_fe), !is.na(uwrk_ma)) |>
+  mutate(housework_ratio = uwrk_fe / (uwrk_fe + uwrk_ma)) |>
+  slice_max(year, by = country, with_ties = FALSE)
+
+ggplot(df, aes(x = housework_ratio, y = tfr, label = iso2c)) +
+  geom_point() +
+  ggrepel::geom_text_repel(size = 3) +
+  geom_smooth(
+    method = "lm",
+    se = FALSE,
+    linewidth = 0.7,
+    color = color_accent
+  ) +
+  labs(
+    x = "無償労働に占める女性の無償労働時間の割合",
+    y = "合計特殊出生率",
+    caption = "Data: World Bank, World Development Indicators"
+  )
+```
+
+
+- 女性への負担が集中している国ほど出生率が低い傾向がある
+- 家事・育児の男女間の不平等が少子化と関連していることが示唆される
+
+# Point 2
+
+<!-- ここに Point 2 の内容を入れてください.
+
+以下は例です. 実際のスライドでは, このテーブルと説明を自分の Point 2 の内容に置き換えてください.
+-->
+
+## 産休日数・家事格差・出生率の比較
+
+::: {.align options = "center"}
+
+```{r}
+#| label: table-policy
+country_ja <- c(
+  "Sweden" = "スウェーデン",
+  "Norway" = "ノルウェー",
+  "France" = "フランス",
+  "Germany" = "ドイツ",
+  "United Kingdom" = "イギリス",
+  "Canada" = "カナダ",
+  "United States" = "アメリカ",
+  "Japan" = "日本",
+  "Korea, Rep." = "韓国"
+)
+region_map <- c(
+  "Sweden" = "北欧",
+  "Norway" = "北欧",
+  "France" = "西欧",
+  "Germany" = "西欧",
+  "United Kingdom" = "西欧",
+  "Canada" = "北米",
+  "United States" = "北米",
+  "Japan" = "東アジア",
+  "Korea, Rep." = "東アジア"
+)
+
+country_codes <- c(
+  "SWE",
+  "NOR",
+  "FRA",
+  "DEU",
+  "GBR",
+  "CAN",
+  "USA",
+  "JPN",
+  "KOR"
+)
+
+latest_non_missing <- function(x, year) {
+  idx <- which(!is.na(x))
+  if (length(idx) == 0) {
+    return(NA_real_)
+  }
+  x[idx[which.max(year[idx])]]
+}
+
+df_leave <- WDI(
+  country = country_codes,
+  indicator = c(mat_leave = "SH.MMR.LEVE"),
+  start = 2010,
+  end = 2023
+) |>
+  filter(!is.na(mat_leave)) |>
+  slice_max(year, by = country, with_ties = FALSE) |>
+  select(country, mat_leave)
+
+df_wdi <- WDI(
+  country = country_codes,
+  indicator = c(
+    uwrk_fe = "SG.TIM.UWRK.FE",
+    uwrk_ma = "SG.TIM.UWRK.MA",
+    tfr = "SP.DYN.TFRT.IN"
+  ),
+  start = 2000,
+  end = 2023
+)
+
+df_uwrk <- df_wdi |>
+  summarise(
+    uwrk_fe = latest_non_missing(uwrk_fe, year),
+    uwrk_ma = latest_non_missing(uwrk_ma, year),
+    tfr = latest_non_missing(tfr, year),
+    .by = country
+  ) |>
+  select(country, uwrk_fe, uwrk_ma, tfr)
+
+df_policy <- tibble(country = names(country_ja)) |>
+  left_join(df_uwrk, by = "country") |>
+  left_join(df_leave, by = "country") |>
+  mutate(
+    country_ja = country_ja[country],
+    region = factor(
+      region_map[country],
+      levels = c("北欧", "西欧", "北米", "東アジア")
+    )
+  ) |>
+  arrange(region, country) |>
+  transmute(
+    country_ja,
+    region,
+    mat_leave_days = mat_leave,
+    female_housework_share = uwrk_fe / (uwrk_fe + uwrk_ma),
+    tfr
+  )
+
+group_starts <- df_policy |>
+  mutate(row = row_number()) |>
+  summarise(row = first(row), .by = region) |>
+  arrange(region)
+
+group_label_rows <- group_starts$row + seq_len(nrow(group_starts)) - 1
+
+notes <- "注: World Bank, World Development Indicators.産休 (日) は各国とも2019年の値を掲載し, 女性の家事割合と合計特殊出生率は2000-2023年のうち取得できる最新の非欠損値を掲載."
+
+df_policy |>
+  select(-region) |>
+  setNames(c("国", "産休 (日)", "女性の家事割合", "合計特殊出生率")) |>
+  tt(notes = notes, width = c(0.3, 0.2, 0.2, 0.2)) |>
+  group_tt(
+    i = setNames(as.list(group_starts$row), as.character(group_starts$region))
+  ) |>
+  style_tt(align = "lrrr") |>
+  style_tt(i = group_label_rows, bold = TRUE) |>
+  style_tt(i = "notes", fontsize = 0.6) |>
+  style_tt(fontsize = 0.8) |>
+  format_tt(
+    j = 2,
+    digits = 0,
+    num_fmt = "decimal",
+    num_zero = TRUE,
+    replace = "—"
+  ) |>
+  format_tt(j = 3, fn = function(x) scales::percent(x, accuracy = 0.1)) |>
+  format_tt(j = 4, digits = 2, num_fmt = "decimal", num_zero = TRUE)
+```
+
+:::
+
+# Point 3 <!-- 論点のタイトルを入れてください -->
+
+## Point 3 のタイトル
+
+- ここに Point 3 の内容を入れてください
+
+
+## まとめ
+
+<!--
+ここに発表全体のまとめを入れてください. 要件としては
+
+- Point 1, Point 2, Point 3 で得られた知見のまとめ
+- それらの知見から得られる示唆
+- 今回の分析の限界や今後の課題
+
+発表内で触れられていないことは一切入れないこと. まとめの役割は議論を閉じることであり, 新たな論点は決して入れないこと.
+-->
+
+
+- Point 1, Point 2, Point 3 の知見のまとめ
+- それらから得られる示唆
+- 分析の限界と今後の課題
+
+<!-- 以下は触れないこと. 適切に設定していれば, 引用した文献の一覧が自動で生成される. -->
+
+{{< appendix >}}
+
+## 参考文献
+
+::: {#refs}
+:::

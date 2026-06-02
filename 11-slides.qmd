@@ -1,10 +1,8 @@
-# Quarto (応用編)
-
-## スライド {#sec-slides}
+# スライド {#sec-slides}
 
 Quartoでスライドを作る場合, PowerPoint, Beamer, Reveal.js などの形式を選ぶことができます. Quartoを使う人は Reveal.js 形式を選ぶことが多いですが, HTMLベースであるため扱いに癖があります. ここでは, Typst 形式でスライドを作る方法を紹介します. その他の方法は[Quartoのドキュメント](https://quarto.org/docs/presentations/)を参照してください. 基本的に文法は変わらず, YAMLフロントマターの `format` で `revealjs` などを選ぶことでスライド形式で出力されるようになります.
 
-### quarto-clean-typst
+## quarto-clean-typst
 
 [quarto-clean-typst](https://github.com/kazuyanagimoto/quarto-clean-typst) は, 私 (柳本和春) が作ったQuartoでTypst形式のスライドを作るためのテンプレートです.  ここでは最小限の機能を紹介しますが, 詳細は [Zennの記事](https://zenn.dev/nicetak/articles/quarto-typst-slides) を参照してください.
 
@@ -21,7 +19,7 @@ quarto install extension kazuyanagimoto/quarto-clean-typst
 
 として `Y` を入力するだけです. プロジェクトディレクトリに `_extensions/kazuyanagimoto/clean/` というディレクトリができていれば成功です.
 
-### スライドの作成
+## スライドの作成
 
 YAMLフロントマターに `format: clean-typst` と書くと, Typst形式のスライドが出力されるようになります. そのほかは通常のQuartoと同じような内容を設定できます.
 
@@ -86,7 +84,7 @@ This is a `2em` vertical spaced from above.
 ![](/static/img/11-quarto/adhoc_styling.png)
 
 
-### 演習
+## 演習
 
 ::: {.callout-tip}
 

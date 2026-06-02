@@ -15,12 +15,16 @@ tar_plan(
   tar_typst,
   #---- Data ----
   tar_data,
+  #---- Student templates ----
+  tar_template,
   #---- Website ----
   tar_file(
     static,
     {
       gif
       typst_svg
+      template_report_zip
+      template_slides_zip
       list.files(
         here_rel("static"),
         recursive = TRUE,

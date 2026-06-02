@@ -8,6 +8,7 @@ project:
   resources:
     - exercise/**.qmd
     - static/schedule.csv
+    - static/download/*.zip
 
 book:
   title: 基礎演習
@@ -24,7 +25,7 @@ book:
     - 02-citation.qmd
     - 03-data-analysis.qmd
   appendices:
-    - 11-quarto.qmd
+    - 11-slides.qmd
     - 12-rlang.qmd
     - references.qmd
   search: false
