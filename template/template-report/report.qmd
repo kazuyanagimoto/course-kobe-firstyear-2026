@@ -45,12 +45,7 @@ knitr:
     out.width: 90%
     collapse: true
     dev: svg
-crossref:
-  fig-title: 図
-  fig-prefix: 図
-  tbl-title: 表
-  tbl-prefix: 表
-  sec-prefix: 第
+lang: ja
 fig-notes-title: "注:"
 tbl-notes-title: "注:"
 ---

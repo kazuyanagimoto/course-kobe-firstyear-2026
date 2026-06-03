@@ -191,3 +191,28 @@ penguins |>
 
 本文で `@tbl-penguins-tt` と書くと @tbl-penguins-tt のように参照できます.
 
+### ラベルのカスタマイズ
+
+デフォルトでは, キャプションも本文中の参照も英語の "Figure" / "Table" になります. これを「図」「表」に変えるには, YAMLフロントマター (または `_quarto.yml`) の `crossref` で設定します.
+
+- `fig-title` / `tbl-title`: **キャプション側** の接頭辞. 「Figure 1: ...」の "Figure" の部分.
+- `fig-prefix` / `tbl-prefix`: **本文の参照側** の接頭辞. `@fig-...` が展開されたときの "Figure 1" の "Figure" の部分.
+- `title-delim`: 接頭辞・番号とキャプション本文の間の区切り文字 (デフォルトは `:`).
+
+```{.yaml filename=_quarto.yml}
+crossref:
+  fig-title: 図
+  tbl-title: 表
+  fig-prefix: 図
+  tbl-prefix: 表
+  title-delim: "　"
+```
+
+こう設定すると, キャプションは「図 1　…」, 本文の参照は「図 1」のように表示されます.
+
+なお, ドキュメント全体を日本語にする場合は, `lang: ja` を指定するだけでこれらの既定値がまとめて日本語になるため, 個別の指定は不要なことが多いです.
+
+```{.yaml filename=_quarto.yml}
+lang: ja
+```
+
