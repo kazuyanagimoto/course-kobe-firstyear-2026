@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Appendix A — スライド – 基礎演習</title>
+<title>Appendix A — Quarto (応用編) – 基礎演習</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -95,16 +95,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 
 
-<meta property="og:title" content="Appendix A — スライド – 基礎演習">
+<meta property="og:title" content="Appendix A — Quarto (応用編) – 基礎演習">
 <meta property="og:description" content="">
 <meta property="og:image" content="https://kazuyanagimoto.com/course-kobe-firstyear-2026/static/img/sns-card.drawio.png">
 <meta property="og:site_name" content="基礎演習">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image:height" content="640">
 <meta property="og:image:width" content="1280">
-<meta name="twitter:title" content="Appendix A — スライド – 基礎演習">
+<meta name="twitter:title" content="Appendix A — Quarto (応用編) – 基礎演習">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://kazuyanagimoto.com/course-kobe-firstyear-2026/static/img/sns-card.drawio.png">
 <meta name="twitter:creator" content="kazuyanagimoto">
@@ -122,7 +124,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-slides.html">Appendices</a></li><li class="breadcrumb-item"><a href="./11-slides.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">スライド</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-quarto.html">Appendices</a></li><li class="breadcrumb-item"><a href="./11-quarto.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Quarto (応用編)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -181,8 +183,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./11-slides.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">スライド</span></span></a>
+  <a href="./11-quarto.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Quarto (応用編)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -209,21 +211,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#quarto-clean-typst" id="toc-quarto-clean-typst" class="nav-link active" data-scroll-target="#quarto-clean-typst"><span class="header-section-number">A.1</span> quarto-clean-typst</a></li>
-  <li><a href="#スライドの作成" id="toc-スライドの作成" class="nav-link" data-scroll-target="#スライドの作成"><span class="header-section-number">A.2</span> スライドの作成</a>
+  <li><a href="#sec-slides" id="toc-sec-slides" class="nav-link active" data-scroll-target="#sec-slides"><span class="header-section-number">A.1</span> スライド</a>
   <ul class="collapse">
+  <li><a href="#quarto-clean-typst" id="toc-quarto-clean-typst" class="nav-link" data-scroll-target="#quarto-clean-typst">quarto-clean-typst</a></li>
+  <li><a href="#スライドの作成" id="toc-スライドの作成" class="nav-link" data-scroll-target="#スライドの作成">スライドの作成</a></li>
   <li><a href="#局所的なカスタマイズ" id="toc-局所的なカスタマイズ" class="nav-link" data-scroll-target="#局所的なカスタマイズ">局所的なカスタマイズ</a></li>
+  <li><a href="#演習" id="toc-演習" class="nav-link" data-scroll-target="#演習">演習</a></li>
   </ul></li>
-  <li><a href="#演習" id="toc-演習" class="nav-link" data-scroll-target="#演習"><span class="header-section-number">A.3</span> 演習</a></li>
+  <li><a href="#sec-crossref" id="toc-sec-crossref" class="nav-link" data-scroll-target="#sec-crossref"><span class="header-section-number">A.2</span> 相互参照</a>
+  <ul class="collapse">
+  <li><a href="#画像ファイルの相互参照" id="toc-画像ファイルの相互参照" class="nav-link" data-scroll-target="#画像ファイルの相互参照">画像ファイルの相互参照</a></li>
+  <li><a href="#markdown-テーブルの相互参照" id="toc-markdown-テーブルの相互参照" class="nav-link" data-scroll-target="#markdown-テーブルの相互参照">Markdown テーブルの相互参照</a></li>
+  <li><a href="#ggplot2-による図の相互参照" id="toc-ggplot2-による図の相互参照" class="nav-link" data-scroll-target="#ggplot2-による図の相互参照"><code>ggplot2</code> による図の相互参照</a></li>
+  <li><a href="#tinytable-による表の相互参照" id="toc-tinytable-による表の相互参照" class="nav-link" data-scroll-target="#tinytable-による表の相互参照"><code>tinytable</code> による表の相互参照</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-slides.html">Appendices</a></li><li class="breadcrumb-item"><a href="./11-slides.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">スライド</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-quarto.html">Appendices</a></li><li class="breadcrumb-item"><a href="./11-quarto.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Quarto (応用編)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-slides" class="quarto-section-identifier">Appendix A — スライド</span></h1>
+<h1 class="title">Appendix A — Quarto (応用編)</h1>
 </div>
 
 
@@ -240,17 +250,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="sec-slides" class="level2" data-number="A.1">
+<h2 data-number="A.1" class="anchored" data-anchor-id="sec-slides"><span class="header-section-number">A.1</span> スライド</h2>
 <p>Quartoでスライドを作る場合, PowerPoint, Beamer, Reveal.js などの形式を選ぶことができます. Quartoを使う人は Reveal.js 形式を選ぶことが多いですが, HTMLベースであるため扱いに癖があります. ここでは, Typst 形式でスライドを作る方法を紹介します. その他の方法は<a href="https://quarto.org/docs/presentations/">Quartoのドキュメント</a>を参照してください. 基本的に文法は変わらず, YAMLフロントマターの <code>format</code> で <code>revealjs</code> などを選ぶことでスライド形式で出力されるようになります.</p>
-<section id="quarto-clean-typst" class="level2" data-number="A.1">
-<h2 data-number="A.1" class="anchored" data-anchor-id="quarto-clean-typst"><span class="header-section-number">A.1</span> quarto-clean-typst</h2>
+<section id="quarto-clean-typst" class="level3">
+<h3 class="anchored" data-anchor-id="quarto-clean-typst">quarto-clean-typst</h3>
 <p><a href="https://github.com/kazuyanagimoto/quarto-clean-typst">quarto-clean-typst</a> は, 私 (柳本和春) が作ったQuartoでTypst形式のスライドを作るためのテンプレートです. ここでは最小限の機能を紹介しますが, 詳細は <a href="https://zenn.dev/nicetak/articles/quarto-typst-slides">Zennの記事</a> を参照してください.</p>
 <iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/aecc63d3b8e14cb39729197c4d396066" title="Quarto Clean Theme" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
 <p>インストールはプロジェクトを開いた状態で, ターミナルから</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install extension kazuyanagimoto/quarto-clean-typst</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>として <code>Y</code> を入力するだけです. プロジェクトディレクトリに <code>_extensions/kazuyanagimoto/clean/</code> というディレクトリができていれば成功です.</p>
 </section>
-<section id="スライドの作成" class="level2" data-number="A.2">
-<h2 data-number="A.2" class="anchored" data-anchor-id="スライドの作成"><span class="header-section-number">A.2</span> スライドの作成</h2>
+<section id="スライドの作成" class="level3">
+<h3 class="anchored" data-anchor-id="スライドの作成">スライドの作成</h3>
 <p>YAMLフロントマターに <code>format: clean-typst</code> と書くと, Typst形式のスライドが出力されるようになります. そのほかは通常のQuartoと同じような内容を設定できます.</p>
 <p>基本的には, Quartoのスライド記法 (特にReveal.jsの) を使います. <code>h2</code>レベルのヘッダーがスライドの区切りかつスライドタイトルであり, <code>h1</code>がセクションタイトル, <code>h3</code>がスライドのサブタイトルとなります.</p>
 <div class="code-with-filename">
@@ -279,6 +291,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Also, all the <span class="co">[</span><span class="ot">Touying</span><span class="co">](https://touying-typ.github.io)</span> features can be used by **Typst native code**.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><a href="./static/img/11-quarto/slides_example.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="./static/img/11-quarto/slides_example.png" class="img-fluid"></a></p>
+</section>
 <section id="局所的なカスタマイズ" class="level3">
 <h3 class="anchored" data-anchor-id="局所的なカスタマイズ">局所的なカスタマイズ</h3>
 <p>スライドを作成する際, 一部のスライドだけスタイルを変更したり, 行間を調整したいことがよくあります. Quartoの<a href="https://quarto.org/docs/advanced/typst/typst-css.html">Typst CSS</a>を用いたり, 独自機能の <code>{{&lt; v 1em &gt;}}</code> を使うことで局所的なカスタマイズが可能です.</p>
@@ -312,9 +325,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><a href="./static/img/11-quarto/adhoc_styling.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="./static/img/11-quarto/adhoc_styling.png" class="img-fluid"></a></p>
 </section>
-</section>
-<section id="演習" class="level2" data-number="A.3">
-<h2 data-number="A.3" class="anchored" data-anchor-id="演習"><span class="header-section-number">A.3</span> 演習</h2>
+<section id="演習" class="level3">
+<h3 class="anchored" data-anchor-id="演習">演習</h3>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -334,8 +346,208 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 </div>
 </div>
+</section>
+</section>
+<section id="sec-crossref" class="level2" data-number="A.2">
+<h2 data-number="A.2" class="anchored" data-anchor-id="sec-crossref"><span class="header-section-number">A.2</span> 相互参照</h2>
+<p>相互参照 (cross-reference) は, 図・表・節などに自動で番号を振り, 本文から「<code>@fig-...</code> を参照」のように引用する仕組みです. 番号は出現順に自動で振られ, 並び替えても自動で更新されるため, 手で「図1」「図2」と書く必要がありません.</p>
+<p>Quartoでは, 要素に <strong>ラベル</strong> を付け, 本文から <code>@ラベル名</code> で参照します. ラベルの <strong>接頭辞</strong> が要素の種類を決め, 番号の付け方 (「図」か「表」か) もこれで決まります.</p>
+<ul>
+<li><code>fig-</code>: 図 (figure)</li>
+<li><code>tbl-</code>: 表 (table)</li>
+<li>ほかに <code>sec-</code> (節, この節も <code>{#sec-crossref}</code> で参照可能), <code>eq-</code> (数式) など</li>
+</ul>
+<section id="画像ファイルの相互参照" class="level3">
+<h3 class="anchored" data-anchor-id="画像ファイルの相互参照">画像ファイルの相互参照</h3>
+<p>Markdownの画像記法で, <code>[]</code> の中にキャプションを書き, 末尾に <code>{#fig-ラベル}</code> を付けます.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="al">![スライドの例](/static/img/11-quarto/slides_example.png)</span>{#fig-slides-img}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="fig-slides-img" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-slides-img-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./static/img/11-quarto/slides_example.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;A.1: スライドの例"><img src="./static/img/11-quarto/slides_example.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-slides-img-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;A.1: スライドの例
+</figcaption>
+</figure>
+</div>
+<p>本文で <code>@fig-slides-img</code> と書くと, <a href="#fig-slides-img" class="quarto-xref">Figure&nbsp;<span>A.1</span></a> のように「図 番号」へ展開されます.</p>
+</section>
+<section id="markdown-テーブルの相互参照" class="level3">
+<h3 class="anchored" data-anchor-id="markdown-テーブルの相互参照">Markdown テーブルの相互参照</h3>
+<p>テーブルの直後に空行を挟んで, <code>: キャプション {#tbl-ラベル}</code> を書きます.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 種類   <span class="pp">|</span> 主な生息地             <span class="pp">|</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|--------|------------------------|</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Adelie <span class="pp">|</span> 南極半島周辺           <span class="pp">|</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Gentoo <span class="pp">|</span> フォークランド諸島など <span class="pp">|</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>: ペンギンの種類 {#tbl-penguins-md}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="tbl-penguins-md" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-penguins-md-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;A.1: ペンギンの種類
+</figcaption>
+<div aria-describedby="tbl-penguins-md-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>種類</th>
+<th>主な生息地</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Adelie</td>
+<td>南極半島周辺</td>
+</tr>
+<tr class="even">
+<td>Gentoo</td>
+<td>フォークランド諸島など</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>本文で <code>@tbl-penguins-md</code> と書くと <a href="#tbl-penguins-md" class="quarto-xref">Table&nbsp;<span>A.1</span></a> のように展開されます.</p>
+</section>
+<section id="ggplot2-による図の相互参照" class="level3">
+<h3 class="anchored" data-anchor-id="ggplot2-による図の相互参照"><code>ggplot2</code> による図の相互参照</h3>
+<p>コードで生成する図には, チャンクオプションの <code>#| label:</code> を <code>fig-</code> で始め, <code>#| fig-cap:</code> でキャプションを付けます. 図そのものに <code>{#...}</code> を付ける必要はありません.</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-penguins-plot</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "くちばしの長さとひれの長さの関係"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> flipper_len, <span class="at">y =</span> bill_len, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Flipper length (mm)"</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Bill length (mm)"</span>,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Species"</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-penguins-plot" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-penguins-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="11-quarto_files/figure-html/fig-penguins-plot-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;A.2: くちばしの長さとひれの長さの関係"><img src="11-quarto_files/figure-html/fig-penguins-plot-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-penguins-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;A.2: くちばしの長さとひれの長さの関係
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>本文で <code>@fig-penguins-plot</code> と書くと <a href="#fig-penguins-plot" class="quarto-xref">Figure&nbsp;<span>A.2</span></a> のように参照できます.</p>
+</section>
+<section id="tinytable-による表の相互参照" class="level3">
+<h3 class="anchored" data-anchor-id="tinytable-による表の相互参照"><code>tinytable</code> による表の相互参照</h3>
+<p>表も同様に, チャンクラベルを <code>tbl-</code> で始め, <code>#| tbl-cap:</code> でキャプションを付けます. <code>tinytable</code> では <code>tt(caption = ...)</code> よりも, このチャンクオプションを使う方が相互参照が確実に効きます.</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-penguins-tt</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "ペンギンの種類ごとの平均値"</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">bill_len =</span> <span class="fu">mean</span>(bill_len, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">flipper_len =</span> <span class="fu">mean</span>(flipper_len, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">.by =</span> species</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tt</span>()</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="tbl-penguins-tt" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-layout-align="center">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-penguins-tt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;A.2: ペンギンの種類ごとの平均値
+</figcaption>
+<div aria-describedby="tbl-penguins-tt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<!-- preamble start -->
+
+    <!-- tinytable mathjax start -->
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+    <!-- tinytable mathjax end -->
+
+    <script src="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.js"></script>
+
+    <script>
+      // Create table-specific functions using external factory
+      const tableFns_luf63v69dkrydkv5pj0h = TinyTable.createTableFunctions("tinytable_luf63v69dkrydkv5pj0h");
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: '3', j: 1 }, { i: '3', j: 2 }, { i: '3', j: 3 } ], css_id: 'tinytable_css_roznh0m7ayen40ss0gb7',}, 
+          { positions: [ { i: '0', j: 1 }, { i: '0', j: 2 }, { i: '0', j: 3 } ], css_id: 'tinytable_css_xgtp7j7o4y772cbn1nsv',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  tableFns_luf63v69dkrydkv5pj0h.styleCell(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
+    <style>
+    /* tinytable css entries after */
+    #tinytable_luf63v69dkrydkv5pj0h td.tinytable_css_roznh0m7ayen40ss0gb7, #tinytable_luf63v69dkrydkv5pj0h th.tinytable_css_roznh0m7ayen40ss0gb7 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%;  }
+    #tinytable_luf63v69dkrydkv5pj0h td.tinytable_css_xgtp7j7o4y772cbn1nsv, #tinytable_luf63v69dkrydkv5pj0h th.tinytable_css_xgtp7j7o4y772cbn1nsv {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%;  }
+    </style>
+    <div class="container">
+      <table class="tinytable" id="tinytable_luf63v69dkrydkv5pj0h" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        
+        <thead>
+              <tr>
+                <th scope="col" data-row="0" data-col="1">species</th>
+                <th scope="col" data-row="0" data-col="2">bill_len</th>
+                <th scope="col" data-row="0" data-col="3">flipper_len</th>
+              </tr>
+        </thead>
+        
+        <tbody>
+                <tr>
+                  <td data-row="1" data-col="1">Adelie</td>
+                  <td data-row="1" data-col="2">38.79139</td>
+                  <td data-row="1" data-col="3">189.9536</td>
+                </tr>
+                <tr>
+                  <td data-row="2" data-col="1">Gentoo</td>
+                  <td data-row="2" data-col="2">47.50488</td>
+                  <td data-row="2" data-col="3">217.1870</td>
+                </tr>
+                <tr>
+                  <td data-row="3" data-col="1">Chinstrap</td>
+                  <td data-row="3" data-col="2">48.83382</td>
+                  <td data-row="3" data-col="3">195.8235</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- hack to avoid NA insertion in last line -->
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>本文で <code>@tbl-penguins-tt</code> と書くと <a href="#tbl-penguins-tt" class="quarto-xref">Table&nbsp;<span>A.2</span></a> のように参照できます.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

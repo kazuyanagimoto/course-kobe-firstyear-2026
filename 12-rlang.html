@@ -83,7 +83,7 @@ div.csl-indent {
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <link href="./references.html" rel="next">
-<link href="./11-slides.html" rel="prev">
+<link href="./11-quarto.html" rel="prev">
 <link href="./static/img/logo.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
@@ -143,7 +143,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-slides.html">Appendices</a></li><li class="breadcrumb-item"><a href="./12-rlang.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Rの基礎</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-quarto.html">Appendices</a></li><li class="breadcrumb-item"><a href="./12-rlang.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Rの基礎</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -202,8 +202,8 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./11-slides.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">スライド</span></span></a>
+  <a href="./11-quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Quarto (応用編)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -245,13 +245,18 @@ div.csl-indent {
   <li><a href="#tidyr-によるデータの整形" id="toc-tidyr-によるデータの整形" class="nav-link" data-scroll-target="#tidyr-によるデータの整形"><code>tidyr</code> によるデータの整形</a></li>
   <li><a href="#ggplot2-によるデータの可視化" id="toc-ggplot2-によるデータの可視化" class="nav-link" data-scroll-target="#ggplot2-によるデータの可視化"><code>ggplot2</code> によるデータの可視化</a></li>
   </ul></li>
+  <li><a href="#tinytable-によるテーブルの作成" id="toc-tinytable-によるテーブルの作成" class="nav-link" data-scroll-target="#tinytable-によるテーブルの作成"><span class="header-section-number">B.3</span> tinytable によるテーブルの作成</a>
+  <ul class="collapse">
+  <li><a href="#format_tt-による値の整形" id="toc-format_tt-による値の整形" class="nav-link" data-scroll-target="#format_tt-による値の整形"><code>format_tt()</code> による値の整形</a></li>
+  <li><a href="#style_tt-による装飾" id="toc-style_tt-による装飾" class="nav-link" data-scroll-target="#style_tt-による装飾"><code>style_tt()</code> による装飾</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-slides.html">Appendices</a></li><li class="breadcrumb-item"><a href="./12-rlang.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Rの基礎</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-quarto.html">Appendices</a></li><li class="breadcrumb-item"><a href="./12-rlang.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Rの基礎</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span id="sec-rlang" class="quarto-section-identifier">Appendix B — Rの基礎</span></h1>
 </div>
@@ -663,6 +668,259 @@ div.csl-indent {
 <li><code>color</code> 美的マッピングを追加することで, 種類ごとに色分けされたグラフを作成することができます.</li>
 <li><code>shape</code> 美的マッピングを追加することで, 種類ごとに形を変えることができます.</li>
 <li>どちらか一方を指定するだけでもいいですが, 両方を指定することをお勧めします. (色覚障害の方も見やすくなるため, 白黒印刷しても見やすくなるため)</li>
+</ul>
+</section>
+</section>
+<section id="tinytable-によるテーブルの作成" class="level2" data-number="B.3">
+<h2 data-number="B.3" class="anchored" data-anchor-id="tinytable-によるテーブルの作成"><span class="header-section-number">B.3</span> tinytable によるテーブルの作成</h2>
+<p><code>tinytable</code> は HTML・PDF・Word など複数の出力形式に対応した, シンプルで美しいテーブルを作成するためのパッケージです. データフレームを <code>tt()</code> 関数に渡すだけで, 整形されたテーブルが得られます.</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tinytable)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>まずは集計したデータフレームを <code>tt()</code> に渡してみましょう.</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>tbl_data <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">bill_len =</span> <span class="fu">mean</span>(bill_len, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">flipper_len =</span> <span class="fu">mean</span>(flipper_len, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">.by =</span> species</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>tbl_data <span class="sc">|&gt;</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tt</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<!-- preamble start -->
+
+    <script src="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.js"></script>
+
+    <script>
+      // Create table-specific functions using external factory
+      const tableFns_81omkfkb7k6atdspiwzm = TinyTable.createTableFunctions("tinytable_81omkfkb7k6atdspiwzm");
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: '3', j: 1 }, { i: '3', j: 2 }, { i: '3', j: 3 }, { i: '3', j: 4 } ], css_id: 'tinytable_css_u0z6psuyay3abaf604cv',}, 
+          { positions: [ { i: '0', j: 1 }, { i: '0', j: 2 }, { i: '0', j: 3 }, { i: '0', j: 4 } ], css_id: 'tinytable_css_mb0wav5t7kzxmevden0x',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  tableFns_81omkfkb7k6atdspiwzm.styleCell(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
+    <style>
+    /* tinytable css entries after */
+    #tinytable_81omkfkb7k6atdspiwzm td.tinytable_css_u0z6psuyay3abaf604cv, #tinytable_81omkfkb7k6atdspiwzm th.tinytable_css_u0z6psuyay3abaf604cv {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%;  }
+    #tinytable_81omkfkb7k6atdspiwzm td.tinytable_css_mb0wav5t7kzxmevden0x, #tinytable_81omkfkb7k6atdspiwzm th.tinytable_css_mb0wav5t7kzxmevden0x {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%;  }
+    </style>
+    <div class="container">
+      <table class="tinytable" id="tinytable_81omkfkb7k6atdspiwzm" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        
+        <thead>
+              <tr>
+                <th scope="col" data-row="0" data-col="1">species</th>
+                <th scope="col" data-row="0" data-col="2">n</th>
+                <th scope="col" data-row="0" data-col="3">bill_len</th>
+                <th scope="col" data-row="0" data-col="4">flipper_len</th>
+              </tr>
+        </thead>
+        
+        <tbody>
+                <tr>
+                  <td data-row="1" data-col="1">Adelie</td>
+                  <td data-row="1" data-col="2">152</td>
+                  <td data-row="1" data-col="3">38.79139</td>
+                  <td data-row="1" data-col="4">189.9536</td>
+                </tr>
+                <tr>
+                  <td data-row="2" data-col="1">Gentoo</td>
+                  <td data-row="2" data-col="2">124</td>
+                  <td data-row="2" data-col="3">47.50488</td>
+                  <td data-row="2" data-col="4">217.1870</td>
+                </tr>
+                <tr>
+                  <td data-row="3" data-col="1">Chinstrap</td>
+                  <td data-row="3" data-col="2">68</td>
+                  <td data-row="3" data-col="3">48.83382</td>
+                  <td data-row="3" data-col="4">195.8235</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- hack to avoid NA insertion in last line -->
+</div>
+</div>
+<section id="format_tt-による値の整形" class="level3">
+<h3 class="anchored" data-anchor-id="format_tt-による値の整形"><code>format_tt()</code> による値の整形</h3>
+<p><code>format_tt()</code> を使うと, 小数点以下の桁数や列名を整えることができます.</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>tbl_data <span class="sc">|&gt;</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tt</span>() <span class="sc">|&gt;</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">format_tt</span>(<span class="at">digits =</span> <span class="dv">1</span>, <span class="at">num_fmt =</span> <span class="st">"decimal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<!-- preamble start -->
+
+    <script src="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.js"></script>
+
+    <script>
+      // Create table-specific functions using external factory
+      const tableFns_zrpmt8grgp8vs88y65y9 = TinyTable.createTableFunctions("tinytable_zrpmt8grgp8vs88y65y9");
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: '3', j: 1 }, { i: '3', j: 2 }, { i: '3', j: 3 }, { i: '3', j: 4 } ], css_id: 'tinytable_css_vxyrg3g4rc4aq2uiclpo',}, 
+          { positions: [ { i: '0', j: 1 }, { i: '0', j: 2 }, { i: '0', j: 3 }, { i: '0', j: 4 } ], css_id: 'tinytable_css_73aobv4gcdmkatujs3qy',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  tableFns_zrpmt8grgp8vs88y65y9.styleCell(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
+    <style>
+    /* tinytable css entries after */
+    #tinytable_zrpmt8grgp8vs88y65y9 td.tinytable_css_vxyrg3g4rc4aq2uiclpo, #tinytable_zrpmt8grgp8vs88y65y9 th.tinytable_css_vxyrg3g4rc4aq2uiclpo {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%;  }
+    #tinytable_zrpmt8grgp8vs88y65y9 td.tinytable_css_73aobv4gcdmkatujs3qy, #tinytable_zrpmt8grgp8vs88y65y9 th.tinytable_css_73aobv4gcdmkatujs3qy {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%;  }
+    </style>
+    <div class="container">
+      <table class="tinytable" id="tinytable_zrpmt8grgp8vs88y65y9" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        
+        <thead>
+              <tr>
+                <th scope="col" data-row="0" data-col="1">species</th>
+                <th scope="col" data-row="0" data-col="2">n</th>
+                <th scope="col" data-row="0" data-col="3">bill_len</th>
+                <th scope="col" data-row="0" data-col="4">flipper_len</th>
+              </tr>
+        </thead>
+        
+        <tbody>
+                <tr>
+                  <td data-row="1" data-col="1">Adelie</td>
+                  <td data-row="1" data-col="2">152</td>
+                  <td data-row="1" data-col="3">38.8</td>
+                  <td data-row="1" data-col="4">190</td>
+                </tr>
+                <tr>
+                  <td data-row="2" data-col="1">Gentoo</td>
+                  <td data-row="2" data-col="2">124</td>
+                  <td data-row="2" data-col="3">47.5</td>
+                  <td data-row="2" data-col="4">217.2</td>
+                </tr>
+                <tr>
+                  <td data-row="3" data-col="1">Chinstrap</td>
+                  <td data-row="3" data-col="2">68</td>
+                  <td data-row="3" data-col="3">48.8</td>
+                  <td data-row="3" data-col="4">195.8</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- hack to avoid NA insertion in last line -->
+</div>
+</div>
+</section>
+<section id="style_tt-による装飾" class="level3">
+<h3 class="anchored" data-anchor-id="style_tt-による装飾"><code>style_tt()</code> による装飾</h3>
+<p><code>style_tt()</code> を使うと, セルの色や太字, 罫線などのスタイルを指定できます. <code>i</code> で行, <code>j</code> で列を指定します.</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>tbl_data <span class="sc">|&gt;</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tt</span>() <span class="sc">|&gt;</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">format_tt</span>(<span class="at">digits =</span> <span class="dv">1</span>, <span class="at">num_fmt =</span> <span class="st">"decimal"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">style_tt</span>(<span class="at">i =</span> <span class="dv">0</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span> <span class="co"># ヘッダー行を太字に</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">style_tt</span>(<span class="at">j =</span> <span class="dv">1</span>, <span class="at">background =</span> <span class="st">"#f0f0f0"</span>) <span class="co"># 1列目に背景色</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<!-- preamble start -->
+
+    <script src="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.js"></script>
+
+    <script>
+      // Create table-specific functions using external factory
+      const tableFns_57ajqmlr2d2umh3lfl1z = TinyTable.createTableFunctions("tinytable_57ajqmlr2d2umh3lfl1z");
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: '3', j: 2 }, { i: '3', j: 3 }, { i: '3', j: 4 } ], css_id: 'tinytable_css_zeib94j80717pjyl29u9',}, 
+          { positions: [ { i: '0', j: 2 }, { i: '0', j: 3 }, { i: '0', j: 4 } ], css_id: 'tinytable_css_2wqh5u5yp1fq5cz2jv72',}, 
+          { positions: [ { i: '3', j: 1 } ], css_id: 'tinytable_css_ymy11kl7ddgklkql0hpd',}, 
+          { positions: [ { i: '1', j: 1 }, { i: '2', j: 1 } ], css_id: 'tinytable_css_zpp19kmojm0kqqscpnvs',}, 
+          { positions: [ { i: '0', j: 1 } ], css_id: 'tinytable_css_vii4clex9nbkjzsa4kxz',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  tableFns_57ajqmlr2d2umh3lfl1z.styleCell(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
+    <style>
+    /* tinytable css entries after */
+    #tinytable_57ajqmlr2d2umh3lfl1z td.tinytable_css_zeib94j80717pjyl29u9, #tinytable_57ajqmlr2d2umh3lfl1z th.tinytable_css_zeib94j80717pjyl29u9 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%;  }
+    #tinytable_57ajqmlr2d2umh3lfl1z td.tinytable_css_2wqh5u5yp1fq5cz2jv72, #tinytable_57ajqmlr2d2umh3lfl1z th.tinytable_css_2wqh5u5yp1fq5cz2jv72 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; font-weight: bold }
+    #tinytable_57ajqmlr2d2umh3lfl1z td.tinytable_css_ymy11kl7ddgklkql0hpd, #tinytable_57ajqmlr2d2umh3lfl1z th.tinytable_css_ymy11kl7ddgklkql0hpd {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; background-color: #f0f0f0 }
+    #tinytable_57ajqmlr2d2umh3lfl1z td.tinytable_css_zpp19kmojm0kqqscpnvs, #tinytable_57ajqmlr2d2umh3lfl1z th.tinytable_css_zpp19kmojm0kqqscpnvs { background-color: #f0f0f0 }
+    #tinytable_57ajqmlr2d2umh3lfl1z td.tinytable_css_vii4clex9nbkjzsa4kxz, #tinytable_57ajqmlr2d2umh3lfl1z th.tinytable_css_vii4clex9nbkjzsa4kxz {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; font-weight: bold; background-color: #f0f0f0 }
+    </style>
+    <div class="container">
+      <table class="tinytable" id="tinytable_57ajqmlr2d2umh3lfl1z" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        
+        <thead>
+              <tr>
+                <th scope="col" data-row="0" data-col="1">species</th>
+                <th scope="col" data-row="0" data-col="2">n</th>
+                <th scope="col" data-row="0" data-col="3">bill_len</th>
+                <th scope="col" data-row="0" data-col="4">flipper_len</th>
+              </tr>
+        </thead>
+        
+        <tbody>
+                <tr>
+                  <td data-row="1" data-col="1">Adelie</td>
+                  <td data-row="1" data-col="2">152</td>
+                  <td data-row="1" data-col="3">38.8</td>
+                  <td data-row="1" data-col="4">190</td>
+                </tr>
+                <tr>
+                  <td data-row="2" data-col="1">Gentoo</td>
+                  <td data-row="2" data-col="2">124</td>
+                  <td data-row="2" data-col="3">47.5</td>
+                  <td data-row="2" data-col="4">217.2</td>
+                </tr>
+                <tr>
+                  <td data-row="3" data-col="1">Chinstrap</td>
+                  <td data-row="3" data-col="2">68</td>
+                  <td data-row="3" data-col="3">48.8</td>
+                  <td data-row="3" data-col="4">195.8</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- hack to avoid NA insertion in last line -->
+</div>
+</div>
+<ul>
+<li><code>tt()</code> はデータフレームからテーブルを作成する関数</li>
+<li><code>format_tt()</code> は数値の桁数や表示形式を整える関数</li>
+<li><code>style_tt()</code> はセルの色や太字などのスタイルを指定する関数</li>
+<li>これらをパイプ演算子でつないでいくことで, 段階的にテーブルを構築できます</li>
 </ul>
 
 
@@ -1077,8 +1335,8 @@ Wilkinson, Leland. 1999. <em>The Grammar of Graphics</em>. Statistics and Comput
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./11-slides.html" class="pagination-link" aria-label="スライド">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">スライド</span></span>
+      <a href="./11-quarto.html" class="pagination-link" aria-label="Quarto (応用編)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Quarto (応用編)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
