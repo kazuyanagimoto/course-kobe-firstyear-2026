@@ -301,3 +301,58 @@ penguins |>
 - `color` 美的マッピングを追加することで, 種類ごとに色分けされたグラフを作成することができます.
 - `shape` 美的マッピングを追加することで, 種類ごとに形を変えることができます.
 - どちらか一方を指定するだけでもいいですが, 両方を指定することをお勧めします. (色覚障害の方も見やすくなるため, 白黒印刷しても見やすくなるため)
+
+## tinytable によるテーブルの作成
+
+`tinytable` は HTML・PDF・Word など複数の出力形式に対応した, シンプルで美しいテーブルを作成するためのパッケージです. データフレームを `tt()` 関数に渡すだけで, 整形されたテーブルが得られます.
+
+```{r}
+#| label: package-tinytable
+library(tinytable)
+```
+
+まずは集計したデータフレームを `tt()` に渡してみましょう.
+
+```{r}
+#| label: table-tinytable-basic
+tbl_data <- penguins |>
+  summarize(
+    n = n(),
+    bill_len = mean(bill_len, na.rm = TRUE),
+    flipper_len = mean(flipper_len, na.rm = TRUE),
+    .by = species
+  )
+
+tbl_data |>
+  tt()
+```
+
+### `format_tt()` による値の整形
+
+`format_tt()` を使うと, 小数点以下の桁数や列名を整えることができます.
+
+```{r}
+#| label: table-tinytable-format
+tbl_data |>
+  tt() |>
+  format_tt(digits = 1, num_fmt = "decimal")
+```
+
+### `style_tt()` による装飾
+
+`style_tt()` を使うと, セルの色や太字, 罫線などのスタイルを指定できます. `i` で行, `j` で列を指定します.
+
+```{r}
+#| label: table-tinytable-style
+tbl_data |>
+  tt() |>
+  format_tt(digits = 1, num_fmt = "decimal") |>
+  style_tt(i = 0, bold = TRUE) |> # ヘッダー行を太字に
+  style_tt(j = 1, background = "#f0f0f0") # 1列目に背景色
+```
+
+- `tt()` はデータフレームからテーブルを作成する関数
+- `format_tt()` は数値の桁数や表示形式を整える関数
+- `style_tt()` はセルの色や太字などのスタイルを指定する関数
+- これらをパイプ演算子でつないでいくことで, 段階的にテーブルを構築できます
+
