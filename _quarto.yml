@@ -24,6 +24,7 @@ book:
     - 01-quarto.qmd
     - 02-citation.qmd
     - 03-data-analysis.qmd
+    - 04-visualization.qmd
   appendices:
     - 11-quarto.qmd
     - 12-rlang.qmd

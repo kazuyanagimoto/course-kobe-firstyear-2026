@@ -1,0 +1,178 @@
+# 可視化のTips {#sec-visualization-tips}
+
+この章では, データ可視化に関するいくつかのTipsを紹介します. しかし, これらのテクニックは次の一つの原則に基づいているに過ぎません.
+
+::: {.callout-tip}
+
+## 可視化の原則
+
+図は主張をもち, その主張を最短時間で伝えられるようにデザインされなければならない.
+
+:::
+
+```{r}
+#| label: setup
+library(dplyr)
+library(ggplot2)
+```
+
+
+## 最少の要素
+
+最短時間で図を伝えるためには, 過剰な情報を削ぎ落とすことが重要です. これを表した @tufte2001 の有名な原則があります.
+
+::: {.callout-tip}
+
+## データインク比の原則 [@tufte2001]
+
+図においては次のデータインク比を最大化しなければならない:
+
+$$
+\text{データインク比} := \frac{\text{データインク}}{\text{図に使用されたインクの総量}}.
+$$
+
+:::
+
+ここでいうデータインクとは, 図の中でデータを表すために使われているインクの量のことであり, 基本的には図を構成するために最低限必要な要素のことを指します. ここから, 次のような規則も見出すことができます:
+
+::: {.callout-tip}
+
+## データインク比の原則の系
+
+削除しても図の主張を損なわない要素は削除しなければならない.
+
+:::
+
+この原則を, R に標準で付属する `penguins` データセットで確かめてみましょう.
+ここではペンギンの種 (`species`) ごとに, 性別 (`sex`) 別の個体数を数えた棒グラフを描きます.
+まずは何の工夫もしていない, デフォルトのグラフです.
+
+```{r}
+#| label: plot-penguins-bar-default
+penguins_bar <- penguins |>
+  filter(!is.na(sex))
+
+penguins_bar |>
+  ggplot(aes(x = species, fill = sex)) +
+  geom_bar(position = "dodge")
+```
+
+このグラフには
+
+- グレーの背景
+- 縦横のグリッド線
+- 自明な軸ラベル
+
+など, データを表していないインクが多く含まれています. データインク比の原則に従って, これらの要素を削ぎ落とします.
+
+```{r}
+#| label: plot-penguins-bar-minimal
+penguins_bar |>
+  ggplot(aes(x = species, fill = sex)) +
+  geom_bar(position = "dodge") +
+  labs(
+    x = NULL,
+    y = NULL,
+    fill = NULL,
+    title = "Number of Penguins by Species and Sex"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank()
+  )
+```
+
+さらに可読性を高めるために, 棒を横向きにして凡例をパネル内の空白に移します. 横向きにするとカテゴリ名が水平に並ぶので, ラベルが長くなっても読みやすくなります. また, 凡例をパネル内の空白に移すことで, グラフ全体のバランスが良くなります.
+
+```{r}
+#| label: plot-penguins-bar-flip
+penguins_bar |>
+  ggplot(aes(x = forcats::fct_rev(species), fill = sex)) +
+  geom_bar(position = "dodge") +
+  coord_flip() +
+  labs(
+    x = NULL,
+    y = NULL,
+    fill = NULL,
+    title = "Number of Penguins by Species and Sex"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.grid.minor = element_blank(),
+    panel.grid.major.y = element_blank(),
+    legend.position = "inside",
+    legend.position.inside = c(0.9, 0.15),
+    plot.title.position = "plot"
+  ) +
+  guides(fill = guide_legend(reverse = TRUE))
+```
+
+なお, 横向きに変えたことに伴って見づらくなってしまった点があるので
+
+- `forcats::fct_rev()` 関数を使ってカテゴリの順番を逆にしています
+- `guides(fill = guide_legend(reverse = TRUE))` を使って, 凡例の順番も逆にしています
+
+## 色の選び方
+
+色の選択は重要なテーマで様々な理論がありますが, ここでは深入りせずに用意されているカラーパレットを紹介します.
+
+### R Color Brewer's Palettes
+
+現代的なカラーパレット集として有名な [Color Brewer](https://colorbrewer2.org/) のパッケージとして, RColorBrewerが提供されています.
+
+![](https://r-graph-gallery.com/38-rcolorbrewers-palettes_files/figure-html/thecode-1.png)
+
+```{r}
+#| label: plot-color-brewer
+penguins_bar |>
+  ggplot(aes(x = forcats::fct_rev(species), fill = sex)) +
+  geom_bar(position = "dodge") +
+  coord_flip() +
+  labs(
+    x = NULL,
+    y = NULL,
+    fill = NULL,
+    title = "Number of Penguins by Species and Sex"
+  ) +
+  scale_fill_brewer(palette = "Set2") +
+  theme_minimal() +
+  theme(
+    panel.grid.minor = element_blank(),
+    panel.grid.major.y = element_blank(),
+    legend.position = "inside",
+    legend.position.inside = c(0.9, 0.15),
+    plot.title.position = "plot"
+  ) +
+  guides(fill = guide_legend(reverse = TRUE))
+```
+
+### カラー・セーフティ: Okabe-Ito パレット
+
+色選択の一つの方針として, 色覚異常の人でも見分けやすい色を使う, という考え方があります. カラー・セーフティなパレットとして提案された中でも有名なカラーパレットがOkabe-Itoカラーパレットです.
+
+```{r}
+#| label: plot-okabe-ito
+penguins_bar |>
+  ggplot(aes(x = forcats::fct_rev(species), fill = sex)) +
+  geom_bar(position = "dodge") +
+  coord_flip() +
+  labs(
+    x = NULL,
+    y = NULL,
+    fill = NULL,
+    title = "Number of Penguins by Species and Sex"
+  ) +
+  see::scale_fill_okabeito() +
+  theme_minimal() +
+  theme(
+    panel.grid.minor = element_blank(),
+    panel.grid.major.y = element_blank(),
+    legend.position = "inside",
+    legend.position.inside = c(0.9, 0.15),
+    plot.title.position = "plot"
+  ) +
+  guides(fill = guide_legend(reverse = TRUE))
+```
+
+## フォント
