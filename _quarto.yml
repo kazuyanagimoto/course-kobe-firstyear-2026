@@ -28,6 +28,7 @@ book:
   appendices:
     - 11-quarto.qmd
     - 12-rlang.qmd
+    - 13-color.qmd
     - references.qmd
   search: false
   site-url: https://kazuyanagimoto.com/course-kobe-firstyear-2026

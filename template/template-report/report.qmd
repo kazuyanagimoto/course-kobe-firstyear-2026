@@ -11,7 +11,7 @@ author:
 date: today
 date-format: "YYYY年M月D日"
 format:
-  typst:
+  kobe-typst:
     include-in-header:
       - text: "#set bibliography(title: [参考文献])"
 thanks: "ここで貢献について説明してください. 例: Member 1がFigure 1-3を担当, Member 2がFigure 4-6を担当, Member 3がPoint 1の内容をまとめるのを担当, Member 4がPoint 2の内容をまとめるのを担当, Member 5がPoint 3の内容をまとめるのを担当, Member 6がまとめの部分を担当"
@@ -43,8 +43,6 @@ knitr:
     fig.width: 6
     fig.height: 3.708
     out.width: 90%
-    collapse: true
-    dev: svg
 lang: ja
 fig-notes-title: "注:"
 tbl-notes-title: "注:"
