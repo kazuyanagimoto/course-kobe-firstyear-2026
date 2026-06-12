@@ -34,8 +34,6 @@ knitr:
     fig.width: 6
     fig.height: 3.708
     out.width: 80%
-    collapse: true
-    dev: svg
 crossref:
   fig-title: 図
   fig-prefix: 図

@@ -59,6 +59,7 @@ _book/
 static/mov/
 .playwright-mcp/
 data/
+.vscode/
 
 # rv
 rv/library/
