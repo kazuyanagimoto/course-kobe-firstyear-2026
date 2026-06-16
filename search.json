@@ -230,6 +230,46 @@
     ]
   },
   {
+    "objectID": "04-visualization.html",
+    "href": "04-visualization.html",
+    "title": "4  可視化のTips",
+    "section": "",
+    "text": "4.1 最少の要素\nこの章では, データ可視化に関するいくつかのTipsを紹介します. しかし, これらのテクニックは次の一つの原則に基づいているに過ぎません.\n最短時間で図を伝えるためには, 過剰な情報を削ぎ落とすことが重要です. これを表した Tufte (2001) の有名な原則があります.\nここでいうデータインクとは, 図の中でデータを表すために使われているインクの量のことであり, 基本的には図を構成するために最低限必要な要素のことを指します. ここから, 次のような規則も見出すことができます:\nこの原則を, R に標準で付属する penguins データセットで確かめてみましょう. ここではペンギンの種 (species) ごとに, 性別 (sex) 別の個体数を数えた棒グラフを描きます. まずは何の工夫もしていない, デフォルトのグラフです.\npenguins_bar &lt;- penguins |&gt;\n  filter(!is.na(sex))\n\npenguins_bar |&gt;\n  ggplot(aes(x = species, fill = sex)) +\n  geom_bar(position = \"dodge\")\nこのグラフには\nなど, データを表していないインクが多く含まれています. データインク比の原則に従って, これらの要素を削ぎ落とします.\npenguins_bar |&gt;\n  ggplot(aes(x = species, fill = sex)) +\n  geom_bar(position = \"dodge\") +\n  labs(\n    x = NULL,\n    y = NULL,\n    fill = NULL,\n    title = \"Number of Penguins by Species and Sex\"\n  ) +\n  theme_minimal() +\n  theme(\n    panel.grid.minor = element_blank(),\n    panel.grid.major.x = element_blank()\n  )\nさらに可読性を高めるために, 棒を横向きにして凡例をパネル内の空白に移します. 横向きにするとカテゴリ名が水平に並ぶので, ラベルが長くなっても読みやすくなります. また, 凡例をパネル内の空白に移すことで, グラフ全体のバランスが良くなります.\npenguins_bar |&gt;\n  ggplot(aes(x = forcats::fct_rev(species), fill = sex)) +\n  geom_bar(position = \"dodge\") +\n  coord_flip() +\n  labs(\n    x = NULL,\n    y = NULL,\n    fill = NULL,\n    title = \"Number of Penguins by Species and Sex\"\n  ) +\n  theme_minimal() +\n  theme(\n    panel.grid.minor = element_blank(),\n    panel.grid.major.y = element_blank(),\n    legend.position = \"inside\",\n    legend.position.inside = c(0.9, 0.15),\n    plot.title.position = \"plot\"\n  ) +\n  guides(fill = guide_legend(reverse = TRUE))\nなお, 横向きに変えたことに伴って見づらくなってしまった点があるので",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>可視化のTips</span>"
+    ]
+  },
+  {
+    "objectID": "04-visualization.html#最少の要素",
+    "href": "04-visualization.html#最少の要素",
+    "title": "4  可視化のTips",
+    "section": "",
+    "text": "Tipデータインク比の原則 (Tufte 2001)\n\n\n\n図においては次のデータインク比を最大化しなければならない:\n\\[\n\\text{データインク比} := \\frac{\\text{データインク}}{\\text{図に使用されたインクの総量}}.\n\\]\n\n\n\n\n\n\n\n\n\nTipデータインク比の原則の系\n\n\n\n削除しても図の主張を損なわない要素は削除しなければならない.\n\n\n\n\n\n\nグレーの背景\n縦横のグリッド線\n自明な軸ラベル\n\n\n\n\n\n\n\nforcats::fct_rev() 関数を使ってカテゴリの順番を逆にしています\nguides(fill = guide_legend(reverse = TRUE)) を使って, 凡例の順番も逆にしています",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>可視化のTips</span>"
+    ]
+  },
+  {
+    "objectID": "04-visualization.html#色の選び方",
+    "href": "04-visualization.html#色の選び方",
+    "title": "4  可視化のTips",
+    "section": "4.2 色の選び方",
+    "text": "4.2 色の選び方\n色の選択は重要なテーマで様々な理論がありますが, ここでは深入りせずに用意されているカラーパレットを紹介します.\n\nR Color Brewer’s Palettes\n現代的なカラーパレット集として有名な Color Brewer のパッケージとして, RColorBrewerが提供されています.\n\n\npenguins_bar |&gt;\n  ggplot(aes(x = forcats::fct_rev(species), fill = sex)) +\n  geom_bar(position = \"dodge\") +\n  coord_flip() +\n  labs(\n    x = NULL,\n    y = NULL,\n    fill = NULL,\n    title = \"Number of Penguins by Species and Sex\"\n  ) +\n  scale_fill_brewer(palette = \"Set2\") +\n  theme_minimal() +\n  theme(\n    panel.grid.minor = element_blank(),\n    panel.grid.major.y = element_blank(),\n    legend.position = \"inside\",\n    legend.position.inside = c(0.9, 0.15),\n    plot.title.position = \"plot\"\n  ) +\n  guides(fill = guide_legend(reverse = TRUE))\n\n\n\n\n\n\n\n\n\n\nカラー・セーフティ: Okabe-Ito パレット\n色選択の一つの方針として, 色覚異常の人でも見分けやすい色を使う, という考え方があります. カラー・セーフティなパレットとして提案された中でも有名なカラーパレットがOkabe-Itoカラーパレットです.\n\npenguins_bar |&gt;\n  ggplot(aes(x = forcats::fct_rev(species), fill = sex)) +\n  geom_bar(position = \"dodge\") +\n  coord_flip() +\n  labs(\n    x = NULL,\n    y = NULL,\n    fill = NULL,\n    title = \"Number of Penguins by Species and Sex\"\n  ) +\n  see::scale_fill_okabeito() +\n  theme_minimal() +\n  theme(\n    panel.grid.minor = element_blank(),\n    panel.grid.major.y = element_blank(),\n    legend.position = \"inside\",\n    legend.position.inside = c(0.9, 0.15),\n    plot.title.position = \"plot\"\n  ) +\n  guides(fill = guide_legend(reverse = TRUE))",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>可視化のTips</span>"
+    ]
+  },
+  {
+    "objectID": "04-visualization.html#フォント",
+    "href": "04-visualization.html#フォント",
+    "title": "4  可視化のTips",
+    "section": "4.3 フォント",
+    "text": "4.3 フォント\n\n\n\n\nTufte, Edward R. 2001. The Visual Display of Quantitative Information. 2nd ed. Graphics Press.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>可視化のTips</span>"
+    ]
+  },
+  {
     "objectID": "11-quarto.html",
     "href": "11-quarto.html",
     "title": "Appendix A — Quarto (応用編)",
