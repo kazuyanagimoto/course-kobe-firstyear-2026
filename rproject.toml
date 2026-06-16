@@ -73,4 +73,5 @@ dependencies = [
     "ggrepel",
     "see",
     "forcats",
+    "MetBrewer",
 ]

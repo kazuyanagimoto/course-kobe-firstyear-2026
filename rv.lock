@@ -13,6 +13,15 @@ dependencies = [
 ]
 
 [[packages]]
+name = "MetBrewer"
+version = "0.2.0"
+source = { repository = "https://cloud.r-project.org/" }
+force_source = false
+dependencies = [
+    "ggplot2",
+]
+
+[[packages]]
 name = "R6"
 version = "2.6.1"
 source = { repository = "https://cloud.r-project.org/" }
