@@ -34,12 +34,6 @@ knitr:
     fig.width: 6
     fig.height: 3.708
     out.width: 80%
-crossref:
-  fig-title: 図
-  fig-prefix: 図
-  tbl-title: 表
-  tbl-prefix: 表
-  sec-prefix: 第
 ---
 
 ```{r}
@@ -47,7 +41,6 @@ crossref:
 library(dplyr)
 library(ggplot2)
 library(tinytable)
-library(WDI)
 library(showtext)
 showtext_auto()
 
@@ -174,9 +167,10 @@ theme_set(theme_proj(size_base = 16))
 {{< v -0.5em >}}
 
 ```{r}
-#| label: plot-housework-tfr
-#| out-width: 65%
-df <- WDI::WDI(
+#| label: download-housework-tfr
+#| eval: false
+# data/ に同梱済みの CSV はこのコードで取得したものです (再実行は不要).
+WDI::WDI(
   country = "all",
   indicator = c(
     tfr = "SP.DYN.TFRT.IN",
@@ -189,6 +183,14 @@ df <- WDI::WDI(
 ) |>
   filter(income == "High income") |>
   filter(!is.na(tfr), !is.na(uwrk_fe), !is.na(uwrk_ma)) |>
+  select(country, iso2c, year, income, tfr, uwrk_fe, uwrk_ma) |>
+  readr::write_csv("data/wdi_housework_tfr.csv")
+```
+
+```{r}
+#| label: plot-housework-tfr
+#| out-width: 65%
+df <- readr::read_csv("data/wdi_housework_tfr.csv") |>
   mutate(housework_ratio = uwrk_fe / (uwrk_fe + uwrk_ma)) |>
   slice_max(year, by = country, with_ties = FALSE)
 
@@ -224,6 +226,33 @@ ggplot(df, aes(x = housework_ratio, y = tfr, label = iso2c)) +
 ::: {.align options = "center"}
 
 ```{r}
+#| label: download-policy
+#| eval: false
+# data/ に同梱済みの CSV はこのコードで取得したものです (再実行は不要).
+country_codes <- c("SWE", "NOR", "FRA", "DEU", "GBR", "CAN", "USA", "JPN", "KOR")
+WDI::WDI(
+  country = country_codes,
+  indicator = c(mat_leave = "SH.MMR.LEVE"),
+  start = 2010,
+  end = 2023
+) |>
+  select(country, iso2c, year, mat_leave) |>
+  readr::write_csv("data/wdi_maternity_leave.csv")
+WDI::WDI(
+  country = country_codes,
+  indicator = c(
+    uwrk_fe = "SG.TIM.UWRK.FE",
+    uwrk_ma = "SG.TIM.UWRK.MA",
+    tfr = "SP.DYN.TFRT.IN"
+  ),
+  start = 2000,
+  end = 2023
+) |>
+  select(country, iso2c, year, uwrk_fe, uwrk_ma, tfr) |>
+  readr::write_csv("data/wdi_policy.csv")
+```
+
+```{r}
 #| label: table-policy
 country_ja <- c(
   "Sweden" = "スウェーデン",
@@ -248,18 +277,6 @@ region_map <- c(
   "Korea, Rep." = "東アジア"
 )
 
-country_codes <- c(
-  "SWE",
-  "NOR",
-  "FRA",
-  "DEU",
-  "GBR",
-  "CAN",
-  "USA",
-  "JPN",
-  "KOR"
-)
-
 latest_non_missing <- function(x, year) {
   idx <- which(!is.na(x))
   if (length(idx) == 0) {
@@ -268,26 +285,12 @@ latest_non_missing <- function(x, year) {
   x[idx[which.max(year[idx])]]
 }
 
-df_leave <- WDI(
-  country = country_codes,
-  indicator = c(mat_leave = "SH.MMR.LEVE"),
-  start = 2010,
-  end = 2023
-) |>
+df_leave <- readr::read_csv("data/wdi_maternity_leave.csv") |>
   filter(!is.na(mat_leave)) |>
   slice_max(year, by = country, with_ties = FALSE) |>
   select(country, mat_leave)
 
-df_wdi <- WDI(
-  country = country_codes,
-  indicator = c(
-    uwrk_fe = "SG.TIM.UWRK.FE",
-    uwrk_ma = "SG.TIM.UWRK.MA",
-    tfr = "SP.DYN.TFRT.IN"
-  ),
-  start = 2000,
-  end = 2023
-)
+df_wdi <- readr::read_csv("data/wdi_policy.csv")
 
 df_uwrk <- df_wdi |>
   summarise(

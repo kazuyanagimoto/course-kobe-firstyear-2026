@@ -78,7 +78,10 @@
             #set text(style: heading-style) if heading-style != "normal"
             #set text(fill: heading-color) if heading-color != black
 
-            #text(size: title-size)[#title #if thanks != none { super("*") }]
+            #text(size: title-size)[#title #if thanks != none {
+              footnote(numbering: "*", thanks)
+              counter(footnote).update(n => n - 1)
+            }]
             #(if subtitle != none {
               parbreak()
               text(size: subtitle-size)[#subtitle]
@@ -115,11 +118,6 @@
         }
       ]
     )
-  }
-
-  if thanks != none {
-    place(footnote(numbering: "*", thanks))
-    counter(footnote).update(n => n - 1)
   }
 
   if toc {
