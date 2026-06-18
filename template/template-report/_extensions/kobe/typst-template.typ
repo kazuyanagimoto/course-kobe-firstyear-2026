@@ -66,7 +66,7 @@
     place(
       top,
       float: true,
-      scope: "parent",
+      scope: if cols == 1 { "column" } else { "parent" },
       clearance: 4mm,
       block(below: 1em, width: 100%)[
 
