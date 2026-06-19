@@ -270,8 +270,21 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#r-color-brewers-palettes" id="toc-r-color-brewers-palettes" class="nav-link" data-scroll-target="#r-color-brewers-palettes">R Color Brewer’s Palettes</a></li>
   <li><a href="#カラーセーフティ-okabe-ito-パレット" id="toc-カラーセーフティ-okabe-ito-パレット" class="nav-link" data-scroll-target="#カラーセーフティ-okabe-ito-パレット">カラー・セーフティ: Okabe-Ito パレット</a></li>
+  <li><a href="#metbrewer-パレット" id="toc-metbrewer-パレット" class="nav-link" data-scroll-target="#metbrewer-パレット">MetBrewer パレット</a></li>
   </ul></li>
-  <li><a href="#フォント" id="toc-フォント" class="nav-link" data-scroll-target="#フォント"><span class="header-section-number">4.3</span> フォント</a></li>
+  <li><a href="#フォント" id="toc-フォント" class="nav-link" data-scroll-target="#フォント"><span class="header-section-number">4.3</span> フォント</a>
+  <ul class="collapse">
+  <li><a href="#フォントの種類" id="toc-フォントの種類" class="nav-link" data-scroll-target="#フォントの種類">フォントの種類</a></li>
+  <li><a href="#フォントの選び方" id="toc-フォントの選び方" class="nav-link" data-scroll-target="#フォントの選び方">フォントの選び方</a></li>
+  <li><a href="#日本語フォントの解決法" id="toc-日本語フォントの解決法" class="nav-link" data-scroll-target="#日本語フォントの解決法">日本語フォントの解決法</a></li>
+  </ul></li>
+  <li><a href="#画像形式" id="toc-画像形式" class="nav-link" data-scroll-target="#画像形式"><span class="header-section-number">4.4</span> 画像形式</a>
+  <ul class="collapse">
+  <li><a href="#ラスターとベクター" id="toc-ラスターとベクター" class="nav-link" data-scroll-target="#ラスターとベクター">ラスターとベクター</a></li>
+  <li><a href="#ラスター" id="toc-ラスター" class="nav-link" data-scroll-target="#ラスター">ラスター</a></li>
+  <li><a href="#ベクター" id="toc-ベクター" class="nav-link" data-scroll-target="#ベクター">ベクター</a></li>
+  <li><a href="#画像形式の選び方" id="toc-画像形式の選び方" class="nav-link" data-scroll-target="#画像形式の選び方">画像形式の選び方</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -311,6 +324,7 @@ window.Quarto = {
 <p>図は主張をもち, その主張を最短時間で伝えられるようにデザインされなければならない.</p>
 </div>
 </div>
+<p>これから紹介するテクニックは図の見た目を改善するためのものですが, それらは単に最短時間で図の主張を伝えるために手段であると言うことを忘れないでください.</p>
 <div class="cell" data-layout-align="center">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -499,9 +513,219 @@ window.Quarto = {
 </div>
 </div>
 </section>
+<section id="metbrewer-パレット" class="level3">
+<h3 class="anchored" data-anchor-id="metbrewer-パレット">MetBrewer パレット</h3>
+<p><a href="https://github.com/BlakeRMills/MetBrewer">MetBrewer</a> は, アメリカのメトロポリタン美術館のコレクションからインスピレーションを得たカラーパレットを提供するパッケージです.</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("MetBrewer")</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MetBrewer)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>ここでは <a href="https://www.metmuseum.org/art/collection/search/369093?sortBy=Relevance&amp;ft=Vasily+Kandinsky&amp;offset=0&amp;rpp=40&amp;pos=12">Kandinsky</a> のパレットを使ってみましょう.</p>
+<p><a href="https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Kandinsky.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Kandinsky.png?raw=true" class="img-fluid"></a></p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>penguins_bar <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> forcats<span class="sc">::</span><span class="fu">fct_rev</span>(species), <span class="at">fill =</span> sex)) <span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="cn">NULL</span>,</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Number of Penguins by Species and Sex"</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">met.brewer</span>(<span class="st">"Kandinsky"</span>)) <span class="sc">+</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"inside"</span>,</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position.inside =</span> <span class="fu">c</span>(<span class="fl">0.9</span>, <span class="fl">0.15</span>),</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title.position =</span> <span class="st">"plot"</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">reverse =</span> <span class="cn">TRUE</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="04-visualization_files/figure-html/plot-metbrewer-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="04-visualization_files/figure-html/plot-metbrewer-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="フォント" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="フォント"><span class="header-section-number">4.3</span> フォント</h2>
+<section id="フォントの種類" class="level3">
+<h3 class="anchored" data-anchor-id="フォントの種類">フォントの種類</h3>
+<p>フォントには大きく分けて, セリフ体 (serif) とサンセリフ体 (sans-serif) の二種類があります. セリフ体は文字の端に装飾があるフォントで, サンセリフ体は装飾のないフォントです. 下の左の図で赤く示された, 文字の端の突起や飾りが「セリフ」です.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/2/26/Serif_and_sans-serif_03.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="セリフ体 (serif)"><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Serif_and_sans-serif_03.svg" class="img-fluid figure-img" alt="セリフ体 (serif)"></a></p>
+<figcaption>セリフ体 (serif)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/9/99/Serif_and_sans-serif_01.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="サンセリフ体 (sans-serif)"><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Serif_and_sans-serif_01.svg" class="img-fluid figure-img" alt="サンセリフ体 (sans-serif)"></a></p>
+<figcaption>サンセリフ体 (sans-serif)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>日本語でも明朝体がセリフ体でゴシック体がサンセリフ体に相当します. 英語では, セリフ体は Times New Roman や Garamond などが有名で, サンセリフ体は Arial や Helvetica などが有名です.</p>
+</section>
+<section id="フォントの選び方" class="level3">
+<h3 class="anchored" data-anchor-id="フォントの選び方">フォントの選び方</h3>
+<p>基本的に図表はサンセリフ体を使うことが推奨されます. これは, サンセリフ体の方が小さいサイズでも読みやすいからです. <code>ggplot2</code> では, デフォルトでサンセリフ体 (多くの場合のシステムに入っている Helvetica か Arial) が使われています.</p>
+<p>ただし, 日本語でラベルを追加しようと思うと, Helvetica や Arial には日本語が含まれていないため, 日本語が豆腐化 (□) してしまいます. 日本語を表示するためには, 日本語が含まれているフォントを指定する必要があります. 例えば, Windows では Meiryo, Mac では Hiragino Kaku Gothic ProN などが日本語を含むサンセリフ体のフォントとしてよく使われます.</p>
+</section>
+<section id="日本語フォントの解決法" class="level3">
+<h3 class="anchored" data-anchor-id="日本語フォントの解決法">日本語フォントの解決法</h3>
+<p>一つの問題として, PC間でコードを共有した場合に, フォントが入っていないと言う問題が起きます. 特にMacのヒラギノ系は有料フォントであるため, Macユーザ以外が持っていることは想定しないほうが良いです. これらの問題をシンプルに解決するのが, <code>showtext</code> パッケージです. <code>showtext</code> を使うことでフォント周りの問題をコード上で完結させることができます.</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("showtext")</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(showtext)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">font_add_google</span>(<span class="st">"Noto Sans JP"</span>) <span class="co"># Google Fonts から Noto Sans JP フォントを追加</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">showtext_auto</span>() <span class="co"># フォントの自動使用を有効化</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>penguins_bar <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">species =</span> <span class="fu">recode</span>(</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>      species,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Adelie"</span> <span class="ot">=</span> <span class="st">"アデリー"</span>,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Chinstrap"</span> <span class="ot">=</span> <span class="st">"ヒゲ"</span>,</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Gentoo"</span> <span class="ot">=</span> <span class="st">"ジェンツー"</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">sex =</span> <span class="fu">recode</span>(</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>      sex,</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"male"</span> <span class="ot">=</span> <span class="st">"オス"</span>,</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"female"</span> <span class="ot">=</span> <span class="st">"メス"</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> forcats<span class="sc">::</span><span class="fu">fct_rev</span>(species), <span class="at">fill =</span> sex)) <span class="sc">+</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="cn">NULL</span>,</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"ペンギンの種と性別ごとの個体数"</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">met.brewer</span>(<span class="st">"Kandinsky"</span>)) <span class="sc">+</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_family =</span> <span class="st">"Noto Sans JP"</span>) <span class="sc">+</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"inside"</span>,</span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position.inside =</span> <span class="fu">c</span>(<span class="fl">0.9</span>, <span class="fl">0.15</span>),</span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title.position =</span> <span class="st">"plot"</span></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">reverse =</span> <span class="cn">TRUE</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="04-visualization_files/figure-html/plot-showtext-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="04-visualization_files/figure-html/plot-showtext-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="画像形式" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="画像形式"><span class="header-section-number">4.4</span> 画像形式</h2>
+<p>レポートやスライドに図を載せる場合, 画像形式の選択が見栄えに影響を与えます. ここでは画像形式について最低限知っておくべきことを紹介します.</p>
+<section id="ラスターとベクター" class="level3">
+<h3 class="anchored" data-anchor-id="ラスターとベクター">ラスターとベクター</h3>
+<p>画像形式には大きく分けて, ラスター (raster) 形式とベクター (vector) 形式があります. ラスター形式はピクセルで構成される画像で, 解像度に依存します. 一方, ベクター形式は数式で描画されるため, 拡大しても画質が劣化しません.</p>
+<p>この違いは, 同じ図を拡大してみると一目瞭然です. 例として, シンプルなサインカーブを描いてみましょう.</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df_sine <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">2</span> <span class="sc">*</span> pi, <span class="at">length.out =</span> <span class="dv">300</span>),</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="fu">sin</span>(x)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>p_sine <span class="ot">&lt;-</span> df_sine <span class="sc">|&gt;</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"#0072B2"</span>, <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="st">"sin(x)"</span>) <span class="sc">+</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>())</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>p_sine</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-sine-curve" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sine-curve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="04-visualization_files/figure-html/fig-sine-curve-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;4.1: A sine curve."><img src="04-visualization_files/figure-html/fig-sine-curve-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sine-curve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: A sine curve.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>このサインカーブの山の部分を, 低解像度のラスター形式 (PNG) とベクター形式 (SVG) で保存し, それぞれ大きく引き伸ばして並べたものが下の図です.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>p_zoom <span class="ot">&lt;-</span> p_sine <span class="sc">+</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(pi <span class="sc">/</span> <span class="dv">2</span> <span class="sc">-</span> <span class="dv">1</span>, pi <span class="sc">/</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">1</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">1.02</span>)) <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="cn">NULL</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>p_zoom</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>p_zoom</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell-output-display">
+<div id="fig-sine-raster" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sine-raster-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="04-visualization_files/figure-html/fig-sine-raster-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;4.2: Raster (PNG)"><img src="04-visualization_files/figure-html/fig-sine-raster-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sine-raster-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.2: Raster (PNG)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell-output-display">
+<div id="fig-sine-vector" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sine-vector-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="04-visualization_files/figure-html/fig-sine-vector-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure&nbsp;4.3: Vector (SVG)"><img src="04-visualization_files/figure-html/fig-sine-vector-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sine-vector-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.3: Vector (SVG)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>ラスター形式では拡大に伴ってピクセルのギザギザ (ジャギー) が目立つのに対し, ベクター形式では曲線が滑らかなまま保たれています.</p>
+<p>皆さんが知っておくべき画像形式は次の4つです:</p>
+</section>
+<section id="ラスター" class="level3">
+<h3 class="anchored" data-anchor-id="ラスター">ラスター</h3>
+</section>
+<section id="ベクター" class="level3">
+<h3 class="anchored" data-anchor-id="ベクター">ベクター</h3>
+<p>知っておくべき画像形式は SVG と PDF です.</p>
+<p><strong>SVG (Scalable Vector Graphics)</strong> はWeb 上で使われるベクター形式の画像です. Web ブラウザで表示することができ, 拡大しても画質が劣化しません. また, SVG は XML 形式で記述されるため, テキストエディタで編集することも可能です.</p>
+<p><strong>PDF (Portable Document Format)</strong> は, Adobe が開発したベクター形式の画像です. PDF は印刷に適しており, 拡大しても画質が劣化しません. また, PDF は多くのアプリケーションでサポートされており, 共有や印刷に便利です.</p>
+</section>
+<section id="画像形式の選び方" class="level3">
+<h3 class="anchored" data-anchor-id="画像形式の選び方">画像形式の選び方</h3>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
@@ -509,6 +733,7 @@ window.Quarto = {
 Tufte, Edward R. 2001. <em>The Visual Display of Quantitative Information</em>. 2nd ed. Graphics Press.
 </div>
 </div>
+</section>
 </section>
 
 </main> <!-- /main -->
