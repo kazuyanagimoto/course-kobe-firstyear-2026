@@ -1,4 +1,22 @@
 
+// Quarto >= 1.9 generates this helper automatically, but 1.8.x does not,
+// so we define it here (a duplicate #let definition is harmless).
+#let content-to-string(content) = {
+  if type(content) == str {
+    content
+  } else if content == none {
+    ""
+  } else if content.has("text") {
+    content.text
+  } else if content.has("children") {
+    content.children.map(content-to-string).join("")
+  } else if content.has("body") {
+    content-to-string(content.body)
+  } else if content == [ ] {
+    " "
+  }
+}
+
 #let article(
   title: none,
   subtitle: none,

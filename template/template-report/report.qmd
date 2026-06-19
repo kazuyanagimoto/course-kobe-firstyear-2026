@@ -19,11 +19,6 @@ filters:
   - quarto-notes-filter
 brand:
   typography:      
-    fonts:
-      - family: Noto Serif JP
-        source: google
-      - family: IBM Plex Sans JP
-        source: google
     base: Noto Serif JP
     headings:
       family: IBM Plex Sans JP

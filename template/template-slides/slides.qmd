@@ -15,9 +15,6 @@ date: today
 date-format: "YYYY年M月D日"
 brand:
   typography:
-    fonts:
-      - family: Noto Sans JP
-        source: google
     base: Noto Sans JP
     headings: Noto Sans JP
 bibliography: references.bib

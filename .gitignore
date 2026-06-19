@@ -60,6 +60,7 @@ static/mov/
 .playwright-mcp/
 data/
 .vscode/
+posit-cloud/
 
 # rv
 rv/library/
